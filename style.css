@@ -1,0 +1,29 @@
+
+/* -------------------UNIVERSAL RESETS------------------- */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------UTILITY CLASSES------------------- */
+
+
+/* -------------------PADDING & MARGINS------------------- */
+
+
+/* -------------------GENERAL SELECTORS------------------- */
+
+div{
+  border: 2px solid grey;
+};
+}
+
+/* -------------------SPECIFIC SELECTORS------------------- */
+
+/*
+/* -------------------PARENT CHILD SELECTORS------------------- */
+
+
+/* -------------------MEDIA QUERIES--------------------------- */
