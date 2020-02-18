@@ -1,0 +1,15 @@
+---
+layout: default
+
+---
+
+<section class="grid">
+
+
+  {% for day in page.day %}
+
+  {% include ItineraryDays/{{day.location}}.html %}
+
+  {% endfor %}
+
+</section>

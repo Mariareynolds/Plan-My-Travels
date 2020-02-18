@@ -59,10 +59,12 @@ img{
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase:
-  letter-spacing: 1px;
   color: grey;
   border: 2px solid;
-  transition: all 1s;
+  
+  letter-spacing: 0.5rem;
+  padding: 1rem 3rem;
+  transition: all 3s;
   }
 
   .calltoactionheart:hover span {
@@ -70,11 +72,17 @@ img{
     display: inline-block;
     transition: all 3s;
   }
-}
+
 .fab{
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
+  margin: 1rem;
+  padding: 0%
+}
+
+.socials a{
+  border: none;
 }
 
 .relative{
@@ -108,6 +116,9 @@ header a{
   padding: 2%;
   border-right: 2px solid white;
 }
+header a:last-of-type{
+  border: none;
+}
 
 nav{
   text-align: right;
@@ -135,7 +146,14 @@ footer a{
   border-right: 2px solid white;
   display: inline-block;
 }
+footer a:last-of-type{
+  border: none;
 
+}
+
+div{
+  padding: 5%;
+}
 
 /* -------------------SPECIFIC SELECTORS------------------- */
 
