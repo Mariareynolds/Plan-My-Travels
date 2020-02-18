@@ -5,20 +5,137 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 2px solid #C8F5F5;
 }
 
+img{
+  max-width:100%;
+  text-align: center;
+}
+
+[class*=col-], [class*=col_], [class~=col]{
+  padding: 0;
+}
 /* -------------------UTILITY CLASSES------------------- */
 
+.center{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padded{
+  padding: 3%;
+}
+
+.bg-color{
+  background-color: #D8DDDD;
+
+}
+
+.banner,
+.banner-with-header {
+  background-image: url('/images/whitsundaysview.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+
+.sydney{
+  color: lightblue;
+}
+
+
+
+.logo{
+  font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
+  font
+}
+
+.calltoactionheart{
+  padding: 0.5rem 0.2rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase:
+  letter-spacing: 1px;
+  color: grey;
+  border: 2px solid;
+  transition: all 1s;
+  }
+
+  .calltoactionheart:hover span {
+    transform:rotate(360deg);
+    display: inline-block;
+    transition: all 3s;
+  }
+}
+.fab{
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.relative{
+  position: relative;
+}
+
+.object-fit{
+  object-fit: cover;
+}
 
 /* -------------------PADDING & MARGINS------------------- */
 
 
 /* -------------------GENERAL SELECTORS------------------- */
 
-div{
-  border: 2px solid grey;
-};
+header{
+  color: white;
+  background-color: #B8DDDD;
+  position:fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  letter-spacing: 0.5;
+  padding:1%;
 }
+
+
+header a{
+  color: white;
+  text-decoration: none;
+  padding: 2%;
+  border-right: 2px solid white;
+}
+
+nav{
+  text-align: right;
+}
+
+hr{
+border: 0px solid;
+border-bottom:1px solid white;
+position: absolute;
+bottom: 0rem;
+right: 25vw;
+left: 29vw;
+}
+
+footer{
+  color: white;
+  background-color: #B8DDDD;
+}
+
+footer a{
+  color: white;
+  background-color: #B8DDDD;
+  text-decoration: none;
+  padding: 2%;
+  border-right: 2px solid white;
+  display: inline-block;
+}
+
 
 /* -------------------SPECIFIC SELECTORS------------------- */
 

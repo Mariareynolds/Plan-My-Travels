@@ -1,14 +1,130 @@
 ---
 layout: default
+banner-image: /images/whitsundaysview.jpg
+block:
+  - id: mel.html
+  - id: sydney.html
 ---
 
 <!----------- THIS IS THE INFO WINDOW------ -->
+<section class="grid">
+  <div class="col-4_md-12">
+    <h2> What we do </h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class="col-4_md-12">
+    << ADD IMAGE >>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+  </div>
+  <div class="col-4_md-12">
+    <h2> Why use us </h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</section>
+
+<!-- {% for block in page.block %}
+  <!-- {% include block.id.html %}
+{% endfor %} --> -->
+
+{% if page.sydney == true %}
+
+<!-- <section CLASS="SYDNEY">
+  <h1> DAY 1 ITINERARY </h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section> -->
+
+{% endif %}
+
+<section class="center padded bg-color">
 
 
-<!----------- THIS IS THE "CALLBTO ACTION" BANNER ---- ->
+{% include click-to-action.html %}
+
+</section>
 
 
-<!---------- THIS IS THE  HOVER GALLERY ------ ->
+<!-- THIS IS THE REVIEWS -->
 
+<section class="light-bg centered padded">
+  <h2> Reviews </h2>
+  <div class="grid padded-1">
+
+    <div class="col-4_sm-12 padded-1">
+      <div class="card light-bg">
+        <img src="#" class="profile">
+        <p class="author"> Jane </p>
+        <p class="company"> Envato </p>
+        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+        <span> &#9733; &#9733; &#9733; &#9733; &#9733; </span>
+      </div>
+    </div>
+
+    <div class="col-4_sm-12 padded-1">
+      <div class="card light-bg">
+        <img src="#" class="profile">
+        <p class="author"> John </p>
+        <p class="company"> The Butchers Shop </p>
+        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+        <span> &#9733; &#9733; &#9733; &#9733; &#9733; </span>
+      </div>
+    </div>
+
+    <div class="col-4_sm-12 padded-1">
+      <div class="card light-bg">
+        <img src="#" class="profile">
+        <p class="author"> Emilio </p>
+        <p class="company"> EON </p>
+        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+        <span> &#9733; &#9733; &#9733; &#9733; &#9733; </span>
+      </div>
+    </div>
+
+</section>
+
+
+<!-- -------- THIS IS THE  HOVER GALLERY -------->
+
+<section class="padded centered">
+
+  <h2> Our Clients </h2>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    <div class="popup-gallery grid-center padded-1">
+
+      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
+        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      </a>
+
+    </div>
+
+</section>
 
 <!---------- THIS IS THE FOOTER ------ -->
