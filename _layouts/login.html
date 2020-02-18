@@ -3,13 +3,15 @@ layout: default
 
 ---
 
-<section class="grid">
+<section class="grid-spaceBetween">
 
 
   {% for day in page.day %}
+<div class="col-5 padded">
 
   {% include ItineraryDays/{{day.location}}.html %}
 
+</div>
   {% endfor %}
 
 </section>
