@@ -108,12 +108,12 @@ activities:
 
 <section class="grid bg-color">
 
-  <div class="col-4 relative">
+  <div class="col-4_sm-hidden relative">
 
     <img class="object-fit" src="/images/12apostlessoft.jpg" alt="The 12 Apostles in a light tone">
 
   </div>
-  <div class="col-4 padded center">
+  <div class="col-4_sm-12 padded center">
     <label for="level"> Pick a country </label>
     <select name="level">
       {% for country in page.country %}
@@ -124,12 +124,12 @@ activities:
 
 
   </div>
-  <div class="col-4">
+  <div class="col-4_sm-hidden">
 
 <img src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
 
   </div>
-  <div class="col-3 padded center">
+  <div class="col-3_sm-12 padded center">
 
  <label for="level"> How long are you planning to stay for? (in days) </label>
 <select name="level">
@@ -140,12 +140,12 @@ activities:
 </select>
 
   </div>
-  <div class="col-3">
+  <div class="col-3_sm-hidden">
 
 <img src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
 
   </div>
-  <div class="col-3 padded center">
+  <div class="col-3_sm-12 padded center">
 
 <label>  Do you have a starting position?  </label>
 <div class="radio checkboxes">
@@ -158,13 +158,13 @@ activities:
 </div>
 
   </div>
-  <div class="col-3">
+  <div class="col-3_sm-hidden">
 
   <img src="/images/darkapostles.jpg" alt="The 12 Apostles in a light tone">
 
   </div>
 
-  <div class="col-4 padded center">
+  <div class="col-4_sm-12 padded center">
 
  <label>  Do you have a finishing position?  </label>
 <div class="radio">
@@ -177,18 +177,18 @@ activities:
 </div>
 
   </div>
-  <div class="col-3">
+  <div class="col-3_sm-hidden">
 
 <img src="/images/whitsundays-view.jpg" alt="WhitsundaysIslands">
 
   </div>
-  <div class="col-5 padded center">
+  <div class="col-5_sm-12 padded center">
 
   <h3> Where would you like to stop?  <h3>
 <div class="checkboxes wrap">
 
 {% for stops in page.stops %}
- <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" required type="checkbox" name="Stops" value="{{stops.select}}" />
+ <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" name="Stops" value="{{stops.select}}" />
  </label>
    {% endfor %}
 </div>
@@ -196,12 +196,12 @@ activities:
   </div>
 
 
-  <div class="col-5">
+  <div class="col-5_sm-hidden">
 
 <img src="/images/island.jpg" alt="Skyview of an island peninsula">
 
   </div>
-  <div class="col-3 padded center">
+  <div class="col-3_sm-12 padded center">
 
      <h3>  What modes of transport do you want to use?  </h3>
      <div class="checkboxes right">
@@ -214,45 +214,45 @@ activities:
       </div>
     </div>
 
-  <div class="col-4">
+  <div class="col-4_sm-hidden">
 
 <img src="/images/operahouse.jpg" alt="Opera House at night time- pink sky">
 
   </div>
 
 
-  <div class="col-3 padded center">
+  <div class="col-3_sm-12 padded center">
 
     <h3>  what activities do you enjoy? </h3>
       <div class="checkboxes right">
     {% for activities in page.activities %}
 
     <label for="{{activities.select}}"> {{activities.select}}
-      <input id={{activities.select}} required type="checkbox" name="{{activities.select}}" value="{{activities.select}}"/>
+      <input id="{{activities.select}}" type="checkbox" name="{{activities.select}}" value="{{activities.select}}"/>
 
     </label>
 {% endfor %}
     </div>
     </div>
-  <div class="col-3">
+  <div class="col-3_sm-hidden">
 
 <img src="/images/pinkbeach.jpg" alt="pink beach tones">
 
   </div>
-  <div class="col-4 padded center">
+  <div class="col-4_sm-12 padded center">
 
 
-    <div class="col-6_sm-12 padded">
+
       <label for="name"> Your Name </label>
       <input required type="text" name="name" id="name" placeholder="Name" />
 
       <label for="email"> Your Email </label>
       <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
-<p> <input type="submit" value="Submit"> </p>
+<p> <input type="submit" value="Submit for a quote"> </p>
 
   </div>
-  <div class="col-2">
+  <div class="col-2_sm-hidden">
 
 <img src="/images/pinkbluesand.jpg" alt="pink blue sand">
 
