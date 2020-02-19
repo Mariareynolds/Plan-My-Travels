@@ -20,7 +20,7 @@
     <nav class="col-6">
       <a href="/"> Home</a>
       <a href="/Plannerpage"> Plan My Travels </a>
-      <a href="/Login"> Login </a>
+      <a href="/login"> Login </a>
     </nav>
 
 
@@ -64,7 +64,7 @@
   <div class="col-4 padded center">
     <label for="level"> Pick a country </label>
     <select name="level">
-      <option value="Australia"> Australia </option> </select>
+      <option required value="Australia"> Australia </option> </select>
   </div>
   <div class="col-4">
 
@@ -75,7 +75,7 @@
 
  <label for="level"> How long are you planning to stay for? (in days) </label>
 <select name="level">
-  <option value="1"> 1</option> </select>
+  <option required value="1"> 1</option> </select>
 
   </div>
   <div class="col-3">
@@ -87,8 +87,8 @@
 
 <label>  Do you have a starting position?  </label>
 <div class="checkboxes">
-  <p>YES<input type="checkbox" name="interests" value="YES" /> </p>
-  <p>NO<input type="checkbox" name="interests" value="NO" /> </p>
+  <p>YES<input type="radio" name="interests" value="YES" /> </p>
+  <p>NO<input type="radio" name="interests" value="NO" /> </p>
 </div>
 
   </div>
@@ -102,8 +102,8 @@
 
  <label>  Do you have a finishing position?  </label>
 <div class="checkboxes">
-  <p>YES<input type="checkbox" name="interests" value="YES" /> </p>
-  <p>NO<input type="checkbox" name="interests" value="NO" /> </p>
+  <p>YES<input type="radio" name="interests" value="YES" /> </p>
+  <p>NO<input type="radio" name="interests" value="NO" /> </p>
 </div>
 
   </div>
@@ -116,7 +116,7 @@
 
  <label>  Where would you like to stop?  </label>
 <div class="checkboxes">
-  <p>YES<input type="checkbox" name="interests" value="YES" /> </p>
+  <p>YES<input required type="checkbox" name="interests" value="YES" /> </p>
 </div>
 
   </div>
@@ -131,7 +131,7 @@
 
      <label>  What modes of transport do you want to use?  </label>
     <div class="checkboxes">
-      <p>YES<input type="checkbox" name="interests" value="YES" /> </p>
+      <p>YES<input required type="checkbox" name="interests" value="YES" /> </p>
     </div>
 
   </div>
@@ -146,7 +146,7 @@
 
     <label>  what activities do you enjoy?  </label>
     <div class="checkboxes">
-      <p>YES<input type="checkbox" name="interests" value="YES" /> </p>
+      <p>YES<input required type="checkbox" name="interests" value="YES" /> </p>
     </div>
 
   </div>
@@ -160,12 +160,12 @@
     <div class="grid">
     <div class="col-6_sm-12 padded">
       <label for="name"> Your Name </label>
-      <input type="text" name="name" id="name" placeholder="Name" />
+      <input required type="text" name="name" id="name" placeholder="Name" />
 
       <label for="email"> Your Email </label>
-      <input type="email" name="_replyto" id="email" placeholder="Email" />
+      <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
-<p> <button type="button">Click Me!</button> </p>
+<p> <input type="submit" value="Submit"> </p>
 
   </div>
   <div class="col-2">
