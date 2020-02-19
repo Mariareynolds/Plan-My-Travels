@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 2px solid #C8F5F5;
+  /* border: 2px solid #C8F5F5; */
 }
 
 img{
@@ -16,7 +16,12 @@ img{
 [class*=col-], [class*=col_], [class~=col]{
   padding: 0;
 }
-/* -------------------UTILITY CLASSES------------------- */
+
+[class*=grid-], [class*=grid_], [class~=grid] {
+
+    margin: 0;
+  }
+/* -------------------UTILITY CLASSES-------------------*/
 
 .center{
   text-align: center;
@@ -30,9 +35,18 @@ img{
 
 .bg-color{
   background-color: #D8DDDD;
-
 }
+/* .bg-blue{
+  background-color: #C8F5F5
+}
+.bg-white{
+  background-color: white;
+} */
+/* .text-shadow{
+  background-color: #C8F5F5;
+  text-shadow:0px 0px 20px #C8F5F5;
 
+} */
 .banner,
 .banner-with-header {
   background-image: url('/images/whitsundays-view.jpg');
@@ -93,10 +107,93 @@ img{
   object-fit: cover;
 }
 
+.comment-box{
+  position: sticky;
+  top: 4.4rem;
+  right: 0;
+  border-radius: 0;
+  width: 13rem;
+  margin-left: auto;
+  border: 2px solid pink;
+  background-color: pink;
+  padding: 1% 2%;
+  transition: all 2s;
+}
+.comment-box a{
+  text-decoration: none;
+  color: white;
+  background-color: pink;
+}
+.comment-box-fix{
+      margin-top: -7rem;
+}
 /* -------------------PADDING & MARGINS------------------- */
 
 
 /* -------------------GENERAL SELECTORS------------------- */
+
+
+
+
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid rgb(220,220,220);
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+form label {
+  margin: 1rem 0 0;
+  display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
+  color: #6C7A89;
+  font-weight: bold;
+}
+
+.checkboxes{
+  text-align: right;
+}
+/* Checkbox styles */
+
+form input[type="checkbox"]{
+  margin: 0 1em;
+  width: auto;
+  display:inline-block;
+}
+
+.checkboxes p {
+  margin:0.5rem 0;
+  font-size: 0.8rem;
+}
+.checkboxes {
+  margin: 0 0 1.5em;
+  padding:0!important;
+}
+
+form input[type="submit"] {
+  background-color:#6C7A89;
+  color:white;
+  border: none;
+}
+ Style 2 remove comment to show alternative
+
+form input,
+form textarea {
+  border: 2px solid #6C7A89;
+  padding:1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+form label {
+  text-transform: uppercase;
+}
+
 
 header{
   color: white;
@@ -106,7 +203,7 @@ header{
   right: 0;
   top: 0;
   letter-spacing: 0.5;
-  padding:1%;
+  padding:0.6rem;
 }
 
 
