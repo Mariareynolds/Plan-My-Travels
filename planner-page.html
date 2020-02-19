@@ -185,10 +185,11 @@ activities:
   <div class="col-5 padded center">
 
   <h3> Where would you like to stop?  <h3>
-<div class="checkboxes">
+<div class="checkboxes wrap">
 
 {% for stops in page.stops %}
- <label for="{{stops.select}}">{{stops.select}} </label> <input id="{{stops.select}}" required type="checkbox" name="Stops" value="{{stops.select}}" />
+ <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" required type="checkbox" name="Stops" value="{{stops.select}}" />
+ </label>
    {% endfor %}
 </div>
 
@@ -202,13 +203,15 @@ activities:
   </div>
   <div class="col-3 padded center">
 
-     <label>  What modes of transport do you want to use?  </label>
+     <h3>  What modes of transport do you want to use?  </h3>
+     <div class="checkboxes right">
      {% for transport in page.transport %}
-     <div class="checkboxes">
-    <label for="{{transport.select}}">{{transport.select}}</label>
+
+    <label for="{{transport.select}}">{{transport.select}}
       <input id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
-      </div>
+      </label>
       {% endfor %}
+      </div>
     </div>
 
   <div class="col-4">
@@ -220,14 +223,17 @@ activities:
 
   <div class="col-3 padded center">
 
-    <label>  what activities do you enjoy?  </label>
+    <h3>  what activities do you enjoy? </h3>
+      <div class="checkboxes right">
     {% for activities in page.activities %}
-    <div class="checkboxes">
-    <label for="{{activities.select}}"> {{activities.select}}</label>
-      <input id={{activities.select}} required type="checkbox" name="{{activities.select}}" value="{{activities.select}}" />
-    </div>
+
+    <label for="{{activities.select}}"> {{activities.select}}
+      <input id={{activities.select}} required type="checkbox" name="{{activities.select}}" value="{{activities.select}}"/>
+
+    </label>
 {% endfor %}
-  </div>
+    </div>
+    </div>
   <div class="col-3">
 
 <img src="/images/pinkbeach.jpg" alt="pink beach tones">

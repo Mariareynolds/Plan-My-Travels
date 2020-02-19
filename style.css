@@ -29,6 +29,10 @@ img{
   margin-right: auto;
 }
 
+.right{
+  text-align: right;
+}
+
 .padded{
   padding: 3%;
 }
@@ -136,7 +140,8 @@ img{
 
 
 
-form input,
+form input[type=text],
+form input[type=email],
 form textarea {
   width: 100%;
   margin: 0.5rem 0;
@@ -153,10 +158,16 @@ form label {
   display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
   color: #6C7A89;
   font-weight: bold;
+  text-transform: uppercase;
+display: block;
+
+
 }
 
-.checkboxes{
+.wrap{
   text-align: right;
+  display: flex;
+  flex-wrap: wrap;
 }
 /* Checkbox styles */
 
@@ -179,6 +190,8 @@ form input[type="submit"] {
   background-color:#6C7A89;
   color:white;
   border: none;
+  padding: 1rem 3rem;
+  width: 100%;
 }
  Style 2 remove comment to show alternative
 
@@ -192,8 +205,35 @@ form textarea {
 
 form label {
   text-transform: uppercase;
+  display: block;
+}
+form h3{
+  margin: 1rem 0 0;
+display: inline-block;
+color: #6C7A89;
+font-weight: bold;
+text-transform: uppercase;
+display: block;
+font-size: 1rem;
 }
 
+select{
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
 header{
   color: white;
