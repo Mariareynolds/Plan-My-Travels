@@ -35,7 +35,7 @@ img{
 
 .banner,
 .banner-with-header {
-  background-image: url('/images/whitsundaysview.jpg');
+  background-image: url('/images/whitsundays-view.jpg');
   background-size: cover;
   background-position: center;
   min-height: 80vh;
@@ -61,7 +61,7 @@ img{
   text-transform: uppercase:
   color: grey;
   border: 2px solid;
-  
+
   letter-spacing: 0.5rem;
   padding: 1rem 3rem;
   transition: all 3s;
