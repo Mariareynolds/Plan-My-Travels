@@ -1,11 +1,20 @@
 ---
 layout: default
+country:
+- select: Australia
+- select: More to come!
+
+
 ---
 <form action="https://formspree.io/youemail@gmail.com" method="POST">
 
+
 <label for="level"> Pick a country </label>
 <select name="level">
-  <option value="Australia"> Australia </option>
+{% for country in include.country %}
+  <option value="{{ country.select }}"> {{ country.select }} </option>
+
+{% endfor %}
 
 
 

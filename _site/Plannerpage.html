@@ -64,7 +64,16 @@
   <div class="col-4 padded center">
     <label for="level"> Pick a country </label>
     <select name="level">
-      <option required value="Australia"> Australia </option> </select>
+      
+      <option required value="Australia"> Australia </option>
+
+      
+      <option required value="More to come!"> More to come! </option>
+
+      
+    </select>
+
+
   </div>
   <div class="col-4">
 
@@ -75,7 +84,63 @@
 
  <label for="level"> How long are you planning to stay for? (in days) </label>
 <select name="level">
-  <option required value="1"> 1</option> </select>
+
+
+  <option required value="1"> 1 </option>
+
+  <option required value="2"> 2 </option>
+
+  <option required value="3"> 3 </option>
+
+  <option required value="4"> 4 </option>
+
+  <option required value="5"> 5 </option>
+
+  <option required value="6"> 6 </option>
+
+  <option required value="7"> 7 </option>
+
+  <option required value="8"> 8 </option>
+
+  <option required value="9"> 9 </option>
+
+  <option required value="10"> 10 </option>
+
+  <option required value="11"> 11 </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+  <option required value="">  </option>
+
+</select>
 
   </div>
   <div class="col-3">
@@ -86,9 +151,13 @@
   <div class="col-3 padded center">
 
 <label>  Do you have a starting position?  </label>
-<div class="checkboxes">
-  <p>YES<input type="radio" name="interests" value="YES" /> </p>
-  <p>NO<input type="radio" name="interests" value="NO" /> </p>
+<div class="radio">
+  <label for="starting-yes">YES
+  <input type="radio" id=starting-yes name="start" value="YES" /> </label>
+
+
+  <label for="starting-no">NO
+  <input type="radio" id=starting-no name="start" value="NO" /> <label>
 </div>
 
   </div>
@@ -101,22 +170,31 @@
   <div class="col-4 padded center">
 
  <label>  Do you have a finishing position?  </label>
-<div class="checkboxes">
-  <p>YES<input type="radio" name="interests" value="YES" /> </p>
-  <p>NO<input type="radio" name="interests" value="NO" /> </p>
+<div class="radio">
+  <label for="finishing-yes">YES
+  <input type="radio" id=finishing-yes name="finish" value="YES" /> </label>
+
+
+  <label for="finishing-no">NO
+  <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 </div>
 
   </div>
   <div class="col-3">
 
-<img src="/images/whitsundaysview.jpg" alt="WhitsundaysIslands">
+<img src="/images/whitsundays-view.jpg" alt="WhitsundaysIslands">
 
   </div>
   <div class="col-5 padded center">
 
- <label>  Where would you like to stop?  </label>
+  <h3> Where would you like to stop?  <h3>
 <div class="checkboxes">
-  <p>YES<input required type="checkbox" name="interests" value="YES" /> </p>
+
+
+ <label for="melbourne">melbourne </label> <input id="melbourne" required type="checkbox" name="Stops" value="melbourne" />
+   
+ <label for="Jervis Bay">Jervis Bay </label> <input id="Jervis Bay" required type="checkbox" name="Stops" value="Jervis Bay" />
+   
 </div>
 
   </div>
