@@ -16,26 +16,85 @@ days:
 - select: 9
 - select: 10
 - select: 11
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
-- select:
+- select: 12
+- select: 13
+- select: 14
+- select: 15
+- select: 16
+- select: 17
+- select: 18
+- select: 19
+- select: 20
+- select: 21
+- select: 22
+- select: 23
+- select: 24
+- select: 25
+- select: 26
+- select: 27
+- select: 28
+- select: 29
+- select: 30
+- select: 31
+- select: 32
+- select: 33
+- select: 34
+- select: 35
+- select: 36
+- select: 37
+- select: 38
+- select: 39
+- select: 40
+- select: 41
+- select: 42
+- select: 43
+- select: 44
+- select: 45
+- select: 46
+- select: 47
+- select: 48
+- select: 49
+- select: 50
 
 stops:
+- select: Adelaide
+- select: Great Ocean Road
 - select: melbourne
+- select: Canberra
 - select: Jervis Bay
+- select: Woollongong
+- select: Sydney
+- select: Central Coast
+- select: Newcastle
+- select: Byron Bay
+- select: Gold Coast
+- select: Brisbane
+- select: Sunshine Coast
+- select: Noosa
+- select: Fraser Island
+- select: Whitsundays
+- select: Airlis Beach
+- select: Cairns
+- select: Perth
+- select: Rottnest Island
+- select: Exmouth
+transport:
+- select: Car Hire
+- select: Train
+- select: Greyhound Bus
+- select: Plane
+- select: Bus
+activities:
+- select: Beach Days
+- select: Hiking
+- select: Watersports
+- select: Museums
+- select: History
+- select: Animal Encounters
+- select: Landmarks
+- select: Photography
+- select: Sailing
+
 ---
 
 <!-- --------This is my map with popouts---------- -->
@@ -126,7 +185,7 @@ stops:
   <h3> Where would you like to stop?  <h3>
 <div class="checkboxes">
 
-{% for stops in page .stops %}
+{% for stops in page.stops %}
  <label for="{{stops.select}}">{{stops.select}} </label> <input id="{{stops.select}}" required type="checkbox" name="Stops" value="{{stops.select}}" />
    {% endfor %}
 </div>
@@ -142,11 +201,14 @@ stops:
   <div class="col-3 padded center">
 
      <label>  What modes of transport do you want to use?  </label>
-    <div class="checkboxes">
-      <p>YES<input required type="checkbox" name="interests" value="YES" /> </p>
+     {% for transport in page.transport %}
+     <div class="checkboxes">
+    <label for="{{transport.select}}">{{transport.select}}</label>
+      <input id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
+      </div>
+      {% endfor %}
     </div>
 
-  </div>
   <div class="col-4">
 
 <img src="/images/operahouse.jpg" alt="Opera House at night time- pink sky">
@@ -157,10 +219,12 @@ stops:
   <div class="col-3 padded center">
 
     <label>  what activities do you enjoy?  </label>
+    {% for activities in page.activities %}
     <div class="checkboxes">
-      <p>YES<input required type="checkbox" name="interests" value="YES" /> </p>
+    <label for="{{activities.select}}"> {{activities.select}}</label>
+      <input id={{activities.select}} required type="checkbox" name="{{activities.select}}" value="{{activities.select}}" />
     </div>
-
+{% endfor %}
   </div>
   <div class="col-3">
 
