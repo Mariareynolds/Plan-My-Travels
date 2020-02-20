@@ -131,6 +131,11 @@ img{
       margin-top: -7rem;
 }
 
+  [class*=grid-]>[class*=col-3].card, [class*=grid_]>[class*=col-3].card, [class~=grid]>[class*=col-3].card {
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
 .card {
   padding: 2rem;
   background-color: white;
