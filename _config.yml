@@ -1,3 +1,4 @@
 collections:
   bespokePlans:
     output: true
+    layout: Login
