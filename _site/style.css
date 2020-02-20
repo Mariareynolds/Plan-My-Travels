@@ -143,7 +143,20 @@ img{
 
 /* -------------------GENERAL SELECTORS------------------- */
 
+h2, h3 {
+  font-family: 'Lato', sans-serif;
+  color: #495057;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 1.3rem;
+}
 
+p{
+  font-family: 'Lato', sans-serif;
+  color: #495057;
+  font-weight: 400;
+  line-height: 2;
+}
 
 
 
@@ -197,6 +210,10 @@ form input[type="checkbox"]{
     padding: .3rem;
     border-radius: 10px;
     white-space: nowrap; */
+
+    .popup-gallery .bg-image {
+      border: 2px solid white;
+    }
 
 form input[type="submit"] {
   background-color:#6C7A89;
@@ -265,6 +282,7 @@ header a{
   text-decoration: none;
   padding: 2%;
   border-right: 2px solid white;
+  text-transform: uppercase;
 }
 header a:last-of-type{
   border: none;
@@ -295,6 +313,7 @@ footer a{
   padding: 2%;
   border-right: 2px solid white;
   display: inline-block;
+  text-transform: uppercase;
 }
 footer a:last-of-type{
   border: none;
