@@ -24,3 +24,26 @@ console.log(step3);
 if(step3 != ""){
   $("#step4").addClass("ready");
 }
+
+// step 4
+var step4 =("#step4 input").val();
+console.log(step4);
+
+if(step4 != ""){
+  $("#step5").addClass("ready");
+}
+// step 5
+var step5 =("#step5 input").val();
+console.log(step5);
+
+if(step3 != ""){
+  $("#step6").addClass("ready");
+}
+
+// step 6
+var step6 =("#step6 input").val();
+console.log(step6);
+
+if(step4 != ""){
+  $("#step7").addClass("ready");
+}
