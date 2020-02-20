@@ -80,6 +80,30 @@
 
 </section>
 
+<script type="text/javascript">
+  console.log("START");
+
+  $(document).ready(function() {
+    console.log("READY");
+
+    $('.map iframe').on('load', function(){
+        console.log("MAP LOADED");
+
+        var iframe = $('.map iframe').children();
+        console.log(iframe.size());
+
+        iframe.on('DOMNodeInserted', function(){
+          console.log("INSERTED");
+          window.setTimeout(addImage, 1000);
+        });
+    });
+  });
+
+  function addImage() {
+    console.log('Popup text: ' + $('.si-wrapper-top').html());
+  }
+</script>
+
 <!-- -------- This is my form page ---------------- -->
 
 <form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
