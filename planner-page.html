@@ -114,7 +114,7 @@ activities:
     <img class="object-fit" src="/images/12apostlessoft.jpg" alt="The 12 Apostles in a light tone">
 
   </div>
-  <div class="col-4_sm-12 padded center">
+  <div id="step1" class="col-4_sm-12 padded center">
     <label for="level"> Pick a country </label>
     <select name="level">
       {% for country in page.country %}
@@ -130,7 +130,7 @@ activities:
 <img src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
 
   </div>
-  <div class="col-3_sm-12 padded center">
+  <div id="step2" class="col-3_sm-12 padded center">
 
  <label for="level"> How long are you planning to stay for? (in days) </label>
 <select name="level">
@@ -146,7 +146,7 @@ activities:
 <img src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
 
   </div>
-  <div class="col-3_sm-12 padded center">
+  <div id="step3" class="col-3_sm-12 padded center">
 
 <label>  Do you have a starting location?  </label>
 <div class="radio checkboxes">
@@ -168,7 +168,7 @@ activities:
   <div class="col-4_sm-12 padded center">
 
  <label>  Do you have a finishing location?  </label>
-<div class="radio">
+<div id="step4" class="radio">
   <label for="finishing-yes">YES
   <input type="radio" id=finishing-yes name="finish" value="YES" /> </label>
 
@@ -183,7 +183,7 @@ activities:
 <img src="/images/whitsundays-view-cropped.jpg" alt="WhitsundaysIslands">
 
   </div>
-  <div class="col-5_sm-12 padded center">
+  <div id="step5" class="col-5_sm-12 padded center">
 
   <h3> Where would you like to stop?  <h3>
 <div class="checkboxes wrap">
@@ -197,50 +197,57 @@ activities:
   </div>
 
 
-  <div class="col-5_sm-hidden">
+  <div id="step6" class="col-5_sm-hidden">
+    <h3>  What modes of transport do you want to use during your trip?  </h3>
+    <div class="checkboxes right">
+    {% for transport in page.transport %}
 
-<img src="/images/island.jpg" alt="Skyview of an island peninsula">
+   <label for="{{transport.select}}">{{transport.select}}
+     <input id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
+     </label>
+     {% endfor %}
+     </div>
+
+
 
   </div>
   <div class="col-3_sm-12 padded center">
 
-     <h3>  What modes of transport do you want to use?  </h3>
-     <div class="checkboxes right">
-     {% for transport in page.transport %}
+     <img src="/images/island.jpg" alt="Skyview of an island peninsula">
 
-    <label for="{{transport.select}}">{{transport.select}}
-      <input id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
-      </label>
-      {% endfor %}
-      </div>
     </div>
 
   <div class="col-4_sm-hidden">
 
-<img src="/images/operahouse.jpg" alt="Opera House at night time- pink sky">
-
-  </div>
-
-
-  <div class="col-3_sm-12 padded center">
-
     <h3>  what activities do you enjoy? </h3>
-      <div class="checkboxes right">
+      <div id="step7" class="checkboxes right">
     {% for activities in page.activities %}
 
     <label for="{{activities.select}}"> {{activities.select}}
       <input id="{{activities.select}}" type="checkbox" name="{{activities.select}}" value="{{activities.select}}"/>
 
     </label>
-{% endfor %}
+  {% endfor %}
     </div>
-    </div>
+
+  </div>
+
+
+  <div id="step8" class="col-3_sm-12 padded center">
+
+    <label for="message"> Any additional comments that would help me plan your trip... </label>
+              <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
+
+
+            </div>
+
+
   <div class="col-3_sm-hidden">
 
 <img src="/images/pinkbeach.jpg" alt="pink beach tones">
 
   </div>
-  <div class="col-4_sm-12 padded center">
+  <div id="step9" class="col-4_sm-12 padded center">
 
 
 

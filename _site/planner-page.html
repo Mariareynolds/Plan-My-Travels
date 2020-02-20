@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="/javascript/header_bar.js"> </script>
     <script src="/javascript/expire-date.js" defer> </script>
+    <script src="/javascript/planner-if-statements.js" defer> </script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script src="/javascript/info-window.js"></script>
     <script src="/javascript/map.js"></script>
@@ -90,7 +91,7 @@
     <img class="object-fit" src="/images/12apostlessoft.jpg" alt="The 12 Apostles in a light tone">
 
   </div>
-  <div class="col-4_sm-12 padded center">
+  <div id="step1" class="col-4_sm-12 padded center">
     <label for="level"> Pick a country </label>
     <select name="level">
       
@@ -109,7 +110,7 @@
 <img src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
 
   </div>
-  <div class="col-3_sm-12 padded center">
+  <div id="step2" class="col-3_sm-12 padded center">
 
  <label for="level"> How long are you planning to stay for? (in days) </label>
 <select name="level">
@@ -223,7 +224,7 @@
 <img src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
 
   </div>
-  <div class="col-3_sm-12 padded center">
+  <div id="step3" class="col-3_sm-12 padded center">
 
 <label>  Do you have a starting location?  </label>
 <div class="radio checkboxes">
@@ -245,7 +246,7 @@
   <div class="col-4_sm-12 padded center">
 
  <label>  Do you have a finishing location?  </label>
-<div class="radio">
+<div id="step4" class="radio">
   <label for="finishing-yes">YES
   <input type="radio" id=finishing-yes name="finish" value="YES" /> </label>
 
@@ -260,7 +261,7 @@
 <img src="/images/whitsundays-view-cropped.jpg" alt="WhitsundaysIslands">
 
   </div>
-  <div class="col-5_sm-12 padded center">
+  <div id="step5" class="col-5_sm-12 padded center">
 
   <h3> Where would you like to stop?  <h3>
 <div class="checkboxes wrap">
@@ -334,118 +335,125 @@
   </div>
 
 
-  <div class="col-5_sm-hidden">
+  <div id="step6" class="col-5_sm-hidden">
+    <h3>  What modes of transport do you want to use during your trip?  </h3>
+    <div class="checkboxes right">
+    
 
-<img src="/images/island.jpg" alt="Skyview of an island peninsula">
+   <label for="Car Hire">Car Hire
+     <input id="Car Hire"  type="checkbox" name="transport" value="Car Hire" />
+     </label>
+     
+
+   <label for="Train">Train
+     <input id="Train"  type="checkbox" name="transport" value="Train" />
+     </label>
+     
+
+   <label for="Greyhound Bus">Greyhound Bus
+     <input id="Greyhound Bus"  type="checkbox" name="transport" value="Greyhound Bus" />
+     </label>
+     
+
+   <label for="Plane">Plane
+     <input id="Plane"  type="checkbox" name="transport" value="Plane" />
+     </label>
+     
+
+   <label for="Bus">Bus
+     <input id="Bus"  type="checkbox" name="transport" value="Bus" />
+     </label>
+     
+     </div>
+
+
 
   </div>
   <div class="col-3_sm-12 padded center">
 
-     <h3>  What modes of transport do you want to use?  </h3>
-     <div class="checkboxes right">
-     
+     <img src="/images/island.jpg" alt="Skyview of an island peninsula">
 
-    <label for="Car Hire">Car Hire
-      <input id="Car Hire"  type="checkbox" name="transport" value="Car Hire" />
-      </label>
-      
-
-    <label for="Train">Train
-      <input id="Train"  type="checkbox" name="transport" value="Train" />
-      </label>
-      
-
-    <label for="Greyhound Bus">Greyhound Bus
-      <input id="Greyhound Bus"  type="checkbox" name="transport" value="Greyhound Bus" />
-      </label>
-      
-
-    <label for="Plane">Plane
-      <input id="Plane"  type="checkbox" name="transport" value="Plane" />
-      </label>
-      
-
-    <label for="Bus">Bus
-      <input id="Bus"  type="checkbox" name="transport" value="Bus" />
-      </label>
-      
-      </div>
     </div>
 
   <div class="col-4_sm-hidden">
 
-<img src="/images/operahouse.jpg" alt="Opera House at night time- pink sky">
-
-  </div>
-
-
-  <div class="col-3_sm-12 padded center">
-
     <h3>  what activities do you enjoy? </h3>
-      <div class="checkboxes right">
+      <div id="step7" class="checkboxes right">
     
 
     <label for="Beach Days"> Beach Days
       <input id="Beach Days" type="checkbox" name="Beach Days" value="Beach Days"/>
 
     </label>
-
+  
 
     <label for="Hiking"> Hiking
       <input id="Hiking" type="checkbox" name="Hiking" value="Hiking"/>
 
     </label>
-
+  
 
     <label for="Watersports"> Watersports
       <input id="Watersports" type="checkbox" name="Watersports" value="Watersports"/>
 
     </label>
-
+  
 
     <label for="Museums"> Museums
       <input id="Museums" type="checkbox" name="Museums" value="Museums"/>
 
     </label>
-
+  
 
     <label for="History"> History
       <input id="History" type="checkbox" name="History" value="History"/>
 
     </label>
-
+  
 
     <label for="Animal Encounters"> Animal Encounters
       <input id="Animal Encounters" type="checkbox" name="Animal Encounters" value="Animal Encounters"/>
 
     </label>
-
+  
 
     <label for="Landmarks"> Landmarks
       <input id="Landmarks" type="checkbox" name="Landmarks" value="Landmarks"/>
 
     </label>
-
+  
 
     <label for="Photography"> Photography
       <input id="Photography" type="checkbox" name="Photography" value="Photography"/>
 
     </label>
-
+  
 
     <label for="Sailing"> Sailing
       <input id="Sailing" type="checkbox" name="Sailing" value="Sailing"/>
 
     </label>
+  
+    </div>
 
-    </div>
-    </div>
+  </div>
+
+
+  <div id="step8" class="col-3_sm-12 padded center">
+
+    <label for="message"> Any additional comments that would help me plan your trip... </label>
+              <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
+
+
+            </div>
+
+
   <div class="col-3_sm-hidden">
 
 <img src="/images/pinkbeach.jpg" alt="pink beach tones">
 
   </div>
-  <div class="col-4_sm-12 padded center">
+  <div id="step9" class="col-4_sm-12 padded center">
 
 
 

@@ -1,8 +1,10 @@
 var expDate = $("#expire-date").html();
+expDate= expDate.split("/");
+var newDate=expDate[1]+","+expDate[0]+","+expDate[2];
+var parseDate=new Date (newDate).getTime();
 var todayDate = Date.now();
-console.log(expDate);
-console.log(todayDate);
 
-var parseDate = new Date(expDate).getTime() / 1000
 
-console.log(parseDate);
+if (parseDate < todayDate) {
+ $("#expirecontent").addClass("hidecontent");
+}

@@ -150,7 +150,9 @@ img{
   /* margin: 2rem; */
 }
 
-
+.ready{
+  background-color: red;
+}
 /* -------------------PADDING & MARGINS------------------- */
 
 
@@ -314,7 +316,7 @@ right: 15vw;
 left: 15vw;
 }
 
-.footer  {
+ .footer h2, .footer p, footer {
   color: white;
   background-color: #B8DDDD;
 }
@@ -352,7 +354,11 @@ div{
 #header_bar.not-transparent {
   opacity:1;
 }
-/*
+
+
+.hidecontent{
+display: none;
+}
 /* -------------------PARENT CHILD SELECTORS------------------- */
 
 
