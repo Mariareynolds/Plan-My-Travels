@@ -90,6 +90,9 @@ img{
     transition: all 3s;
   }
 
+.titles span{
+  font-weight: bold;
+}
 .fab{
   text-align: center;
   font-size: 2.5rem;
