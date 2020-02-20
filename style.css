@@ -69,7 +69,7 @@ img{
 .logo{
   font-family: 'Dancing Script', cursive;
   font-weight: lighter;
-  font
+  padding-left: 2rem;
 }
 
 .calltoactionheart{
@@ -93,6 +93,11 @@ img{
 .titles span{
   font-weight: bold;
 }
+.margin-bottom-7{
+  margin-bottom: -7rem;
+  /* for commentbox on planner page */
+}
+
 
 .fab{
   text-align: center;
