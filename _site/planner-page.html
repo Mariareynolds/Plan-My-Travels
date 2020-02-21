@@ -87,7 +87,7 @@
 
 </section>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   console.log("START");
 
   $(document).ready(function() {
@@ -109,7 +109,7 @@
   function addImage() {
     console.log('Popup text: ' + $('.si-wrapper-top').html());
   }
-</script>
+</script> -->
 
 <!-- -------- This is my form page ---------------- -->
 
@@ -117,12 +117,16 @@
 
 <section class="grid bg-color">
 
-  <div class="col-4_sm-hidden relative">
+  <div class="col-5_sm-hidden relative padded">
 
-    <img class="object-fit" src="/images/12apostlessoft.jpg" alt="The 12 Apostles in a light tone">
+    <img class="object-fit card" src="/images/12apostlessoft.jpg" alt="The 12 Apostles in a light tone">
 
   </div>
-  <div id="step1" class="col-4_sm-12 padded center hiddenform">
+  <div id="step1" class="col-3_sm-12-middle padded center hiddenform relative">
+
+    <div class="formcover">
+    <h3> Step 1 </h3>
+  </div>
     <label for="level"> Pick a country </label>
     <select name="level">
       
@@ -136,13 +140,15 @@
 
 
   </div>
-  <div class="col-4_sm-hidden">
+  <div class="col-4_sm-hidden padded">
 
-<img src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
+<img class="object-fit card" src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
 
   </div>
-  <div id="step2" class="col-3_sm-12 padded center">
-
+  <div id="step2" class="col-2_sm-12-middle padded center relative">
+<div class="formcover">
+<h3> Step 2 </h3>
+</div>
  <label for="level"> How long are you planning to stay for? (in days) </label>
 <select name="level">
 
@@ -250,13 +256,16 @@
 </select>
 
   </div>
-  <div class="col-3_sm-hidden">
+  <div class="col-4_sm-hidden padded">
 
-<img src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
+<img class="object-fit card" src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
 
   </div>
-  <div id="step3" class="col-3_sm-12 padded center">
+  <div id="step3" class="col-2_sm-12-middle padded center relative">
 
+<div class="formcover">
+<h3> Step 3 </h3>
+</div>
 <label>  Do you have a starting location?  </label>
 <div class="radio checkboxes">
   <label for="starting-yes">YES
@@ -268,16 +277,19 @@
 </div>
 
   </div>
-  <div class="col-3_sm-hidden">
+  <div class="col-4_sm-hidden padded">
 
-  <img src="/images/darkapostles.jpg" alt="The 12 Apostles in a light tone">
+  <img class="object-fit card" src="/images/Lake-Mackenzie.jpg" alt="The 12 Apostles in a light tone">
 
   </div>
 
-  <div class="col-4_sm-12 padded center">
+  <div id="step4" class="col-3_sm-12-middle padded center relative">
+<div class="formcover">
+<h3> Step 4 </h3>
+</div>
 
  <label>  Do you have a finishing location?  </label>
-<div id="step4" class="radio">
+<div  class="radio">
   <label for="finishing-yes">YES
   <input type="radio" id=finishing-yes name="finish" value="YES" /> </label>
 
@@ -287,12 +299,15 @@
 </div>
 
   </div>
-  <div class="col-3_sm-hidden">
+  <div class="col-5_sm-hidden padded">
 
-<img src="/images/whitsundays-view-cropped.jpg" alt="WhitsundaysIslands">
+<img class="object-fit card" src="/images/Noosa-surf.jpg" alt="WhitsundaysIslands">
 
   </div>
-  <div id="step5" class="col-5_sm-12 padded center">
+  <div id="step5" class="col-4_sm-12-middle padded center relative">
+<div class="formcover">
+<h3> Step 5 </h3>
+ </div>
 
   <h3> Where would you like to stop?  <h3>
 <div class="checkboxes wrap">
@@ -366,7 +381,11 @@
   </div>
 
 
-  <div id="step6" class="col-5_sm-hidden">
+  <div id="step6" class="col-3_sm-hidden-middle relative">
+    <div class="formcover">
+    <h3> Step 6 </h3>
+  </div>
+
     <h3>  What modes of transport do you want to use during your trip?  </h3>
     <div class="checkboxes right">
     
@@ -400,14 +419,16 @@
 
 
   </div>
-  <div class="col-3_sm-12 padded center">
+  <div class="col-6_sm-12-hidden padded center padded">
 
-     <img src="/images/island.jpg" alt="Skyview of an island peninsula">
+     <img class="object-fit card" src="/images/Noosa-fairy-pools.jpg" alt="Skyview of an island peninsula">
 
     </div>
 
-  <div class="col-4_sm-hidden">
-
+  <div class="col-3_sm-middle relative">
+    <div class="formcover">
+    <h3> Step 7 </h3>
+  </div>
     <h3>  what activities do you enjoy? </h3>
       <div id="step7" class="checkboxes right">
     
@@ -470,8 +491,10 @@
   </div>
 
 
-  <div id="step8" class="col-3_sm-12 padded center">
-
+  <div id="step8" class="col-3_sm-12-middle padded center relative">
+    <div class="formcover">
+    <h3> Step 8 </h3>
+  </div>
     <label for="message"> Any additional comments that would help me plan your trip... </label>
               <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
 
@@ -479,13 +502,15 @@
             </div>
 
 
-  <div class="col-3_sm-hidden">
+  <div class="col-3_sm-hidden padded">
 
-<img src="/images/pinkbeach.jpg" alt="pink beach tones">
+<img class="object-fit card" src="/images/pinkbeach.jpg" alt="pink beach tones">
 
   </div>
-  <div id="step9" class="col-4_sm-12 padded center">
-
+  <div id="step9" class="col-4_sm-12-middle padded center relative">
+    <div class="formcover">
+    <h3> Step 9 </h3>
+  </div>
 
 
       <label for="name"> Your Name </label>
@@ -497,9 +522,9 @@
 <p> <input type="submit" value="Submit for a quote"> </p>
 
   </div>
-  <div class="col-2_sm-hidden">
+  <div class="col-2_sm-hidden padded">
 
-<img src="/images/pinkbluesand.jpg" alt="pink blue sand">
+<img class="object-fit card" src="/images/Koala.jpg" alt=" Koala asleep in a tree">
 
   </div>
 </section>

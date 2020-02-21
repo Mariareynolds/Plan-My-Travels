@@ -1,49 +1,100 @@
+  $(document).ready(function(){
 
-// step 1
-var step1 = $("#step1 select").val();
+    $("#step1").on("mouseover", function(){
+      if (true || $("#step1").hasClass("ready")){
+          $("#step1").addClass("hidecover");
+      }
+    });
 
-console.log(step1);
-if (step1 != ""){
-  $("#step2").addClass("ready");
-}
+  // step 1
+  var step1 = $("#step1 select").val();
+
+  console.log(step1);
+  if (step1 != ""){
+    $("#step2").addClass("ready");
+  }
+  $("#step2").on("mouseover", function(){
+    if ($("#step2").hasClass("ready")){
+        $("#step2").addClass("hidecover");
+    }
+  });
+
+  //step 2
+  var step2 = $("#step2 select").val();
+  console.log(step2);
+
+  if (step2 != ""){
+    $("#step3").addClass("ready");
+  }
+  $("#step3").on("mouseover", function(){
+    if ($("#step3").hasClass("ready")){
+      $("#step3").addClass("hidecover");
+    }
+  });
+
+  // step 3
+  var step3 = $("#step3 input").val();
+  console.log(step3);
+
+  $('#step3 input').on("change", function(){
+    if(step3 != ""){
+      $("#step4").addClass("ready");
+    }
+  });
+
+  $("#step4").on("mouseover", function(){
+    if ($("#step4").hasClass("ready")){
+      $("#step4").addClass("hidecover");
+    }
+  });
 
 
-//step 2
-var step2 = $("#step2 select").val();
-console.log(step2);
-
-if (step2 != ""){
-  $("#step3").addClass("ready");
-}
+  // step 4
+  var step4 = $("#step4 input").val();
+  console.log(step4);
 
 
-// step 3
-var step3 =("#step3 input").val();
-console.log(step3);
+  $('#step4 input').on("change", function(){
+    if(step4 != ""){
+      $("#step5").addClass("ready");
+    }
+  });
+  $("#step5").on("mouseover", function(){
+    if ($("#step5").hasClass("ready")){
+      $("#step5").addClass("hidecover");
+    }
+  });
 
-if(step3 != ""){
-  $("#step4").addClass("ready");
-}
+  // step 5
+  var step5 = $("#step5 input").val();
+  console.log(step5);
 
-// step 4
-var step4 =("#step4 input").val();
-console.log(step4);
+  $('#step4 input').on("change", function(){
+    if(step4 != ""){
+      $("#step5").addClass("ready");
+    }
+  });
+  $("#step5").on("mouseover", function(){
+    if ($("#step5").hasClass("ready")){
+      $("#step5").addClass("hidecover");
+    }
+  });
 
-if(step4 != ""){
-  $("#step5").addClass("ready");
-}
-// step 5
-var step5 =("#step5 input").val();
-console.log(step5);
+  // step 6
+  var step6 = $("#step6 input").val();
+  console.log(step6);
 
-if(step3 != ""){
-  $("#step6").addClass("ready");
-}
+  $('#step6 input').on("change", function(){
+    if(step6 != ""){
+    $("#step7").addClass("ready");
+    $("#step8").addClass("ready");
+    $("#step9").addClass("ready");
+    }
+  });
+  $("#step7").on("mouseover", function(){
+    if ($("#step7").hasClass("ready")){
+      $("#step7").addClass("hidecover");
+    }
+  });
 
-// step 6
-var step6 =("#step6 input").val();
-console.log(step6);
-
-if(step4 != ""){
-  $("#step7").addClass("ready");
-}
+});
