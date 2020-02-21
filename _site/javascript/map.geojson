@@ -1,0 +1,51 @@
+{
+"type": "FeatureCollection",
+"features":
+    [
+      {
+        "type": "Feature",
+        "id": 1,
+        "properties":
+            {
+                "city": "Melbourne",
+                "image": "/images/wategosbeach.jpg",
+                "description": "my paragraph here!"
+            },
+        "geometry":
+            {
+                "type": "Point",
+                "coordinates": [ -71.157609, 42.355988 ]
+            }
+      },
+      {
+        "type": "Feature",
+        "id": 2,
+        "properties":
+            {
+                "city": "Sydney",
+                "image": "/images/gordansbay.JPG",
+                "description": "<p class='my-description'>my paragraph here!</p>"
+            },
+        "geometry":
+            {
+                "type": "Point",
+                "coordinates": [ -71.257609, 42.355988 ]
+            }
+      },
+      {
+        "type": "Feature",
+        "id": 3,
+        "properties":
+            {
+                "city": "Sydney",
+                "image": "/images/gordansbay.JPG",
+                "description": "<p class='my-description'>my paragraph here!</p>"
+            },
+        "geometry":
+            {
+                "type": "Point",
+                "coordinates": [ -71.257609, 42.355988 ]
+            }
+      }
+    ]
+}

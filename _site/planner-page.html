@@ -17,6 +17,12 @@
     <script src="/javascript/planner-if-statements.js" defer> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer></script>
     <script src="/javascript/lightbox.js"></script>
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
+    <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+      #map{ height: 100% }
+    </style>
 
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script src="/javascript/info-window.js"></script>
@@ -38,6 +44,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700i|Lato:300i,400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+
+
   </head>
   <body>
 
@@ -629,7 +637,7 @@
       <!-- column -->
       <div class="col-5_sm-12 padded">
         <h2 class="logo"> Plans My Travels </h2>
-        <p> Designed and created by Maria Francesca Reynolds </p>
+        <p> Website designed and created by Maria Francesca Reynolds </p>
       </div>
       <div class="col-1 sm-hidden"></div>
       <!-- column -->
@@ -655,5 +663,40 @@
 
 
   </footer>
+
+
+
+  <script>
+
+  // initialize the map
+  var map = L.map('map', {
+    scrollWheelZoom: false
+}).setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  // load GeoJSON from an external file
+  $.getJSON("/javascript/map.geojson",function(data){
+    var mapIcon = L.icon({
+      iconUrl: 'https://andywoodruff.com/maptime-leaflet/rat.png',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: mapIcon});
+        marker.bindPopup('<div class="popup-content"><img src="'+ feature.properties.image +'"><h3>' + feature.properties.city + '<h3/><div class="popup-description">' + feature.properties.description + '</div></div>');
+        return marker;
+      }
+    }).addTo(map);
+  });
+
+  </script>
+
   </body>
 </html>

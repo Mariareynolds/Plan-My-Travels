@@ -1,0 +1,376 @@
+---
+layout: default
+banner-image: /images/whitsundays-view-cropped.jpg
+country:
+- select: Australia
+- select: More to come!
+days:
+- select: 1
+- select: 2
+- select: 3
+- select: 4
+- select: 5
+- select: 6
+- select: 7
+- select: 8
+- select: 9
+- select: 10
+- select: 11
+- select: 12
+- select: 13
+- select: 14
+- select: 15
+- select: 16
+- select: 17
+- select: 18
+- select: 19
+- select: 20
+- select: 21
+- select: 22
+- select: 23
+- select: 24
+- select: 25
+- select: 26
+- select: 27
+- select: 28
+- select: 29
+- select: 30
+- select: 31
+- select: 32
+- select: 33
+- select: 34
+- select: 35
+- select: 36
+- select: 37
+- select: 38
+- select: 39
+- select: 40
+- select: 41
+- select: 42
+- select: 43
+- select: 44
+- select: 45
+- select: 46
+- select: 47
+- select: 48
+- select: 49
+- select: 50
+
+stops:
+- select: Adelaide
+- select: Great Ocean Road
+- select: melbourne
+- select: Canberra
+- select: Jervis Bay
+- select: Woollongong
+- select: Sydney
+- select: Central Coast
+- select: Newcastle
+- select: Byron Bay
+- select: Gold Coast
+- select: Brisbane
+- select: Sunshine Coast
+- select: Noosa
+- select: Fraser Island
+- select: Whitsundays
+- select: Airlis Beach
+- select: Cairns
+- select: Perth
+- select: Rottnest Island
+- select: Exmouth
+transport:
+- select: Car Hire
+- select: Train
+- select: Greyhound Bus
+- select: Plane
+- select: Bus
+activities:
+- select: Beach Days
+- select: Hiking
+- select: Watersports
+- select: Museums
+- select: History
+- select: Animal Encounters
+- select: Landmarks
+- select: Photography
+- select: Sailing
+start:
+- select: Adelaide
+- select: Great Ocean Road
+- select: melbourne
+- select: Canberra
+- select: Jervis Bay
+- select: Woollongong
+- select: Sydney
+- select: Central Coast
+- select: Newcastle
+- select: Byron Bay
+- select: Gold Coast
+- select: Brisbane
+- select: Sunshine Coast
+- select: Noosa
+- select: Fraser Island
+- select: Whitsundays
+- select: Airlis Beach
+- select: Cairns
+- select: Perth
+- select: Rottnest Island
+- select: Exmouth
+finish:
+- select: Adelaide
+- select: Great Ocean Road
+- select: melbourne
+- select: Canberra
+- select: Jervis Bay
+- select: Woollongong
+- select: Sydney
+- select: Central Coast
+- select: Newcastle
+- select: Byron Bay
+- select: Gold Coast
+- select: Brisbane
+- select: Sunshine Coast
+- select: Noosa
+- select: Fraser Island
+- select: Whitsundays
+- select: Airlis Beach
+- select: Cairns
+- select: Perth
+- select: Rottnest Island
+- select: Exmouth
+---
+
+<!-- --------This is my map with popouts---------- -->
+<section class="map comment box-fix">
+  <div  class="comment-box margin-bottom-7">
+
+  <a href="#" class="comment-box-text">
+     Double click the map to zoom in and select the drop pins for more information for each location </a>
+
+   </div>
+
+  <!-- <iframe src="https://snazzymaps.com/embed/219502" width="100%" height="600px" style="border:none;"></iframe> -->
+
+
+<div id="map"></div>
+
+</section>
+
+<!-- <script type="text/javascript">
+  console.log("START");
+
+  $(document).ready(function() {
+    console.log("READY");
+
+    $('.map iframe').on('load', function(){
+        console.log("MAP LOADED");
+
+        var iframe = $('.map iframe').children();
+        console.log(iframe.size());
+
+        iframe.on('DOMNodeInserted', function(){
+          console.log("INSERTED");
+          window.setTimeout(addImage, 1000);
+        });
+    });
+  });
+
+  function addImage() {
+    console.log('Popup text: ' + $('.si-wrapper-top').html());
+  }
+</script> -->
+
+<!-- -------- This is my form page ---------------- -->
+
+<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
+
+<section class="grid bg-color">
+  <div class="col-5_sm-hidden relative padded">
+    <img class="object-fit card" src="/images/12apostlessoft.jpg" alt="The 12 Apostles in a light tone">
+  </div>
+  <div id="step1" class="col-3_sm-12-middle padded center hiddenform relative">
+    <div class="formcover">
+      <h3> Step 1 </h3>
+    </div>
+    <label for="level"> Pick a country </label>
+    <select name="level">
+      {% for country in page.country %}
+      <option required value="{{ country.select }}"> {{ country.select }} </option>
+
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-4_sm-hidden padded">
+    <img class="object-fit card" src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
+  </div>
+  <div id="step2" class="col-2_sm-12-middle padded center relative">
+    <div class="formcover">
+      <h3> Step 2 </h3>
+    </div>
+    <label for="level"> How long are you planning to stay for? (in days) </label>
+    <select name="level">
+    {% for days in page.days %}
+      <option required value="{{days.select}}"> {{days.select}} </option>
+    {% endfor %}
+    </select>
+  </div>
+  <div class="col-4_sm-hidden padded">
+    <img class="object-fit card" src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
+  </div>
+  <div id="step3" class="col-2_sm-12-middle padded center relative">
+    <div class="formcover">
+      <h3> Step 3 </h3>
+    </div>
+    <label>  Do you have a starting location?  </label>
+    <div class="radio checkboxes">
+      <label for="starting-yes">YES
+        <input class="start-location" type="radio" id=starting-yes name="start" value="YES" />
+      </label>
+      <label for="starting-no">NO
+        <input type="radio" id=starting-no name="start" value="NO" />
+      </label>
+      <div class="sub-question">
+      <label for="level"> Select your finishing location </label>
+      <select name="level">
+
+       {% for start in page.start %}
+         <option value="{{start.select}}"> {{start.select}} </option>
+       {% endfor %}
+       </select>
+       </div>
+    </div>
+
+  </div>
+  <div class="col-4_sm-hidden padded">
+
+  <img class="object-fit card" src="/images/Lake-Mackenzie.jpg" alt="The 12 Apostles in a light tone">
+
+  </div>
+
+  <div id="step4" class="col-3_sm-12-middle padded center relative">
+<div class="formcover">
+<h3> Step 4 </h3>
+</div>
+
+ <label>  Do you have a finishing location?  </label>
+<div  class="radio">
+  <label for="finishing-yes">YES
+  <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
+
+
+  <label for="finishing-no">NO
+  <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
+
+    <div class="finish-question"> <label for="level"> Select your finishing location </label>
+    <select name="level">
+
+     {% for finish in page.finish %}
+       <option required value="{{finish.select}}"> {{finish.select}} </option>
+     {% endfor %}
+     </select>
+     </div>
+</div>
+
+  </div>
+  <div class="col-5_sm-hidden padded center">
+
+<img class="object-fit card" src="/images/Noosa-surf.jpg" alt="WhitsundaysIslands">
+
+  </div>
+  <div id="step5" class="col-4_sm-12-middle relative">
+<div class="formcover">
+<h3> Step 5 </h3>
+ </div>
+
+  <h3> Where would you like to stop?  <h3>
+<div class="checkboxes wrap">
+
+{% for stops in page.stops %}
+ <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" name="Stops" value="{{stops.select}}" />
+ </label>
+   {% endfor %}
+</div>
+
+  </div>
+
+
+  <div id="step6" class="col-4_sm-hidden-middle relative">
+    <div class="formcover">
+    <h3> Step 6 </h3>
+  </div>
+
+    <h3>  What modes of transport do you want to use during your trip?  </h3>
+    <div class="checkboxes right">
+    {% for transport in page.transport %}
+
+   <label for="{{transport.select}}">{{transport.select}}
+     <input id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
+     </label>
+     {% endfor %}
+     </div>
+
+
+
+  </div>
+  <div class="col-5_sm-12-hidden padded center padded">
+
+     <img class="object-fit card" src="/images/Noosa-fairy-pools.jpg" alt="Skyview of an island peninsula">
+
+    </div>
+
+  <div id="step7" class="col-3_sm-middle relative">
+    <div class="formcover">
+    <h3> Step 7 </h3>
+  </div>
+    <h3>  what activities do you enjoy? </h3>
+      <div  class="checkboxes right">
+    {% for activities in page.activities %}
+
+    <label for="{{activities.select}}"> {{activities.select}}
+      <input id="{{activities.select}}" type="checkbox" name="{{activities.select}}" value="{{activities.select}}"/>
+
+    </label>
+  {% endfor %}
+    </div>
+
+  </div>
+
+
+  <div id="step8" class="col-3_sm-12-middle padded center relative">
+    <div class="formcover">
+    <h3> Step 8 </h3>
+  </div>
+    <label for="message"> Any additional comments that would help me plan your trip... </label>
+              <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
+
+
+            </div>
+
+
+  <div class="col-3_sm-hidden padded center">
+
+<img class="object-fit card" src="/images/pinkbeach.jpg" alt="pink beach tones">
+
+  </div>
+  <div id="step9" class="col-3_sm-12-middle padded center relative">
+    <div class="formcover">
+    <h3> Step 9 </h3>
+  </div>
+
+
+      <label for="name"> Your Name </label>
+      <input required type="text" name="name" id="name" placeholder="Name" />
+
+      <label for="email"> Your Email </label>
+      <input type="email" name="_replyto" required id="email" placeholder="Email" />
+
+<p> <input type="submit" value="Submit for a quote"> </p>
+
+  </div>
+  <div class="col-3_sm-hidden padded center">
+
+<img class="object-fit card" src="/images/Koala.jpg" alt=" Koala asleep in a tree">
+
+  </div>
+</section>
+</form>
