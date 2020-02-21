@@ -15,6 +15,9 @@
     <script src="/javascript/header_bar.js"> </script>
     <script src="/javascript/expire-date.js" defer> </script>
     <script src="/javascript/planner-if-statements.js" defer> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer></script>
+    <script src="/javascript/lightbox.js"></script>
+
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script src="/javascript/info-window.js"></script>
     <script src="/javascript/map.js"></script>
@@ -31,6 +34,7 @@
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700i|Lato:300i,400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
@@ -41,16 +45,16 @@
   <!-- --------------------- THIS IS THE HEADER --------------- -->
 
 
-    <header class="fixed grid-middle ">
+    <header class="fixed  header ">
       <div id="header_bar">&nbsp;</div>
-  <h1 class="col-6 logo"> Plan My Travels </h1>
-    <nav class="col-6">
-      <a href="/index"> Home</a>
-      <a href="/planner-page"> Plan My Travels </a>
-      <a href="/bespokeplans/dan"> Login </a>
-    </nav>
-
-
+  <h1 class="logo"> Plan My Travels </h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/planner-page">Plan My Travels </a></li>
+    <li><a href="/bespokeplans/dan">Login </a></li>
+  </ul>
     <hr>
 
 
@@ -148,7 +152,7 @@
 
         <p class="author"> Emilio </p>
         <p class="company"> EON </p>
-        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
       </div>
     </div>
@@ -158,44 +162,62 @@
 
 <!-- -------- THIS IS THE  HOVER GALLERY -------->
 
-<section class="padded centered">
+<section class="padded center">
 
-  <h2> Our Clients </h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  <h2> Gallery </h2>
+
 
     <div class="popup-gallery grid-center padded-1">
 
       <a class="col-3_sm-6_xs-12" href="/images/camp-cove-beach.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/camp-cove-beach.jpg')"></div>
+        <img class="bg-image" src="/images/camp-cove-beach.jpg">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/Huskissonsjpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12" href="/images/Huskissons.jpg" title="this is where you write the caption">
+        <img class="bg-image" src="/images/Huskissons.jpg">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12" href="/images/bluemountainsmaria.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/bluemountainsmaria.JPG">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12" href="/images/gordonsbay.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/gordonsbay.JPG">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+
+      <a class="col-3_sm-6_xs-12" href="/images/wategosbeach.JPG" title="this is where you write the caption">
+        <img src="/images/wategosbeach.JPG">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12" href="/images/greatoceanroad.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/greatoceanroad.JPG">
+        </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/noosa-fairy-pools.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/noosa-fairy-pools.JPG">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12" href="/images/Kangaroo.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/Kangaroo.JPG">
+      </a>
+      <a class="col-3_sm-6_xs-12" href="/images/spittomanly.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/spittomanly.JPG">
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" title="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12" href="/images/Tomaree-mountain.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/Tomaree-mountain.JPG">
       </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/Noosa-surf.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/Noosa-surf.JPG">
+      </a>
+
+      <a class="col-3_sm-6_xs-12" href="/images/rottnestisland.JPG" title="this is where you write the caption">
+        <img class="bg-image" src="/images/rottnestisland.JPG">
+      </a>
+
+
 
     </div>
 

@@ -15,6 +15,9 @@
     <script src="/javascript/header_bar.js"> </script>
     <script src="/javascript/expire-date.js" defer> </script>
     <script src="/javascript/planner-if-statements.js" defer> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer></script>
+    <script src="/javascript/lightbox.js"></script>
+
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script src="/javascript/info-window.js"></script>
     <script src="/javascript/map.js"></script>
@@ -31,6 +34,7 @@
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
   <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700i|Lato:300i,400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
@@ -41,16 +45,16 @@
   <!-- --------------------- THIS IS THE HEADER --------------- -->
 
 
-    <header class="fixed grid-middle ">
+    <header class="fixed  header ">
       <div id="header_bar">&nbsp;</div>
-  <h1 class="col-6 logo"> Plan My Travels </h1>
-    <nav class="col-6">
-      <a href="/index"> Home</a>
-      <a href="/planner-page"> Plan My Travels </a>
-      <a href="/bespokeplans/dan"> Login </a>
-    </nav>
-
-
+  <h1 class="logo"> Plan My Travels </h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/planner-page">Plan My Travels </a></li>
+    <li><a href="/bespokeplans/dan">Login </a></li>
+  </ul>
     <hr>
 
 

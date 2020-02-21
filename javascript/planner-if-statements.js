@@ -49,6 +49,15 @@
   });
 
 
+
+$('#step3 input').on("change", function(){
+if($('.start-location').is(':checked'))  {
+  $(".sub-question").addClass("visible");
+} else {
+  $(".sub-question").removeClass("visible");
+}
+});
+
   // step 4
   var step4 = $("#step4 input").val();
   console.log(step4);
@@ -65,6 +74,15 @@
     }
   });
 
+
+  $('#step4 input').on("change", function(){
+  if($('.finish-location').is(':checked'))  {
+    $(".finish-question").addClass("visible");
+  } else {
+    $(".finish-question").removeClass("visible");
+  }
+  });
+
   // step 5
   var step5 = $("#step5 input").val();
   console.log(step5);
@@ -74,26 +92,45 @@
       $("#step5").addClass("ready");
     }
   });
+
   $("#step5").on("mouseover", function(){
     if ($("#step5").hasClass("ready")){
       $("#step5").addClass("hidecover");
     }
   });
 
+  $('#step5').on("click", function(){
+    $("#step6").addClass("ready");
+  });
+
+  $("#step6").on("mouseover", function(){
+    if ($("#step6").hasClass("ready")){
+      $("#step6").addClass("hidecover");
+    }
+  });
+
   // step 6
   var step6 = $("#step6 input").val();
-  console.log(step6);
 
-  $('#step6 input').on("change", function(){
-    if(step6 != ""){
+  $('#step6').on("click", function(){
     $("#step7").addClass("ready");
     $("#step8").addClass("ready");
     $("#step9").addClass("ready");
-    }
   });
+
   $("#step7").on("mouseover", function(){
     if ($("#step7").hasClass("ready")){
       $("#step7").addClass("hidecover");
+    }
+  });
+  $("#step8").on("mouseover", function(){
+    if ($("#step8").hasClass("ready")){
+      $("#step8").addClass("hidecover");
+    }
+  });
+  $("#step9").on("mouseover", function(){
+    if ($("#step9").hasClass("ready")){
+      $("#step9").addClass("hidecover");
     }
   });
 
