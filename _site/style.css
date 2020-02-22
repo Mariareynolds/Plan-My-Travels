@@ -36,6 +36,9 @@ img{
 .padded{
   padding: 3%;
 }
+.padded-1{
+  padding: 1%;
+}
 
 .bg-color{
   background-color: #D8DDDD;
@@ -240,6 +243,8 @@ img{
 .bluetext{
   color: #C8F5F5;
   font-size: 3rem;
+  font-family: "Nunito";
+  font-weight: 300;
 }
 
 /* ---------------------.typefont{------------------- */
