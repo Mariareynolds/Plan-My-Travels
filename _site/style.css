@@ -39,6 +39,13 @@ img{
 .padded-1{
   padding: 1%;
 }
+.padding-top{
+  padding-top: 2rem;
+}
+
+.padding-bottom{
+  padding-bottom: 2.5rem;
+}
 
 .bg-color{
   background-color: #D8DDDD;
@@ -124,7 +131,7 @@ img{
 
 .comment-box{
   position: sticky;
-  top: 5rem;
+  top: 5.5rem;
   right: 0;
   border-radius: 0;
   width: 13rem;
@@ -144,10 +151,10 @@ img{
       margin-top: -7rem;
 }
 
-  [class*=grid-]>[class*=col-3].card, [class*=grid_]>[class*=col-3].card, [class~=grid]>[class*=col-3].card {
+  /* [class*=grid-]>[class*=col-3].card, [class*=grid_]>[class*=col-3].card, [class*=grid]>[class*=col-3].card {
     flex-basis: 30%;
     max-width: 30%;
-}
+} */
 
 .card {
   padding: 2rem;
@@ -212,7 +219,7 @@ img{
 
 .blueline{
   border: 2px solid #C8F5F5;
-  bottom: -2rem;
+  bottom: -1rem;
   left: 25%;
   right: 25%;
 
