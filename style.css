@@ -9,13 +9,14 @@
 }
 
 img{
-  max-width:100%;
+  max-width: 100%;
   height: auto;
   text-align: center;
 }
 
 [class*=col-], [class*=col_], [class~=col]{
   padding: 0;
+  width: 100%;
 }
 
 [class*=grid-], [class*=grid_], [class~=grid] {
@@ -491,7 +492,6 @@ display: none;
 
 .header {
   background-color: transparent;
-
   position: fixed;
   width: 100%;
   z-index: 6;
@@ -521,7 +521,7 @@ display: none;
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 10px 50px;
   text-decoration: none;
 }
 
@@ -616,4 +616,8 @@ display: none;
   .header .menu-icon {
     display: none;
   }
+}
+
+@media{
+  max-width: 600px;
 }
