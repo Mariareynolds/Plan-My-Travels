@@ -637,8 +637,8 @@ button{
     padding top: 5rem;
 }
 }
-@media{
-  .card{
+@media(max-width: 48em){
+  .bg-white.card{
     flex-basis: 100%;
     max-width: 100%;
 }
