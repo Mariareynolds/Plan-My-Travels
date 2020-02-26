@@ -143,6 +143,7 @@ img{
 }
 .comment-box-fix{
       margin-top: -7rem;
+      display: block;
 }
 
   [class*=grid-]>[class*=col-3].card, [class*=grid_]>[class*=col-3].card, [class~=grid]>[class*=col-3].card {
@@ -484,6 +485,7 @@ display: none;
 #text{
 display:none;
 }
+
 .btn-container{
   margin: auto;
   height:44px;
@@ -630,6 +632,17 @@ button{
 
 /* 48em = 768px */
 
+@media (max-width: 65em){
+  .mobile-init{
+    order: -3;
+  }
+  .comment-box-fix{
+        display: inline-block;
+        width: 100%;
+        margin-top: 2rem;
+  }
+}
+
 @media{
   .map{
     padding-left: 2rem;
@@ -637,11 +650,14 @@ button{
     padding top: 5rem;
 }
 }
-@media(max-width: 48em){
-  .bg-white.card{
+@media(max-width: 65em){
+  [class*=grid]>[class*=col-3].card{
     flex-basis: 100%;
     max-width: 100%;
 }
+/* .comment-box{
+  display: none;
+} */
 }
 
 @media (min-width: 48em) {
@@ -659,11 +675,17 @@ button{
   .header .menu-icon {
     display: none;
   }
+  /* .card{
+    font-size: 0.8rem;
+  } */
 }
 
 @media(max-width:600px){
   .hidden{
     display: none;
 
+  }
+  .comment-box{
+    display: none;
   }
 }
