@@ -192,11 +192,16 @@ img{
   font-size: 2.5rem;
   text-shadow: text-shadow: 4px 3px 0 white;
   color: white;
+  font-family: 'Bad Script', cursive;
+  border: 2px solid white;
+  text-transform: none;
 }
 
 .hidecover .formcover{
   display: none;
 }
+
+
 .sub-question{
   visibility: hidden;
 }
