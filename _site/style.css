@@ -284,7 +284,15 @@ img{
 
 /* -------------------GENERAL SELECTORS------------------- */
 
-h2, h3 {
+h2{
+  font-family: 'Lato', sans-serif;
+  color: #495057;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 1.3rem;
+}
+
+h3{
   font-family: 'Lato', sans-serif;
   color: #495057;
   font-weight: lighter;
@@ -576,6 +584,7 @@ button:hover {
   padding: 20px 20px;
   border-right: 1px solid white;
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
 }
 
 /* .header li a:hover,
