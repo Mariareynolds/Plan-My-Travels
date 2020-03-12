@@ -21,12 +21,12 @@
     <script src="/javascript/header_bar.js" defer> </script>
     <script src="/javascript/expire-date.js" defer> </script>
     <script src="/javascript/planner-if-statements.js" defer> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer></script>
-    <script src="/javascript/lightbox.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer> </script>
+    <script src="/javascript/lightbox.js" defer></script>
+    <script src="/javascript/read-more-button.js" defer></script>
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato:100,300,300i,400,700|Nunito:300,400,700|Roboto:100i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700|Nunito:300,400,700&display=swap" rel="stylesheet">
+
+
     <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
@@ -51,7 +51,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700i|Lato:300i,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script:400,500,600,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 
 
@@ -97,22 +97,49 @@
 
   <!----------- THIS IS THE INFO WINDOW------ -->
 <section class="grid-spaceAround  padded padding-bottom">
-  <div class="col-3_md-12 padded card media">
-    <h2 class="padding-bottom"> What to expect</h2>
+  <div class="col-5_md-12 padded bg-colorblue margin-bottom  card media">
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> What to expect</h2>
     <p>Plan My Travels offers bespoke itineraries making it a little tricky to explains exactly how much each itinerary will cost as this does depend on how long your itinerary is. Itineraries will start at just £7 or $15 AUD for 1 week and will go up to a maximum of £40 or $80 for a 50 day itinerary, which would cover Melbourne, Sydney, East Coast and Adelaide.
     All you have to do is complete the questions on the planner page and submit for a quote. You will receive a quote and a payment link within 24hours and once payment is received you will receive a link to your own personalised login page detailing your trip day by day. It’s as simple as that. If you have more questions you are welcome you use the additional comments box when submitting your quote and we will come back to you to help your with your plans as best as we can. </p>
   </div>
-  <div class="col-3_md-12 mobile-init padded media bg-colorblue card">
+  <!-- <div class="col-12_md-12 mobile-init padded media bg-colorblue card">
     <img class="padding-bottom"src="/images/mariareynolds.jpg" alt="Founder of Plan My Travels">
-    <h2 class="padding-bottom"> Who is behind the scenes </h2>
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> Who is behind the scenes </h2>
     <p> </p>
-    <h2> What do we do? </h2>
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> What do we do? </h2>
     <p> Plan my travels explores destinations all over Australia (and more countries in the pipeline) showing off the best of each location. Once you have selected which locations appeal to you you will submit your preferences and will then be sent a full itinerary for your own trip. </p>
-  </div>
-  <div class="col-3_md-12 padded card media">
-    <h2 class="padding-bottom"> Why use Plan My Travels </h2>
+  </div> -->
+  <div class="col-5_md-12 padded bg-colorblue margin-bottom card media">
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> Why use Plan My Travels </h2>
     <p>Are you looking to travel a country you know nothing about? Starting a trip with no ideal start or finishing point? Or are you simply working long hours and don’t have the time to do your research but you also don’t want to miss out on anything. Plan my travels was born to fill that void. This website will create custom itineraries for your trip based on the locations you’d like to visit, how long you’re staying and you personal interests. Answer just 9 short questions to allow us to customise a bespoke itinerary that will not only point out where you should visit during your stay but also how to get from A to B and also a few tips on restaurants and hotels along the way. All destinations have been personally visited by the founder of Plan My Travels meaning these locations have been hand picked and are considered worthy of a visit.</p>
   </div>
+  <div class="col-7_md-12 mobile-init padded media bg-colorblue card">
+    <div class="image1"> <img class="padding-bottom "src="/images/mariareynolds.jpg" alt="Founder of Plan My Travels">
+    </div>
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> Who is behind the scenes </h2>
+    <p> </p>
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> What do we do? </h2>
+    <p> Plan my travels explores destinations all over Australia (and more countries in the pipeline) showing off the best of each location. Once you have selected which locations appeal to you you will submit your preferences and will then be sent a full itinerary for your own trip. </p>
+  </div>
+
 </section>
 
 <!-- 
@@ -155,8 +182,9 @@
     <div class="col-3_md-12_sm-12 padded bg-white card">
       <div class=" light-bg">
         <!-- <img src="#" class="profile"> -->
-        <p class="author  bg-white"> Amanda </p>
+
         <p class="bg-white">"Maria listened to everything I wanted to do but remained realistic with my expectations and gave reasoning behind choices. She somehow managed to find a way to incorporate all I wanted to do whilst I was in Australia and in an easy to do way. She also recommended so many places that ended up being my favourite that were slightly off the beaten track as well as recommending places to go within areas such as restaurants etc which was very handy. She not only recommended the plan in terms of days and locations but also helped suggest the best routes for each one.</p>
+
           <div>
             <br>
           <span id="more-text-button"> <p class="more-text"> I wholeheartedly recommend Maria her help was invaluable and made my trip amazing! Without her help I simply wouldn’t have been able to do everything I wanted and see as much as I did"</p>
@@ -165,6 +193,7 @@
         <div class="more-text-button">
             <button id="toggle">Read More</button>
         </div>
+        <p class="author  bg-white"> Amanda </p>
         <!-- <span> &#9733; &#9733; &#9733; &#9733; &#9733; </span> -->
       </div>
     </div>
@@ -172,9 +201,10 @@
     <div class="col-3_md-12_sm-12 padded bg-white card">
       <div class=" light-bg">
 
-        <p class="author"> Sophie & Luke </p>
+
         <p>"Me and my bf are heading to aus for 6 weeks! it’s our first time and we were both feeling a little overwhelmed and totally clueless about what we should spend our time doing/where we should go etc. Maria’s advice has been absolutely priceless, not only have we been able to map out our route with her guidance, but with her own experience she’s opened our eyes to places that we would’ve otherwise never have thought of going to. Now we are excited, chilled and can’t wait to live all of her recommendations. Thank you Maria, we can’t thank you enough!"
       </p>
+      <p class="author"> Sophie & Luke </p>
 
       </div>
     </div>
@@ -182,10 +212,10 @@
     <div class="col-3_md-12_sm-12 padded bg-white card">
       <div class="light-bg">
 
-        <p class="author"> Emilio </p>
+
         <p class="company"> EON </p>
         <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
+        <p class="author"> Emilio </p>
       </div>
     </div>
 

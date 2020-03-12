@@ -62,9 +62,14 @@ img{
   background-image: url('/images/whitsundays-view.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 80vh;
+  min-height: 40vh;
 }
 
+.image1{
+  max-width: 500px;
+  display: block;
+  margin:auto;
+}
 
 .sydney{
   color: lightblue;
@@ -104,7 +109,9 @@ img{
   /* for commentbox on planner page */
 }
 
-
+.margin-bottom{
+  margin-bottom: 2rem;
+}
 .fab{
   text-align: center;
   font-size: 2.5rem;
@@ -160,16 +167,11 @@ img{
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-.bg-colorblue .card {
+.bg-colorblue {
   background-color: lightblue;
 }
 
-.map{
-  padding-left: 8rem;
-  padding-right: 8rem;
-  padding top: 5rem;
-  /* margin: 2rem; */
-}
+
 
 /* .ready{
   background-color: red;
@@ -258,6 +260,14 @@ img{
   font-size: 3rem;
 }
 
+.author{
+  font-family: 'Lato', 300i;
+  color: #495057;
+  font-weight: 300i;
+  line-height: 2;
+
+
+}
 /* ---------------------.typefont{------------------- */
   @keyframes blink{
     0% { opacity:1; }
@@ -278,7 +288,7 @@ img{
 .cursor {
     animation: blink 0.7s infinite;
 }
-}
+
 /* -------------------PADDING & MARGINS------------------- */
 
 
@@ -295,7 +305,7 @@ h2{
 h3{
   font-family: 'Lato', sans-serif;
   color: #495057;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 1.3rem;
 }
@@ -329,6 +339,7 @@ form label {
   font-weight: bold;
   text-transform: uppercase;
 display: block;
+min-height: 3rem;
 
 
 }
@@ -466,6 +477,7 @@ footer a{
   border-right: 2px solid white;
   display: inline-block;
   text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
 }
 footer a:last-of-type{
   border: none;
@@ -693,12 +705,16 @@ button:hover {
   }
 }
 
-@media{
+/* @media{
   .map{
     padding-left: 2rem;
     padding-right: 2rem;
     padding top: 5rem;
-}
+} */
+
+.mediamap{
+  height: 50vh;
+
 }
 @media(max-width: 65em){
   [class*=grid]>[class*=col-3].card{
@@ -724,6 +740,16 @@ button:hover {
   }
   .header .menu-icon {
     display: none;
+  }
+  .banner,
+  .banner-with-header {
+    min-height: 80vh;
+  }
+  .map{
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding top: 5rem;
+    /* margin: 2rem; */
   }
 }
 /* .card{

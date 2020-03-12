@@ -17,7 +17,7 @@
 
 $(document).ready(function(){
   $(".more-text-button").click(function(){
-    $(".more-text").Toggle();
+    $(".more-text").toggle();
   })
 
 })
