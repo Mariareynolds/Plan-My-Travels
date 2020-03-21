@@ -317,7 +317,11 @@ p{
   line-height: 2;
 }
 
+a{
+  color:inherit;
 
+
+}
 
 form input[type=text],
 form input[type=email],
@@ -712,8 +716,7 @@ button:hover {
     padding top: 5rem;
 } */
 
-.mediamap{
-  height: 50vh;
+
 
 }
 @media(max-width: 65em){
@@ -763,5 +766,8 @@ button:hover {
   }
   .comment-box{
     display: none;
+  }
+  .mediamap{
+  display: none;
   }
 }
