@@ -43,6 +43,12 @@ img{
   padding-bottom: 2rem;
 }
 
+/* .paddingnone{
+  padding-bottom: 0;
+  } */
+
+
+
 .bg-color{
   background-color: #D8DDDD;
 }
@@ -330,6 +336,7 @@ form textarea {
   margin: 0.5rem 0;
   padding: 0.5rem;
   border: 1px solid rgb(220,220,220);
+  line-height: 0.45
 }
 
 textarea {
@@ -343,7 +350,8 @@ form label {
   font-weight: bold;
   text-transform: uppercase;
 display: block;
-min-height: 3rem;
+min-height: 2rem;
+
 
 
 }
@@ -754,6 +762,9 @@ button:hover {
     padding top: 5rem;
     /* margin: 2rem; */
   }
+  /* .mediamap{
+  display: none;
+  } */
 }
 /* .card{
   font-size: 0.8rem;
@@ -767,7 +778,5 @@ button:hover {
   .comment-box{
     display: none;
   }
-  .mediamap{
-  display: none;
-  }
+
 }
