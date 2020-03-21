@@ -198,6 +198,7 @@ img{
   top: 0;
   left: 0;
 
+
 }
 
 .formcover h3{
@@ -205,8 +206,10 @@ img{
   text-shadow: text-shadow: 4px 3px 0 white;
   color: white;
   font-family: 'Bad Script', cursive;
-  border: 2px solid white;
+  font-weight: lighter;
+  border: 7px solid white;
   text-transform: none;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .hidecover .formcover{
