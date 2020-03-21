@@ -191,27 +191,24 @@ finish:
 
 <form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
 
-<section class="grid bg-image-paper">
-  <div class="col-4_sm-hidden relative padded">
-    <img class="object-fit card" src="/images/apostlessoft.jpg" alt="The 12 Apostles in a light tone">
-  </div>
-  <div id="step1" class="col-2_sm-12-middle padded center hiddenform form relative">
-    <div class="formcover bg-image-paper">
+<section class="grid">
+
+  <div id="step1" class="col-6_sm-12-middle padded bg-image-apostlessoft padded center hiddenform form relative">
+    <div class="formcover paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
     <label for="level"> Pick a country </label>
     <select name="level">
+
       {% for country in page.country %}
       <option required value="{{ country.select }}"> {{ country.select }} </option>
 
       {% endfor %}
     </select>
   </div>
-  <div class="col-4_sm-hidden padded">
-    <img class="object-fit card" src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
-  </div>
-  <div id="step2" class="col-2_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
+
+  <div id="step2" class="col-6_sm-12-middle  padded bg-image-beachcanoe form padded center relative">
+    <div class="formcover paddingtop50 bg-image-beachcanoe">
       <h3> Step Two </h3>
     </div>
     <label for="level"> How long are you planning to stay for? (in days) </label>
@@ -221,11 +218,9 @@ finish:
     {% endfor %}
     </select>
   </div>
-  <div class="col-4_sm-hidden padded">
-    <img class="object-fit card" src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
-  </div>
-  <div id="step3" class="col-2_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
+
+  <div id="step3" class="col-6_sm-12-middle bg-image-bluemountains form padded center relative">
+    <div class="formcover paddingtop50 bg-image-bluemountains">
       <h3> Step Three </h3>
     </div>
     <label>  Do you have a starting location?  </label>
@@ -248,14 +243,9 @@ finish:
     </div>
 
   </div>
-  <div class="col-4_sm-hidden padded">
 
-  <img class="object-fit card" src="/images/lakemackenzie.JPG" alt="The 12 Apostles in a light tone">
-
-  </div>
-
-  <div id="step4" class="col-2_sm-12-middle form padded center relative">
-<div class="formcover bg-image-paper">
+  <div id="step4" class="col-6_sm-12-middle bg-image-lakemackenzie form padded center relative">
+<div class="formcover paddingtop50 bg-image-lakemackenzie">
 <h3> Step Four </h3>
 </div>
 
@@ -280,7 +270,7 @@ finish:
 
   </div>
 
-  <div id="step5" class="col-12_sm-12-middle form padded center relative">
+  <div id="step5" class="col-12_sm-12-middle bg-image-pinkbeach form padded center relative">
 <div class="formcover bg-image-pinkbeach bg-colour-pinkbeach">
 <h3> Step Five </h3>
  </div>
@@ -296,13 +286,9 @@ finish:
 
   </div>
 
-  <div class="col-4_sm-hidden padded center">
 
-  <img class="object-fit card" src="/images/koala1.JPG" alt="Koala sitting in a tree">
-
-  </div>
-  <div id="step6" class="col-2_sm-12-middle form center relative">
-    <div class="formcover center bg-image-paper">
+  <div id="step6" class="col-6_sm-12- bg-image-koala1 form center relative">
+    <div class="formcover paddingtop50 bg-image-koala1 bg-image-paper">
     <h3> Step Six </h3>
   </div>
 
@@ -316,17 +302,10 @@ finish:
      {% endfor %}
      </div>
 
-
-
   </div>
-  <div class="col-4_sm-hidden center padded">
 
-     <img class="object-fit card" src="/images/noosafairypools.JPG" alt="Noosa Fairy Pools">
-
-    </div>
-
-  <div id="step7" class="col-2_sm-12-middle form  center relative">
-    <div class="formcover paddingtop50 bg-image-paper">
+  <div id="step7" class="col-6_sm-12-middle bg-image-noosafairypools form  center relative">
+    <div class="formcover bg-image-noosafairypools paddingtop50 bg-image-paper">
     <h3> Step Seven </h3>
   </div>
     <h3>  what activities do you enjoy? </h3>
@@ -341,32 +320,19 @@ finish:
     </div>
 
   </div>
-  <div class="col-4_sm-hidden padded center">
 
-<img class="object-fit card" src="/images/noosasurf.JPG" alt="WhitsundaysIslands">
-
-  </div>
-
-
-  <div id="step8" class="col-2_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
+  <div id="step8" class="col-6_sm-12-middle bg-image-noosasurf form padded center relative">
+    <div class="formcover  bg-image-noosasurf bg-image-paper">
     <h3> Step Eight </h3>
   </div>
     <label for="message"> Any additional comments that would help me plan your trip... </label>
-              <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
+    <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
 
 
-            </div>
+    </div>
 
-
-
-  <div class="col-4_sm-hidden padded center">
-
-<img class="object-fit card" src="/images/byronshops.JPG" alt=" Koala asleep in a tree">
-
-  </div>
-  <div id="step9" class="col-2_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
+  <div id="step9" class="col-6_sm-12-middle bg-image-byronshops form padded center relative">
+    <div class="formcover paddingtop50 bg-image-byronshops bg-image-paper">
     <h3> Step Nine </h3>
   </div>
 
@@ -380,6 +346,7 @@ finish:
 <p> <input type="submit" value="Submit for a quote"> </p>
 
   </div>
+
 
 </section>
 </form>

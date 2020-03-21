@@ -42,6 +42,9 @@ img{
 .padding-bottom{
   padding-bottom: 2rem;
 }
+.paddingtop50{
+  padding-top: 20%;
+}
 
 /* .paddingnone{
   padding-bottom: 0;
@@ -81,7 +84,9 @@ img{
   color: lightblue;
 }
 
-
+.grid{
+  border: 2px solid white;
+}
 
 .logo{
   font-family: 'Dancing Script', cursive;
@@ -117,6 +122,10 @@ img{
 
 .margin-bottom{
   margin-bottom: 2rem;
+}
+.margin{
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
 }
 .fab{
   text-align: center;
@@ -199,6 +208,7 @@ img{
   left: 0;
 
 
+
 }
 
 .formcover h3{
@@ -208,17 +218,20 @@ img{
   font-family: 'Bad Script', cursive;
   font-weight: lighter;
   border: 7px solid white;
-  background-color: #C8F5F5;
+  background-color: RGBA(178, 178, 178, 0.5);
   text-transform: none;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
 }
 
 .formcover.bg-image-pinkbeach h3{
   background-color: transparent;
+  border: 7px solid white;
 }
 
 .hidecover .formcover{
   display: none;
+
 }
 
 
@@ -243,6 +256,65 @@ img{
   background-image: url("/images/pinkbeach.jpg");
   background-size: cover;
   background-position: center;
+  border: 1px solid white;
+}
+
+.bg-image-apostlessoft{
+  background-image: url("/images/apostlessoft.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 20%;
+  border: 5px solid white;
+}
+.bg-image-beachcanoe{
+  background-image: url("/images/beachcanoe.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 20%;
+  border: 5px solid white;
+}
+
+.bg-image-bluemountains{
+  background-image: url("/images/greatoceanroad.JPG");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+
+}
+
+.bg-image-lakemackenzie{
+  background-image: url("/images/bluemountains.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+}
+
+.bg-image-koala1{
+  background-image: url("/images/koala1.JPG");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+}
+
+.bg-image-noosafairypools{
+  background-image: url("/images/noosafairypools.JPG");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+}
+
+.bg-image-noosasurf{
+  background-image: url("/images/lakewabby.JPG");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+}
+
+.bg-image-byronshops{
+  background-image: url("/images/byronshops.JPG");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
 }
 
 .blueline{
@@ -751,6 +823,12 @@ button:hover {
 } */
 }
 
+
+@media(max-width: 500px){
+  .mediamap{
+  display: none;
+}
+}
 @media (min-width: 48em) {
   .header li {
   float: left;
@@ -776,9 +854,7 @@ button:hover {
     padding top: 5rem;
     /* margin: 2rem; */
   }
-  /* .mediamap{
-  display: none;
-  } */
+
 }
 /* .card{
   font-size: 0.8rem;
