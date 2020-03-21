@@ -208,8 +208,13 @@ img{
   font-family: 'Bad Script', cursive;
   font-weight: lighter;
   border: 7px solid white;
+  background-color: #C8F5F5;
   text-transform: none;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.formcover.bg-image-pinkbeach h3{
+  background-color: transparent;
 }
 
 .hidecover .formcover{
@@ -232,6 +237,12 @@ img{
 
 .bg-image-paper{
   background-image: url("/images/paper.png");
+}
+
+.bg-image-pinkbeach{
+  background-image: url("/images/pinkbeach.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .blueline{
@@ -742,7 +753,7 @@ button:hover {
 
 @media (min-width: 48em) {
   .header li {
-    float: left;
+  float: left;
   }
   .header li a {
     padding: 20px 30px;
