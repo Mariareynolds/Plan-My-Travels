@@ -46,9 +46,9 @@ img{
   padding-top: 20%;
 }
 
-/* .paddingnone{
-  padding-bottom: 0;
-  } */
+.paddingnone div{
+  padding: 2%;
+  }
 
 
 
@@ -95,7 +95,7 @@ img{
 }
 
 .calltoactionheart{
-  padding: 0.5rem 0.2rem;
+  padding: 0rem 0.2rem;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -196,7 +196,10 @@ img{
   color: pink;
 }
 
-
+.bg-transparent{
+  border: 7px solid white;
+  background-color: RGBA(178, 178, 178, 0.5) ;
+}
 
 .formcover{
   position: absolute;
@@ -218,7 +221,7 @@ img{
   font-family: 'Bad Script', cursive;
   font-weight: lighter;
   border: 7px solid white;
-  background-color: RGBA(178, 178, 178, 0.5);
+  background-color: RGBA(178, 178, 178, 0.5) ;
   text-transform: none;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 
@@ -256,6 +259,13 @@ img{
   background-image: url("/images/pinkbeach.jpg");
   background-size: cover;
   background-position: center;
+  border: 1px solid white;
+}
+
+.bg-image-pinkbeachbottom{
+  background-image: url("/images/pinkbeach.jpg");
+  background-size: cover;
+  background-position: bottom;
   border: 1px solid white;
 }
 
@@ -432,7 +442,8 @@ textarea {
 form label {
   margin: 1rem 0 0;
   display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
-  color: #6C7A89;
+  /* color: #6C7A89; */
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
 display: block;
@@ -497,7 +508,8 @@ form label {
 form h3{
   margin: 1rem 0 0;
 display: inline-block;
-color: #6C7A89;
+/* color: #6C7A89; */
+color: white;
 font-weight: bold;
 text-transform: uppercase;
 display: block;
@@ -706,7 +718,7 @@ button:hover {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 50px;
+  padding: 6px 50px;
   text-decoration: none;
 }
 
@@ -834,7 +846,7 @@ button:hover {
   float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    padding: 10px 30px;
   }
   .header .menu {
     clear: none;
