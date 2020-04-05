@@ -368,7 +368,12 @@ img{
   font-weight: 300i;
   line-height: 2;
 
+}
 
+.postcard{
+  margin-top: 2rem;
+  margin-left: -2rem;
+  max-width: calc(50%+2rem);
 }
 /* ---------------------.typefont{------------------- */
   @keyframes blink{
@@ -583,7 +588,7 @@ footer a{
   color: white;
   background-color: #B8DDDD;
   text-decoration: none;
-  padding: 2%;
+  /* padding: 0.1rem; */
   border-right: 2px solid white;
   display: inline-block;
   text-transform: uppercase;
