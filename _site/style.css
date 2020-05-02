@@ -848,7 +848,7 @@ button:hover {
 }
 @media (min-width: 48em) {
   .header li {
-  float: left;
+  float: right;
   }
   .header li a {
     padding: 10px 30px;
