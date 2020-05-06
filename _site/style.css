@@ -559,9 +559,11 @@ header a{
   border-right: 2px solid white;
   text-transform: uppercase;
 }
+
 header a:last-of-type{
   border: none;
 }
+
 header h1{
   padding-left: 2rem;
 }
@@ -744,6 +746,11 @@ button:hover {
   padding: 28px 20px;
   position: relative;
   user-select: none;
+}
+
+ul.menu li{
+  display: inline-block;
+
 }
 
 .header .menu-icon .navicon {
