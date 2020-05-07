@@ -39,7 +39,6 @@ img{
   padding: 3%;
 }
 
-
 .padding-bottom{
   padding-bottom: 2rem;
 }
@@ -177,7 +176,7 @@ img{
 }
 
 .card {
-  padding: 1rem;
+  padding: 2rem;
   background-color: white;
   /* border-radius: 5px; */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
@@ -254,12 +253,6 @@ img{
 
 .bg-image-paper{
   background-image: url("/images/paper.png");
-
-}
-
-.bg-image-paper-login{
-  background-image: url("/images/paper.png");
-  margin: 4rem;
 }
 
 .bg-image-pinkbeach{
@@ -832,11 +825,11 @@ button:hover {
     padding-left: 2rem;
     padding-right: 2rem;
     padding top: 5rem;
-} */
-
-
-
 }
+
+
+
+} */
 @media(max-width: 65em){
   [class*=grid]>[class*=col-3].card{
     flex-basis: 100%;
@@ -855,7 +848,7 @@ button:hover {
 }
 @media (min-width: 48em) {
   .header li {
-  float: right;
+  float: left;
   }
   .header li a {
     padding: 10px 30px;
