@@ -187,11 +187,19 @@ padding: 0;
 }
 
 .card {
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
   /* border-radius: 5px; */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
+
+.vertical-line{
+        border-right: 1px solid #ccc;
+        margin: 150px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
 
 .bg-colorblue {
   background-color: lightblue;
@@ -264,6 +272,11 @@ padding: 0;
 
 .bg-image-paper{
   background-image: url("/images/paper.png");
+}
+
+.bg-image-paper-login{
+  background-image: url("/images/paper.png");
+  margin: 3%;
 }
 
 .bg-image-pinkbeach{
