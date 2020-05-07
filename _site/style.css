@@ -46,6 +46,12 @@ img{
   padding-top: 20%;
 }
 
+.padding-top{
+  padding-top: 3%;
+}
+.paddingnone{
+padding: 0;
+}
 .paddingnone div{
   padding: 2%;
   }
