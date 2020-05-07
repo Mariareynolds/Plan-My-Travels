@@ -46,8 +46,18 @@ img{
   padding-top: 20%;
 }
 
+.nopaddingtop{
+  padding-top: -3%;
+}
 .padding-top{
-  padding-top: 3%;
+  padding-top: 0.75%;
+}
+
+.padding-top-hr{
+  padding-top: 2.5%;
+}
+.padding-left{
+  padding-left: 1.25%;
 }
 .paddingnone{
 padding: 0;
@@ -198,14 +208,12 @@ padding: 0;
         margin: 150px 0;
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
 
 .bg-colorblue {
   background-color: lightblue;
 }
-
-
 
 /* .ready{
   background-color: red;
@@ -228,8 +236,6 @@ padding: 0;
   z-index: 5;
   top: 0;
   left: 0;
-
-
 
 }
 
@@ -571,7 +577,7 @@ header{
   right: 0;
   top: 0;
   letter-spacing: 0.5;
-  padding: 0.6rem 0;
+  padding: 0.1rem 0;
   z-index: 6;
 }
 
@@ -606,6 +612,10 @@ left: 15vw;
  .footer h2, .footer p, footer {
   color: white;
   background-color: #B8DDDD;
+}
+  .footer h2{
+    margin-bottom: 0.5rem;
+
 }
 
 footer a{
