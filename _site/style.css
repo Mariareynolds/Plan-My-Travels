@@ -212,6 +212,14 @@ padding: 0;
         justify-content: center;
         align-items: center;
     }
+    .vertical-line-review{
+            border-right: 1px solid #ccc;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
 
 .bg-colorblue {
   background-color: lightblue;
@@ -407,6 +415,22 @@ padding: 0;
   margin-left: -2rem;
   max-width: calc(50%+2rem);
 }
+
+.fas{
+  padding: 0.5%
+  color: white;
+  font-size: 3rem;
+}
+.quote-marks{
+  font-size: 1rem;
+  color: grey;
+}
+
+.reversed{
+transform:rotateY(180deg)
+}
+
+
 /* ---------------------.typefont{------------------- */
   @keyframes blink{
     0% { opacity:1; }
