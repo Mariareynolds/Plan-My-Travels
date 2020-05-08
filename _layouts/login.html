@@ -21,15 +21,45 @@ banner-image: /images/operahouse.jpg
 <div class="hidecontent" id="expire-date">
   {{page.expire-date}}
 </div>
-<section id="expirecontent" class="grid-spaceAround titles">
+{% assign day_count = 1 %}
+{% for day in page.day %}
+  {% for itinerary in site.Itinerary_Days %}
+  {% if day.location == itinerary.title %}
 
 
-  {% for day in page.day %}
-<div class="col-5_md-12 padded">
 
-  {% include ItineraryDays/{{day.location}}.html %}
 
-</div>
+  <section class="bg-image-paper-login grid flip-flex">
+
+  <div class="col-4-middle padded">
+    <img class="card" src="/{{itinerary.img}}" alt="{{itinerary.img_alt}}">
+
+  </div>
+
+    <div class="col-2 vertical-line padded">
+      <div class="">
+
+
+    <h2> DAY {{ day_count }}  </h2>
+    {% assign day_count = day_count | plus: 1 %}
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle padded">
+
+
+    <p>  {{itinerary.text}}
+
+   </p>
+      </div>
+  </section>
+
+  {% endif %}
+
+  {% endfor %}
+
   {% endfor %}
 
 

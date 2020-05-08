@@ -2,3 +2,5 @@ collections:
   bespokePlans:
     output: true
     layout: Login
+  Itinerary_Days:
+    
