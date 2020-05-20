@@ -465,15 +465,18 @@ transform:rotateY(180deg)
 
 h2{
   font-family: 'Lato', sans-serif;
-  color: #495057;
+  color: #78787D;
   font-weight: lighter;
   letter-spacing: 1px;
   margin-bottom: 1.3rem;
 }
 
+
+/*  original text colour #495057 */
+
 h3{
   font-family: 'Lato', sans-serif;
-  color: #495057;
+  color: #78787D;
   font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 1.3rem;
@@ -481,7 +484,7 @@ h3{
 
 p{
   font-family: 'Lato', sans-serif;
-  color: #495057;
+  color: #78787D;
   font-weight: 400;
   line-height: 2;
 }
