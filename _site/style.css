@@ -373,6 +373,11 @@ padding: 0;
   border: 5px solid white;
 }
 
+.bg-image-island{
+  background-image: url("/images/island.jpg");
+  background-size: cover;
+  background-position: center;
+}
 .blueline{
   border: 2px solid #C8F5F5;
   bottom: -2rem;
@@ -504,6 +509,23 @@ form textarea {
   border: 1px solid rgb(220,220,220);
   line-height: 0.45
 }
+
+form input[type=email],
+form input[type=password]{
+  width: 50%;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid rgb(220,220,220);
+  line-height: 0.5
+}
+
+ form input.submit[type="submit"]{
+  background-color:#6C7A89;
+  color:white;
+  border: none;
+  padding: 1rem 3rem;
+  width: 50%;
+  }
 
 textarea {
   min-height: 4rem;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> {{page.title}} </title>
+    <title>  </title>
   </head>
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
@@ -11,7 +11,7 @@
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title> {{page.title}} </title>
+      <title>  </title>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
@@ -38,7 +38,7 @@
     <script src="/javascript/info-window.js"></script>
     <script src="/javascript/map.js"></script>
     <script id="marker-content-template" type="text/x-handlebars-template">
-    <div class="custom-img" style="background-image: url({{bgImg}})"></div>
+    <div class="custom-img" style="background-image: url()"></div>
     <section class="custom-content">
     <h1 class="custom-header">
      my header
@@ -78,7 +78,13 @@
 
 </header>
 
-{% include fixed-banner.html %}
+<section class="banner grid-center fixed" style="background-image:url(''); background-position: center;">
+  <div class="col-6_sm-12-middle centered">
+    <h2 class="big-bold font-color"> </h2>
+    <h3 class="not-bold font-color">  </h3>
+  </div>
+</section>
+
 
     <!-- <h2> Fixed Banner</h2>
 
@@ -90,7 +96,43 @@
     </section>
   </header>-->
 
-  {{content}}
+  <!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Log in</title>
+    <style>
+      .incorrect-login-message {
+        display: none;
+      }
+
+      .has-incorrect-login .incorrect-login-message {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-image-island">
+    <h2 class="center">Log in</h2>
+
+    <form action="" method="post" class=" center padded">
+      <div class="incorrect-login-message center padded">
+        Incorrect email address or password.
+      </div>
+
+      <label class="center" for="email">Email Address</label>
+      <input class="center padded" id="email" type="email" name="email" autofocus>
+
+      <label class="center" for="password">Password</label>
+      <input class="center padded" id="password" type="password" name="password" autofocus>
+
+      <input class="center padded submit" type="submit" value="Log in">
+    </form>
+
+    <a class="center padded" href="/reset-password">Forgot your password?</a>
+    <a class="center padded" href="/set-password">Set Password</a>
+  </body>
+</html>
+
 
 
 
