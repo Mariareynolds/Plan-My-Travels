@@ -24,6 +24,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer> </script>
     <script src="/javascript/lightbox.js" defer></script>
     <script src="/javascript/read-more-button.js" defer></script>
+    <script src="/javascript/review.js" defer></script>
+
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -78,12 +80,6 @@
 
 </header>
 
-<section class="banner grid-center fixed" style="background-image:url(''); background-position: center;">
-  <div class="col-6_sm-12-middle centered">
-    <h2 class="big-bold font-color"> </h2>
-    <h3 class="not-bold font-color">  </h3>
-  </div>
-</section>
 
 
     <!-- <h2> Fixed Banner</h2>
@@ -112,9 +108,9 @@
     </style>
   </head>
   <body class="bg-image-island">
-    <h2 class="center">Log in</h2>
+    <h4 class="center padding-login ">Log in</h4>
 
-    <form action="" method="post" class=" center padded">
+    <form action="" method="post" class=" center padded ">
       <div class="incorrect-login-message center padded">
         Incorrect email address or password.
       </div>
@@ -125,11 +121,16 @@
       <label class="center" for="password">Password</label>
       <input class="center padded" id="password" type="password" name="password" autofocus>
 
-      <input class="center padded submit" type="submit" value="Log in">
+      <label for="submit paddingnone"> </label>
+      <input class="center  submit" type="submit" value="Log in">
+
+      <div class="paddingnone">
+      <a class="center" href="/reset-password">Forgot your password?</a>
+      <a class="center" href="/set-password">Set Password</a>
+      </div>
     </form>
 
-    <a class="center padded" href="/reset-password">Forgot your password?</a>
-    <a class="center padded" href="/set-password">Set Password</a>
+  
   </body>
 </html>
 

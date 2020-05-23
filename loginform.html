@@ -17,9 +17,9 @@ layout: default
     </style>
   </head>
   <body class="bg-image-island">
-    <h2 class="center">Log in</h2>
+    <h4 class="center padding-login ">Log in</h4>
 
-    <form action="" method="post" class="{{messageClasses}} center padded">
+    <form action="" method="post" class="{{messageClasses}} center padded ">
       <div class="incorrect-login-message center padded">
         Incorrect email address or password.
       </div>
@@ -30,10 +30,15 @@ layout: default
       <label class="center" for="password">Password</label>
       <input class="center padded" id="password" type="password" name="password" autofocus>
 
-      <input class="center padded submit" type="submit" value="Log in">
+      <label for="submit paddingnone"> </label>
+      <input class="center  submit" type="submit" value="Log in">
+
+      <div class="paddingnone">
+      <a class="center" href="/reset-password">Forgot your password?</a>
+      <a class="center" href="/set-password">Set Password</a>
+      </div>
     </form>
 
-    <a class="center padded" href="/reset-password">Forgot your password?</a>
-    <a class="center padded" href="/set-password">Set Password</a>
+  
   </body>
 </html>
