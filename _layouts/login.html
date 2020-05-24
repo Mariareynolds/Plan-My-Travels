@@ -2,7 +2,7 @@
 layout: default
 banner-image: /images/operahouse.jpg
 ---
-
+<!-- itinerary days -->
 {% include fixed-banner.html %}
 <div class="">
 
@@ -28,8 +28,7 @@ banner-image: /images/operahouse.jpg
   {% for itinerary in site.Itinerary_Days %}
   {% if day.location == itinerary.title %}
 
-
-
+{% if itinerary.type == 'activity' %}
 
   <section class="bg-image-paper-login grid flip-flex">
 
@@ -60,8 +59,67 @@ banner-image: /images/operahouse.jpg
 
   {% endif %}
 
-  {% endfor %}
+  <!-- travel directions  -->
+  {% if itinerary.type == 'direction' %}
 
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+    <div class="col-3 vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div>
+
+    <div class="col-9-middle padded">
+
+
+    <p>  {{itinerary.text}}
+
+   </p>
+      </div>
+  </section>
+<!-- end of directions -->
+  {% endif %}
+
+
+  <!-- Tips <section> -->
+  {% if itinerary.type == 'tips' %}
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+    <div class="col-3 vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div>
+
+    <div class="col-9-middle padded">
+
+
+    <p>  {{itinerary.text}}
+      <a href="/thing.pdf" download>download</a>
+   </p>
+      </div>
+  </section>
+<!-- end of tips -->
+  {% endif %}
+<!-- end checking of IF and ARRAYS being the same  -->
+  {% endif %}
+<!-- end itinerary blocks  -->
+  {% endfor %}
+<!-- end arrays -->
   {% endfor %}
 
 
@@ -126,5 +184,10 @@ banner-image: /images/operahouse.jpg
         <div class="col-1">
 
         </div>
+
+
+<!-- downloadable PDF -->
+    <!-- <a href="/pdf/thing.pdf" download>download</a> -->
+
 
 </section>
