@@ -393,6 +393,13 @@ padding: 0;
   right: 25%;
 
 }
+.bluelinecloser{
+  border: 2px solid #C8F5F5;
+  bottom: 3rem;
+  left: 25%;
+  right: 25%;
+
+}
 
 .lightboxcontainer{
   position:relative;
@@ -554,6 +561,14 @@ form input[type=hidden]{
   min-height: 4rem;
 } */
 
+.textarea textarea {
+  width: 100%;
+  margin: 2.5rem 2.5;
+  padding: 2.5rem;
+  border: 1px solid rgb(220,220,220);
+  line-height: 1
+}
+
 div input[type=text],
 div textarea[type=text]{
   width: 60%;
@@ -575,7 +590,19 @@ form label {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
-
+}
+.form label{
+  margin: 1rem 0 0;
+  display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
+  color: #6C7A89;
+  /* color: white; */
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  min-height: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 .loginform{

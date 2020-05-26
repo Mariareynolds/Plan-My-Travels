@@ -95,6 +95,8 @@ activities:
 - select: Photography
 - select: Sailing
 - select: Theme Parks
+- select: Nightlife
+- select: Wineries
 start:
 - select: Adelaide
 - select: Great Ocean Road
@@ -145,6 +147,12 @@ finish:
 
 {% include fixed-banner.html %}
 
+<section>
+  <div class="center">
+    <h3> Let's start planning your trip </h3>
+    <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which location you want to visit have a look at the destinations on the map to get a feel for what locations you'll enjoy most. </p>
+  </div>
+</section>
 
 <section class="map comment box-fix">
   <!-- <div  class="comment-box margin-bottom-7">
@@ -285,7 +293,7 @@ finish:
 <h3> Step Five </h3>
  </div>
 
-  <h3> Where would you like to stop?  <h3>
+  <label> Where would you like to stop?  <label>
 <div class="checkboxes wrap">
 
 {% for stops in page.stops %}
@@ -296,12 +304,12 @@ finish:
 
   </div>
 
-  <div class="col-4_sm-hidden padded center">
+  <div class="col-3_sm-hidden padded center">
 
   <img class="object-fit card" src="/images/koala1.JPG" alt="Koala sitting in a tree">
 
   </div>
-  <div id="step6" class="col-2_sm-12-middle form center relative">
+  <div id="step6" class="col-3_sm-12-middle form center relative">
     <div class="formcover center bg-image-paper">
     <h3> Step Six </h3>
   </div>
@@ -319,17 +327,17 @@ finish:
 
 
   </div>
-  <div class="col-4_sm-hidden center padded">
+  <div class="col-3_sm-hidden center padded">
 
      <img class="object-fit card" src="/images/noosafairypools.JPG" alt="Noosa Fairy Pools">
 
     </div>
 
-  <div id="step7" class="col-2_sm-12-middle form  center relative">
+  <div id="step7" class="col-3_sm-12-middle form  center relative">
     <div class="formcover paddingtop50 bg-image-paper">
     <h3> Step Seven </h3>
   </div>
-    <h3>  what activities do you enjoy? </h3>
+    <label>  what activities do you enjoy? <label>
       <div  class="checkboxes right">
     {% for activities in page.activities %}
 
@@ -341,31 +349,31 @@ finish:
     </div>
 
   </div>
-  <div class="col-4_sm-hidden padded center">
+  <div class="col-3_sm-hidden padded center">
 
 <img class="object-fit card" src="/images/noosasurf.JPG" alt="WhitsundaysIslands">
 
   </div>
 
 
-  <div id="step8" class="col-2_sm-12-middle form padded center relative">
+  <div id="step8" class="col-3_sm-12-middle form padded center relative">
     <div class="formcover bg-image-paper">
     <h3> Step Eight </h3>
   </div>
     <label for="message"> Any additional comments that would help me plan your trip... </label>
-              <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
+              <textarea class="textarea" name="message" id="message" placeholder="Tell me more!"></textarea>
 
 
             </div>
 
 
 
-  <div class="col-4_sm-hidden padded center">
+  <div class="col-3_sm-hidden padded center">
 
 <img class="object-fit card" src="/images/byronshops.JPG" alt=" Koala asleep in a tree">
 
   </div>
-  <div id="step9" class="col-2_sm-12-middle form padded center relative">
+  <div id="step9" class="col-3_sm-12-middle form padded center relative">
     <div class="formcover bg-image-paper">
     <h3> Step Nine </h3>
   </div>
