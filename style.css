@@ -78,6 +78,9 @@ padding: 0;
 padding: 0;
 }
 
+.top{
+ text-align: top;
+}
 .bg-color{
   background-color: #D8DDDD;
 }
@@ -99,6 +102,24 @@ padding: 0;
   background-position: center;
   min-height: 40vh;
 }
+
+.bump-right {
+  margin-top: 1rem;
+  margin-left:1rem;
+  margin-bottom: 1rem;
+  margin-right:-1rem;
+  z-index:0;
+  position: relative;
+}
+.bump-left {
+  margin-top: 1rem;
+  margin-left:-10rem;
+  margin-bottom: 10rem;
+  margin-right: 10rem;
+  z-index:4;
+  position: relative;
+}
+
 
 .image1{
   max-width: 500px;
@@ -1344,15 +1365,16 @@ body {
 }
 html {
   height: 100%;
-  background: #0e0e0e;
+  background: White;
 }
 body {
   font-family: "Open Sans", arial, verdana;
 }
 /*form styles*/
 #msform {
-  width: 600px;
-  margin: 50px auto;
+  width: 1000px;
+  margin: 100px auto;
+  margin-bottom: 4rem;
   text-align: center;
   position: relative;
 }
@@ -1388,7 +1410,7 @@ body {
 /*buttons*/
 #msform .action-button {
   width: 100px;
-  background: #67d5bf;
+  background: #B8DDDD;
   font-weight: bold;
   color: white;
   border: 0 none;
@@ -1399,7 +1421,7 @@ body {
 }
 #msform .action-button:hover,
 #msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #67d5bf;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #B8DDDD;
 }
 /*headings*/
 .fs-title {
@@ -1462,7 +1484,7 @@ body {
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #67d5bf;
+  background: #B8DDDD;
   color: white;
 }
 .help-block {

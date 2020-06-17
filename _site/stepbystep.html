@@ -26,6 +26,8 @@
     <script src="/javascript/read-more-button.js" defer></script>
     <script src="/javascript/review.js" defer></script>
     <script src="/javascript/stepbystep.js" defer></script>
+    <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/grt-cookie-consent.js" defer></script>
 
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
 
@@ -36,6 +38,11 @@
     <style>
       #map{ height: 100% }
     </style>
+    <!-- Cookies policy -->
+    <link rel="stylesheet" href="/cookie-consent-bar-grt/grt-cookies-consent.css" />
+    <script src="/path/to/cdn/jquery.min.js"></script>
+    <script src="grt-cookie-consent.js"></script>
+
 
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script src="/javascript/info-window.js"></script>
@@ -58,10 +65,18 @@
   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script:400,500,600,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 
-
   </head>
   <body>
 
+    <!-- cookies policy -->
+    <div class="grt-cookie">
+      <div class="grt-cookies-msg">
+        <p>
+          We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you accept and understand our <a href="/">Privacy Policy</a>, and our <a href="#">Terms of Service</a>.
+        </p>
+      </div>
+      <span class="grt-cookie-button">Accept</span>
+    </div>
 
   <!-- --------------------- THIS IS THE HEADER --------------- -->
 
@@ -128,7 +143,7 @@
 
 
 <!-- multistep form -->
-<form id="msform action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST"">
+<form id="msform" action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST"">
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active"></li>
@@ -147,7 +162,7 @@
 		<h2 class="fs-title">Step 1</h2>
 		<h3 class="fs-subtitle">Pick a country you want to visit</h3>
 
-    <select name="level">
+    <select name="level" placeholder="Email">
       
       <option required value="Australia"> Australia </option>
 
@@ -156,14 +171,15 @@
 
       
     </select>
+
+  <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
 	<fieldset>
 		<h2 class="fs-title">Step 2</h2>
-		<h3 class="fs-subtitle">What do your colleagues consider your main strengths to be?</h3>
-    <h3> Step Two </h3>
-  <label for="level"> How long are you planning to stay for? (in days) </label>
+		<h3 class="fs-subtitle">How long are you planning to stay for? (in days)?</h3>
+
   <select name="level">
   
     <option required value="1"> 1 </option>
@@ -267,6 +283,8 @@
     <option required value="50"> 50 </option>
   
   </select>
+  <input type="button" name="previous" class="previous action-button" value="Previous" />
+  <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
@@ -282,6 +300,7 @@
       </label>
       <div class="sub-question">
       <label for="level"> Select your starting location </label>
+
       <select name="level">
 
        
@@ -329,7 +348,11 @@
        
        </select>
        </div>
+       <input type="button" name="previous" class="previous action-button" value="Previous" />
+     <input type="button" name="next" class="next action-button" value="Next" />
     </div>
+
+
 	</fieldset>
 
 
@@ -396,6 +419,8 @@
         
         </select>
         </div>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+  <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
 
 
@@ -469,6 +494,8 @@
    </label>
      
   </div>
+  <input type="button" name="previous" class="previous action-button" value="Previous" />
+  <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
@@ -503,6 +530,8 @@
      </label>
      
      </div>
+     <input type="button" name="previous" class="previous action-button" value="Previous" />
+   <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
@@ -592,7 +621,8 @@
     <label for="message"> Any additional comments that would help me plan your trip... </label>
               <textarea class="textarea" name="message" id="message" placeholder="Tell me more!"></textarea>
 
-
+  <input type="button" name="previous" class="previous action-button" value="Previous" />
+  <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
@@ -605,10 +635,39 @@
     <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
   <p> <input type="submit" value="Submit for a quote"> </p>
-
+  <input type="button" name="previous" class="previous action-button" value="Previous" />
+  <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 </form>
+
+<div class="">
+  <section class="grid featured-bg ">
+  <div class="col-6_md-12 padded">
+    <h2> Contact </h2>
+    <!-- <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+    <p> <strong> Email: </strong> <a href="mailto:mariafrancesca@postcardsfrommaria.com" target="_blank "> </a></p>
+
+
+  </div>
+  <div class="col-6_md-12-middle padded">
+    <form class="grid-center" action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
+      <div class="col-12_sm-12 ">
+        <input type="text" name="name" placeholder="Your Name">
+      </div>
+      <div class="col-12_sm-12 ">
+        <input type="email" name="_replyto" placeholder="Your Email">
+      </div>
+      <div class="col-12 ">
+        <textarea placeholder="Your Message"></textarea>
+        </div>
+        <div class="col-12_sm-12 ">
+        <input type="submit" value="Send" class="button">
+      </div>
+    </form>
+  </div>
+</section>
+</div>
 
 
 
