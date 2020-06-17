@@ -125,6 +125,7 @@ finish:
 - select: melbourne
 - select: Canberra
 - select: Jervis Bay
+- select: The Cove
 - select: Woollongong
 - select: Sydney
 - select: Central Coast
@@ -136,14 +137,14 @@ finish:
 - select: Noosa
 - select: Fraser Island
 - select: Whitsundays
-- select: Airlis Beach
+- select: Airlie Beach
+- select: Magnetic Island
 - select: Cairns
 - select: Perth
 - select: Rottnest Island
 - select: Exmouth
 ---
 
-<!-- --------This is my map with popouts---------- -->
 
 {% include fixed-banner.html %}
 
@@ -171,76 +172,52 @@ finish:
 
 </section>
 
-<!-- <script type="text/javascript">
-  console.log("START");
 
-  $(document).ready(function() {
-    console.log("READY");
 
-    $('.map iframe').on('load', function(){
-        console.log("MAP LOADED");
+<!-- multistep form -->
+<form id="msform action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST"">
+	<!-- progressbar -->
+	<ul id="progressbar">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<h2 class="fs-title">Step 1</h2>
+		<h3 class="fs-subtitle">Pick a country you want to visit</h3>
 
-        var iframe = $('.map iframe').children();
-        console.log(iframe.size());
-
-        iframe.on('DOMNodeInserted', function(){
-          console.log("INSERTED");
-          window.setTimeout(addImage, 1000);
-        });
-    });
-  });
-
-  function addImage() {
-    console.log('Popup text: ' + $('.si-wrapper-top').html());
-  }
-</script> -->
-
-<!-- -------- This is my form page ---------------- -->
-
-<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
-
-<section class="grid bg-image-paper">
-  <div class="col-4_sm-hidden relative padded">
-    <img class="object-fit card" src="/images/apostlessoft.jpg" alt="The 12 Apostles in a light tone">
-  </div>
-
-  <div id="step1" class="col-2_sm-12-middle padded center hiddenform form relative">
-    <div class="formcover bg-image-paper">
-      <h3> Step One </h3>
-    </div>
-    <label for="level"> Pick a country </label>
     <select name="level">
       {% for country in page.country %}
       <option required value="{{ country.select }}"> {{ country.select }} </option>
 
       {% endfor %}
     </select>
-  </div>
+	</fieldset>
 
-  <div class="col-4_sm-hidden padded">
-    <img class="object-fit card" src="/images/beachcanoe.jpg" alt="A Canoe resting on a beach">
-  </div>
 
-  <div id="step2" class="col-2_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
-      <h3> Step Two </h3>
-    </div>
-    <label for="level"> How long are you planning to stay for? (in days) </label>
-    <select name="level">
-    {% for days in page.days %}
-      <option required value="{{days.select}}"> {{days.select}} </option>
-    {% endfor %}
-    </select>
-  </div>
+	<fieldset>
+		<h2 class="fs-title">Step 2</h2>
+		<h3 class="fs-subtitle">What do your colleagues consider your main strengths to be?</h3>
+    <h3> Step Two </h3>
+  <label for="level"> How long are you planning to stay for? (in days) </label>
+  <select name="level">
+  {% for days in page.days %}
+    <option required value="{{days.select}}"> {{days.select}} </option>
+  {% endfor %}
+  </select>
+	</fieldset>
 
-  <div class="col-4_sm-hidden padded">
-    <img class="object-fit card" src="/images/bluemountains.jpg" alt="A man admiring the view from a cliff in the Blue Mountains">
-  </div>
 
-  <div id="step3" class="col-2_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
-      <h3> Step Three </h3>
-    </div>
+	<fieldset>
+		<h2 class="fs-title">Step 3</h2>
     <label>  Do you have a starting location?  </label>
     <div class="radio checkboxes">
       <label for="starting-yes">YES
@@ -259,66 +236,46 @@ finish:
        </select>
        </div>
     </div>
-
-  </div>
-  <div class="col-4_sm-hidden padded">
-
-  <img class="object-fit card" src="/images/lakemackenzie.JPG" alt="The 12 Apostles in a light tone">
-
-  </div>
-
-  <div id="step4" class="col-2_sm-12-middle form padded center relative">
-<div class="formcover bg-image-paper">
-<h3> Step Four </h3>
-</div>
-
- <label>  Do you have a finishing location?  </label>
-<div  class="radio">
-  <label for="finishing-yes">YES
-  <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
+	</fieldset>
 
 
-  <label for="finishing-no">NO
-  <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
+	<fieldset>
+		<h2 class="fs-title">Step 4</h2>
+    <label>  Do you have a finishing location?  </label>
+   <div  class="radio">
+     <label for="finishing-yes">YES
+     <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
 
-    <div class="finish-question"> <label for="level"> Select your finishing location </label>
-    <select name="level">
 
-     {% for finish in page.finish %}
-       <option required value="{{finish.select}}"> {{finish.select}} </option>
+     <label for="finishing-no">NO
+     <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
+
+       <div class="finish-question"> <label for="level"> Select your finishing location </label>
+       <select name="level">
+
+        {% for finish in page.finish %}
+          <option required value="{{finish.select}}"> {{finish.select}} </option>
+        {% endfor %}
+        </select>
+        </div>
+  </fieldset>
+
+
+	<fieldset>
+		<h2 class="fs-title">Step 5</h2>
+    <label> Where would you like to stop?  <label>
+  <div class="checkboxes wrap">
+
+  {% for stops in page.stops %}
+   <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" name="Stops" value="{{stops.select}}" />
+   </label>
      {% endfor %}
-     </select>
-     </div>
-</div>
-
   </div>
+	</fieldset>
 
-  <div id="step5" class="col-12_sm-12-middle form padded center relative">
-<div class="formcover bg-image-pinkbeach bg-colour-pinkbeach">
-<h3> Step Five </h3>
- </div>
 
-  <label> Where would you like to stop?  <label>
-<div class="checkboxes wrap">
-
-{% for stops in page.stops %}
- <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" name="Stops" value="{{stops.select}}" />
- </label>
-   {% endfor %}
-</div>
-
-  </div>
-
-  <div class="col-3_sm-hidden padded center">
-
-  <img class="object-fit card" src="/images/koala1.JPG" alt="Koala sitting in a tree">
-
-  </div>
-  <div id="step6" class="col-3_sm-12-middle form center relative">
-    <div class="formcover center bg-image-paper">
-    <h3> Step Six </h3>
-  </div>
-
+	<fieldset>
+		<h2 class="fs-title">Step 6</h2>
     <h3>  What modes of transport do you want to use during your trip?  </h3>
     <div class="checkboxes right">
     {% for transport in page.transport %}
@@ -328,20 +285,11 @@ finish:
      </label>
      {% endfor %}
      </div>
+	</fieldset>
 
 
-
-  </div>
-  <div class="col-3_sm-hidden center padded">
-
-     <img class="object-fit card" src="/images/noosafairypools.JPG" alt="Noosa Fairy Pools">
-
-    </div>
-
-  <div id="step7" class="col-3_sm-12-middle form  center relative">
-    <div class="formcover paddingtop50 bg-image-paper">
-    <h3> Step Seven </h3>
-  </div>
+	<fieldset>
+		<h2 class="fs-title">Step 7</h2>
     <label>  what activities do you enjoy? <label>
       <div  class="checkboxes right">
     {% for activities in page.activities %}
@@ -352,47 +300,28 @@ finish:
     </label>
   {% endfor %}
     </div>
-
-  </div>
-  <div class="col-3_sm-hidden padded center">
-
-<img class="object-fit card" src="/images/noosasurf.JPG" alt="WhitsundaysIslands">
-
-  </div>
+	</fieldset>
 
 
-  <div id="step8" class="col-3_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
-    <h3> Step Eight </h3>
-  </div>
+	<fieldset>
+		<h2 class="fs-title">Step 8</h2>
     <label for="message"> Any additional comments that would help me plan your trip... </label>
               <textarea class="textarea" name="message" id="message" placeholder="Tell me more!"></textarea>
 
 
-    </div>
+	</fieldset>
 
 
+	<fieldset>
+		<h2 class="fs-title">Step 9</h2>
+    <label for="name"> Your Name </label>
+    <input required type="text" name="name" id="name" placeholder="Name" />
 
-  <div class="col-3_sm-hidden padded center">
+    <label for="email"> Your Email </label>
+    <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
-<img class="object-fit card" src="/images/byronshops.JPG" alt=" Koala asleep in a tree">
+  <p> <input type="submit" value="Submit for a quote"> </p>
 
-  </div>
-  <div id="step9" class="col-3_sm-12-middle form padded center relative">
-    <div class="formcover bg-image-paper">
-    <h3> Step Nine </h3>
-  </div>
+	</fieldset>
 
-
-      <label for="name"> Your Name </label>
-      <input required type="text" name="name" id="name" placeholder="Name" />
-
-      <label for="email"> Your Email </label>
-      <input type="email" name="_replyto" required id="email" placeholder="Email" />
-
-<p> <input type="submit" value="Submit for a quote"> </p>
-
-  </div>
-
-</section>
 </form>
