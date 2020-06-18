@@ -1358,18 +1358,7 @@ body {
   font-weight: 400;
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
 }
-/*basic reset*/
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  height: 100%;
-  background: White;
-}
-body {
-  font-family: "Open Sans", arial, verdana;
-}
+
 /*form styles*/
 #msform {
   width: 1000px;
@@ -1458,8 +1447,8 @@ body {
   width: 20px;
   line-height: 20px;
   display: block;
-  font-size: 10px;
-  color: #333;
+  font-size: 20px;
+  color: #B8DDDD;
   background: white;
   border-radius: 3px;
   margin: 0 auto 5px auto;
