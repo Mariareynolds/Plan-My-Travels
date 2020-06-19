@@ -654,8 +654,8 @@ div textarea[type=text]{
 form label {
   margin: 1rem 0 0;
   display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
-  /* color: #6C7A89; */
-  color: white;
+  color: #6C7A89;
+  /* color: white; */
   font-weight: bold;
   text-transform: uppercase;
   display: block;
