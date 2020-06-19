@@ -1360,22 +1360,27 @@ body {
 #msform {
   width: 1000px;
   margin: 100px auto;
+  min-height: 75vh;
   margin-bottom: 4rem;
   text-align: center;
   position: relative;
+  padding: 0px;
 }
 #msform fieldset {
   background: white;
   border: 0 none;
   border-radius: 3px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 20px 30px;
+  padding: 10px 20px;
   box-sizing: border-box;
   width: 80%;
   margin: 0 10%;
   /*stacking fieldsets above each other*/
   position: absolute;
+  border: 7px solid white;
+  background-color: RGBA(178, 178, 178, 0.5) ;
 }
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
   display: none;
@@ -1396,6 +1401,7 @@ body {
 /*buttons*/
 #msform .action-button {
   width: 100px;
+  min-height: inherit;
   background: #B8DDDD;
   font-weight: bold;
   color: white;

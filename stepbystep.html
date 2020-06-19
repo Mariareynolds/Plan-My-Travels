@@ -103,6 +103,7 @@ start:
 - select: melbourne
 - select: Canberra
 - select: Jervis Bay
+- select: The Cove
 - select: Woollongong
 - select: Sydney
 - select: Central Coast
@@ -114,7 +115,8 @@ start:
 - select: Noosa
 - select: Fraser Island
 - select: Whitsundays
-- select: Airlis Beach
+- select: Airlie Beach
+- select: Magnetic Island
 - select: Cairns
 - select: Perth
 - select: Rottnest Island
@@ -149,11 +151,12 @@ finish:
 {% include fixed-banner.html %}
 
 <section>
-  <div class="center">
+  <div class="center nopaddingbottom">
     <h3> Let's start planning your trip </h3>
     <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which location you want to visit have a look at the destinations on the map to get a feel for what locations you'll enjoy most. </p>
   </div>
 </section>
+
 
 <section class="map comment box-fix">
   <!-- <div  class="comment-box margin-bottom-7">
@@ -172,10 +175,9 @@ finish:
 
 </section>
 
-
-<div>
+<div class="padding0 bg-image-pinkbeach">
 <!-- multistep form -->
-<form id="msform" action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST"">
+<form  id="msform" action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST"">
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active"></li>
@@ -357,6 +359,7 @@ finish:
 </form>
 
 </div>
+
 
 <div class="">
   <section class="grid featured-bg ">
