@@ -34,6 +34,9 @@ img{
 .right{
   text-align: right;
 }
+.left{
+  text-align: left;
+}
 
 .padded{
   padding: 3%;
@@ -687,7 +690,7 @@ form label {
  }
 
 .wrap{
-  text-align: right;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -741,8 +744,8 @@ form label {
 form h3{
   margin: 1rem 0 0;
 display: inline-block;
-/* color: #6C7A89; */
-color: white;
+color: #6C7A89;
+/* color: white; */
 font-weight: bold;
 text-transform: uppercase;
 display: block;

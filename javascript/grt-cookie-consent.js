@@ -4,5 +4,5 @@ $(".grt-cookie").grtCookie({
   buttonbackground:"#333",
   buttontextcolor:"#fff",
   fontsize :"1rem",
-  duration: 730
+  // duration: 730
 })
