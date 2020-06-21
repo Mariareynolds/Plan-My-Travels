@@ -73,7 +73,6 @@ function animatePeople(id) {
                 'margin-left': '',
                 'margin-right': ''
             });
-            // Do the new animation
             doAnimation(id);
         });
     } else {

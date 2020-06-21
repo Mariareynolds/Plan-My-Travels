@@ -597,12 +597,20 @@ p{
   color: #78787D;
   font-weight: 400;
   line-height: 2;
+  margin-bottom: 1.2rem;
 }
 
 a{
   color:inherit;
+}
 
-
+.boldheading{
+    font-family: 'Lato', sans-serif;
+    color: White;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 1.3rem;
 }
 
 form input[type=text],
