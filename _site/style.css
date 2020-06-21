@@ -657,8 +657,8 @@ div textarea[type=text]{
 form label {
   margin: 1rem 0 0;
   display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
-  color: #6C7A89;
-  /* color: white; */
+  /* color: #6C7A89; */
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   display: block;
@@ -1378,7 +1378,7 @@ body {
   /*stacking fieldsets above each other*/
   position: absolute;
   border: 7px solid white;
-  background-color: RGBA(178, 178, 178, 0.5) ;
+  /* background-color: RGBA(178, 178, 178, 0.5) ; */
 }
 
 /*Hide all except first fieldset*/
@@ -1484,4 +1484,30 @@ body {
   color: #7c7c7c;
   text-align: left;
   margin-bottom: 0.5em;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section .is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+.fadein {  opacity: 0;}
+
+.slideinright  {
+    margin-left: 100vw;
+    max-width:100%;
+    width: 100%;
+  }
+
+.slideinleft {
+    margin-left: -100vw;
+    max-width:100%;
 }

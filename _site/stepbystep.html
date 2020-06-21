@@ -32,6 +32,7 @@
     <script src="/javascript/stepbystep.js" defer></script>
     <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
     <script src="/javascript/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/slide.js" defer></script>
 
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
 
@@ -145,7 +146,7 @@
 
 </section>
 
-<div class="padding0 bg-image-pinkbeach">
+<div class="padding0 ">
 <!-- multistep form -->
 <form  id="msform" action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST"">
 	<!-- progressbar -->
@@ -162,7 +163,10 @@
     <li></li>
 	</ul>
 	<!-- fieldsets -->
-	<fieldset>
+	<fieldset class="bg-image-apostlessoft">
+    <div class="bg-image-apostlessoft">
+
+
 		<h2 class="fs-title">Step 1</h2>
 		<h3 class="fs-subtitle">Pick a country you want to visit</h3>
 
@@ -175,12 +179,14 @@
 
       
     </select>
-
-  <input type="button" name="next" class="next action-button" value="Next" />
+  </div>
+    <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
 	<fieldset>
+    <div class="bg-image-beachcanoe">
+
 		<h2 class="fs-title">Step 2</h2>
 		<h3 class="fs-subtitle">How long are you planning on traveling for? (in days)?</h3>
 
@@ -287,13 +293,14 @@
     <option required value="50"> 50 </option>
   
   </select>
+  </div>
   <input type="button" name="previous" class="previous action-button" value="Previous" />
   <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
 	<fieldset>
-    <div id="step3">
+    <div id="step3" class="bg-image-bluemountains">
 		<h2  class="fs-title">Step 3</h2>
     <h3 class="fs-subtitle">  Do you have a starting location?  </h3>
     <div class="radio checkboxes">
@@ -368,7 +375,7 @@
 
 
 	<fieldset>
-    <div id="step4">
+    <div id="step4" class="bg-image-lakemackenzie">
 		<h2 class="fs-title">Step 4</h2>
     <h3 class="fs-subtitle">  Do you have a finishing location?  </h3>
    <div  class="radio">
@@ -439,6 +446,8 @@
 
 
 	<fieldset>
+    <div class="bg-image-koala1">
+
 		<h2 class="fs-title">Step 5</h2>
     <h3 class="fs-subtitle"> Where would you like to stop?  </h3>
   <div class="checkboxes wrap">
@@ -508,12 +517,15 @@
    </label>
      
   </div>
+    </div>
   <input type="button" name="previous" class="previous action-button" value="Previous" />
   <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
 	<fieldset>
+    <div class="bg-image-pinkbeach">
+
 		<h2 class="fs-title">Step 6</h2>
     <h3 class="fs-subtitle">  What modes of transport do you want to use during your trip?  </h3>
     <div class="checkboxes wrap centered">
@@ -544,12 +556,15 @@
      </label>
      
      </div>
+     </div>
      <input type="button" name="previous" class="previous action-button" value="Previous" />
    <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
 	<fieldset>
+    <div class="bg-image-noosafairypools">
+
 		<h2 class="fs-title">Step 7</h2>
     <h3 class="fs-subtitle">  What activities do you enjoy? </h3>
       <div  class="checkboxes wrap left">
@@ -627,15 +642,19 @@
     </label>
   
     </div>
+      </div>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
   <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 
 
 	<fieldset>
+    <div class="bg-image-noosasurf">
+
 		<h2 class="fs-title">Step 8</h2>
     <h3 for="message"> Do you have any additional comments that would help us plan your trip? </h3>
               <textarea class="textarea" name="message" id="message" placeholder="Tell me more!"></textarea>
+      </div>
 
   <input type="button" name="previous" class="previous action-button" value="Previous" />
   <input type="button" name="next" class="next action-button" value="Next" />
@@ -643,6 +662,8 @@
 
 
 	<fieldset>
+    <div class="bg-image-byronshops">
+
 		<h2 class="fs-title">Step 9</h2>
     <label for="name"> Your Name </label>
     <input required type="text" name="name" id="name" placeholder="Name" />
@@ -651,6 +672,7 @@
     <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
   <p> <input type="submit" value="Submit for a quote"> </p>
+    </div>
   <input type="button" name="previous" class="previous action-button" value="Previous" />
   <input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>

@@ -32,6 +32,7 @@
     <script src="/javascript/stepbystep.js" defer></script>
     <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
     <script src="/javascript/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/slide.js" defer></script>
 
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
 
@@ -179,7 +180,7 @@
 
 <section class="grid">
 
-  <div id="step1" class="col-5_sm-12-middle-spaceAround padded bg-image-apostlessoft padded center hiddenform form relative">
+  <div id="step1" id="people-holder-1" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround slideleft padded bg-image-apostlessoft padded center hiddenform form relative">
     <div class="formcover paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
@@ -198,9 +199,11 @@
       
     </select>
     </div>
+
+    <input id="nav-button-1" type="button" name="next" class="next action-button" value="Next" />
   </div>
 
-  <div id="step2" class="col-5_sm-12-middle-spaceAround  padded bg-image-beachcanoe form padded center relative">
+  <div id="step2" id="people-holder-1" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround slideright padded bg-image-beachcanoe form padded center relative">
     <div class="formcover paddingtop50 bg-image-beachcanoe">
       <h3> Step Two </h3>
     </div>
@@ -310,9 +313,11 @@
     
     </select>
     </div>
+    <input id="nav-button-2" type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
   </div>
 
-  <div id="step3" class="col-5_sm-12-middle-spaceAround bg-image-bluemountains form padded center relative">
+  <div id="step3" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround bg-image-bluemountains slideleft form padded center relative">
     <div class="formcover paddingtop50 bg-image-bluemountains">
       <h3> Step Three </h3>
     </div>
@@ -379,7 +384,7 @@
 
   </div>
 
-  <div id="step4" class="col-5_sm-12-middle-spaceAround bg-image-lakemackenzie form padded center relative">
+  <div id="step4" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround slideright bg-image-lakemackenzie form padded center relative">
 <div class="formcover paddingtop50 bg-image-lakemackenzie">
 <h3> Step Four </h3>
 </div>
