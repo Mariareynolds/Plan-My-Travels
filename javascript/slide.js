@@ -46,22 +46,22 @@ $(document).ready(function() {
 
 // slide on button click
 
-        function doAnimation(id) {
-    $(id).children('.slideleft').fadeIn(function () {
-        $(this).animate({
-            marginLeft: '103px'
-        }, 1000, function () {
-            // Animation complete.
-        });
-    });
-    $(id).children('.slideright').fadeIn(function () {
-        $(this).animate({
-            marginRight: '12px'
-        }, 1000, function () {
-            // Animation complete.
-        });
-    });
-}
+//         function doAnimation(id) {
+//     $(id).children('.slideleft').fadeIn(function () {
+//         $(this).animate({
+//             marginLeft: '103px'
+//         }, 1000, function () {
+//             // Animation complete.
+//         });
+//     });
+//     $(id).children('.slideright').fadeIn(function () {
+//         $(this).animate({
+//             marginRight: '12px'
+//         }, 1000, function () {
+//             // Animation complete.
+//         });
+//     });
+// }
 
 function animatePeople(id) {
     // If there are visible people
@@ -80,10 +80,3 @@ function animatePeople(id) {
         doAnimation(id);
     }
 }
-
-$('#nav-button-1').click(function () {
-    animatePeople('#people-holder-1');
-});
-$('#nav-button-2').click(function () {
-    animatePeople('#people-holder-2');
-});

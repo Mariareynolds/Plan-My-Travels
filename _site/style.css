@@ -25,6 +25,11 @@ img{
   }
 /* -------------------UTILITY CLASSES-------------------*/
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 .center{
   text-align: center;
   margin-left: auto;
@@ -1521,13 +1526,26 @@ body {
 }
 .fadein {  opacity: 0;}
 
-.slideinright  {
+.slideinleft, .slideinright{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5vw solid white;
+  border-left: 5vw solid white;
+  border-right: 5vw solid white;
+
+}
+
+.slideinright   {
     margin-left: 100vw;
     max-width:100%;
     width: 100%;
+
   }
 
 .slideinleft {
     margin-left: -100vw;
     max-width:100%;
+
 }
