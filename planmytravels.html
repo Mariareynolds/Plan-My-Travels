@@ -114,10 +114,17 @@ finish:
 
 
 <section>
-  <div class="center">
+  <div class="center hidden">
     <h3> Let's start planning your trip </h3>
-    <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which location you want to visit have a look at the destinations on the map to get a feel for what locations you'll enjoy most. </p>
+    <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at the destinations on the map to get a feel for what there is to do in each location so you can pick what you'll enjoy most. </p>
+    <p>(Use the +/- buttons on the lower right hand corner of the map to help you zoom in and out to get a closer look at each of the locations)</p>
   </div>
+  <div class="center mobilevisible">
+    <h3> Let's start planning your trip </h3>
+    <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at this website on a desktop where you will be able to see a map with all of the pins explaining a little bit about each location </p>
+    <p>Unfortunatley the map of Australia is just too big to be viewed on a mobile!</p>
+  </div>
+
 </section>
 
 
@@ -271,10 +278,10 @@ finish:
  </div>
 <div class="bg-transparent">
   <h3 class="boldheading"> Where would you like to stop?  <h3>
-<div class="checkboxes wrap">
+<div class="checkboxes center wrap">
 
 {% for stops in page.stops %}
- <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" name="Stops" value="{{stops.select}}" />
+ <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" style="left" name="Stops" value="{{stops.select}}" />
  </label>
    {% endfor %}
 </div>
@@ -330,7 +337,7 @@ finish:
   </div>
   <div class="bg-transparent">
     <h3 class="boldheading" for="message"> Any additional comments that would help me plan your trip... </h3>
-    <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
+    <textarea type="text" name="message" id="message" placeholder="Tell me more!"></textarea>
     <a href="#step7" class=" action-button"> Previous</a>
     <a href="#step9"  class=" action-button"> Next</a>
     </div>
