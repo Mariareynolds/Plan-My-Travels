@@ -19,10 +19,12 @@ days:
 - select: 12 weeks
 stops:
 - select: Adelaide
+- select: Kangaroo Island
 - select: Great Ocean Road
 - select: melbourne
 - select: Canberra
 - select: Jervis Bay
+- select: The Cove
 - select: Blue Mountains
 - select: Sydney
 - select: Central Coast
@@ -35,6 +37,7 @@ stops:
 - select: Fraser Island
 - select: Whitsundays
 - select: Airlie Beach
+- select: Magnetic Island
 - select: Cairns
 - select: Perth
 - select: Rottnest Island
@@ -56,6 +59,8 @@ activities:
 - select: Photography
 - select: Sailing
 - select: Theme Parks
+- select: Nightlife
+- select: Wineries
 start:
 - select: Adelaide
 - select: Great Ocean Road
@@ -165,14 +170,14 @@ finish:
 <div class="slideinleft">
 
 
-  <div id="step1"  class="col-5_sm-12-middle-spaceAround card  padded bg-image-apostlessoft padded center hiddenform form relative">
+  <div id="step1"  class="col-5_sm-12-middle-spaceAround shadow padded bg-image-apostlessoft padded center hiddenform form relative">
     <div class="formcover paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
     <div class="bg-transparent">
 
 
-    <label class="boldheading" for="level"> Pick a country </label>
+    <h3 class="boldheading" for="level"> Pick a country </h3>
     <select name="level">
 
       {% for country in page.country %}
@@ -192,7 +197,7 @@ finish:
       <h3> Step Two </h3>
     </div>
     <div class="bg-transparent">
-    <label class="boldheading" for="level"> How long are you planning to travel for? </label>
+    <h3 class="boldheading" for="level"> How long are you planning to travel for? </h3>
     <select name="level">
     {% for days in page.days %}
       <option required value="{{days.select}}"> {{days.select}} </option>
@@ -208,7 +213,7 @@ finish:
       <h3> Step Three </h3>
     </div>
     <div class="bg-transparent">
-    <label class="boldheading">  Do you have a starting location?  </label>
+    <h3 class="boldheading">  Do you have a starting location?  </h3>
     <div class="radio checkboxes">
       <label for="starting-yes">YES
         <input class="start-location" type="radio" id=starting-yes name="start" value="YES" />
@@ -217,7 +222,7 @@ finish:
         <input type="radio" id=starting-no name="start" value="NO" />
       </label>
       <div class="sub-question">
-      <label class="boldheading" for="level"> Select your starting location </label>
+      <h3 class="boldheading" for="level"> Select your starting location </h3>
       <select name="level">
 
        {% for start in page.start %}
@@ -236,7 +241,7 @@ finish:
 <h3> Step Four </h3>
 </div>
 <div class="bg-transparent">
- <label class="boldheading">  Do you have a finishing location?  </label>
+ <h3 class="boldheading">  Do you have a finishing location?  </h3>
 <div  class="radio">
   <label for="finishing-yes">YES
   <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
@@ -246,7 +251,7 @@ finish:
   <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 
     <div class="finish-question">
-      <label class="boldheading" for="level"> Select your finishing location </label>
+      <h3 class="boldheading" for="level"> Select your finishing location </h3>
     <select name="level">
 
      {% for finish in page.finish %}
@@ -286,7 +291,7 @@ finish:
   </div>
   <div class="bg-transparent">
     <h3 class="boldheading">  What modes of transport do you want to use during your trip?  </h3>
-    <div class="checkboxes right">
+    <div class="checkboxes wrap center">
     {% for transport in page.transport %}
 
    <label for="{{transport.select}}">{{transport.select}}
@@ -305,7 +310,7 @@ finish:
   </div>
   <div class="bg-transparent">
     <h3 class="boldheading">  what activities do you enjoy? </h3>
-      <div  class="checkboxes right">
+      <div  class="checkboxes wrap right">
     {% for activities in page.activities %}
 
     <label for="{{activities.select}}"> {{activities.select}}
@@ -324,7 +329,7 @@ finish:
     <h3> Step Eight </h3>
   </div>
   <div class="bg-transparent">
-    <label class="boldheading" for="message"> Any additional comments that would help me plan your trip... </label>
+    <h3 class="boldheading" for="message"> Any additional comments that would help me plan your trip... </h3>
     <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
     <a href="#step7" class=" action-button"> Previous</a>
     <a href="#step9"  class=" action-button"> Next</a>

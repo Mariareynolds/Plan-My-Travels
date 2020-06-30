@@ -33,6 +33,7 @@
     <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
     <script src="/javascript/grt-cookie-consent.js" defer></script>
     <script src="/javascript/slide.js" defer></script>
+    <script src="/javascript/accordian.js" defer></script>
 
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
 
@@ -45,8 +46,8 @@
     </style>
     <!-- Cookies policy -->
     <link rel="stylesheet" href="/cookie-consent-bar-grt/grt-cookies-consent.css" />
-    <script src="/path/to/cdn/jquery.min.js"></script>
-    <script src="grt-cookie-consent.js"></script>
+
+
 
 
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
@@ -93,7 +94,7 @@
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
     <li><a href="/index">Home</a></li>
-    <li><a href="/planner-page">Plan My Travels </a></li>
+    <li><a href="/planmytravels">Plan My Travels </a></li>
     <li><a href="/bespokePlans/dan">Login </a></li>
   </ul>
     <hr>
@@ -182,14 +183,14 @@
 <div class="slideinleft">
 
 
-  <div id="step1"  class="col-5_sm-12-middle-spaceAround card  padded bg-image-apostlessoft padded center hiddenform form relative">
+  <div id="step1"  class="col-5_sm-12-middle-spaceAround shadow padded bg-image-apostlessoft padded center hiddenform form relative">
     <div class="formcover paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
     <div class="bg-transparent">
 
 
-    <label class="boldheading" for="level"> Pick a country </label>
+    <h3 class="boldheading" for="level"> Pick a country </h3>
     <select name="level">
 
       
@@ -212,7 +213,7 @@
       <h3> Step Two </h3>
     </div>
     <div class="bg-transparent">
-    <label class="boldheading" for="level"> How long are you planning to travel for? </label>
+    <h3 class="boldheading" for="level"> How long are you planning to travel for? </h3>
     <select name="level">
     
       <option required value="1 week"> 1 week </option>
@@ -250,7 +251,7 @@
       <h3> Step Three </h3>
     </div>
     <div class="bg-transparent">
-    <label class="boldheading">  Do you have a starting location?  </label>
+    <h3 class="boldheading">  Do you have a starting location?  </h3>
     <div class="radio checkboxes">
       <label for="starting-yes">YES
         <input class="start-location" type="radio" id=starting-yes name="start" value="YES" />
@@ -259,7 +260,7 @@
         <input type="radio" id=starting-no name="start" value="NO" />
       </label>
       <div class="sub-question">
-      <label class="boldheading" for="level"> Select your starting location </label>
+      <h3 class="boldheading" for="level"> Select your starting location </h3>
       <select name="level">
 
        
@@ -318,7 +319,7 @@
 <h3> Step Four </h3>
 </div>
 <div class="bg-transparent">
- <label class="boldheading">  Do you have a finishing location?  </label>
+ <h3 class="boldheading">  Do you have a finishing location?  </h3>
 <div  class="radio">
   <label for="finishing-yes">YES
   <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
@@ -328,7 +329,7 @@
   <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 
     <div class="finish-question">
-      <label class="boldheading" for="level"> Select your finishing location </label>
+      <h3 class="boldheading" for="level"> Select your finishing location </h3>
     <select name="level">
 
      
@@ -394,6 +395,9 @@
  <label for="Adelaide">Adelaide  <input id="Adelaide" type="checkbox" name="Stops" value="Adelaide" />
  </label>
    
+ <label for="Kangaroo Island">Kangaroo Island  <input id="Kangaroo Island" type="checkbox" name="Stops" value="Kangaroo Island" />
+ </label>
+   
  <label for="Great Ocean Road">Great Ocean Road  <input id="Great Ocean Road" type="checkbox" name="Stops" value="Great Ocean Road" />
  </label>
    
@@ -404,6 +408,9 @@
  </label>
    
  <label for="Jervis Bay">Jervis Bay  <input id="Jervis Bay" type="checkbox" name="Stops" value="Jervis Bay" />
+ </label>
+   
+ <label for="The Cove">The Cove  <input id="The Cove" type="checkbox" name="Stops" value="The Cove" />
  </label>
    
  <label for="Blue Mountains">Blue Mountains  <input id="Blue Mountains" type="checkbox" name="Stops" value="Blue Mountains" />
@@ -442,6 +449,9 @@
  <label for="Airlie Beach">Airlie Beach  <input id="Airlie Beach" type="checkbox" name="Stops" value="Airlie Beach" />
  </label>
    
+ <label for="Magnetic Island">Magnetic Island  <input id="Magnetic Island" type="checkbox" name="Stops" value="Magnetic Island" />
+ </label>
+   
  <label for="Cairns">Cairns  <input id="Cairns" type="checkbox" name="Stops" value="Cairns" />
  </label>
    
@@ -468,7 +478,7 @@
   </div>
   <div class="bg-transparent">
     <h3 class="boldheading">  What modes of transport do you want to use during your trip?  </h3>
-    <div class="checkboxes right">
+    <div class="checkboxes wrap center">
     
 
    <label for="Car Hire">Car Hire
@@ -507,7 +517,7 @@
   </div>
   <div class="bg-transparent">
     <h3 class="boldheading">  what activities do you enjoy? </h3>
-      <div  class="checkboxes right">
+      <div  class="checkboxes wrap right">
     
 
     <label for="Beach Days"> Beach Days
@@ -569,6 +579,18 @@
 
     </label>
   
+
+    <label for="Nightlife"> Nightlife
+      <input id="Nightlife" type="checkbox" name="Nightlife" value="Nightlife"/>
+
+    </label>
+  
+
+    <label for="Wineries"> Wineries
+      <input id="Wineries" type="checkbox" name="Wineries" value="Wineries"/>
+
+    </label>
+  
     </div>
     <a href="#step6" class=" action-button"> Previous</a>
     <a href="#step8"  class=" action-button"> Next</a>
@@ -580,7 +602,7 @@
     <h3> Step Eight </h3>
   </div>
   <div class="bg-transparent">
-    <label class="boldheading" for="message"> Any additional comments that would help me plan your trip... </label>
+    <h3 class="boldheading" for="message"> Any additional comments that would help me plan your trip... </h3>
     <textarea name="message" id="message" placeholder="Tell me more!"></textarea>
     <a href="#step7" class=" action-button"> Previous</a>
     <a href="#step9"  class=" action-button"> Next</a>
@@ -649,8 +671,8 @@
       <div class="col-3_sm-12-middle  mobile-init  right">
         <nav class="inline padded">
           <a class="padded" href="/index"> Home </a>
-          <a class="padded" href="/plannerpage"> Plan My Travels </a>
-          <a class="padded" href="/login"> Login </a>
+          <a class="padded" href="/planmytravels"> Plan My Travels </a>
+          <a class="padded" href="/loginform"> Login </a>
         </nav>
       </div>
 

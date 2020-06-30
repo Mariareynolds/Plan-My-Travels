@@ -115,23 +115,24 @@ padding: 0;
   margin-top: 1rem;
   margin-left:1rem;
   margin-bottom: 1rem;
-  margin-right:-1rem;
-  z-index:0;
+  margin-right:-10rem;
+  z-index:5;
   position: relative;
 }
 .bump-left {
-  margin-top: 1rem;
-  margin-left:-10rem;
-  margin-bottom: 10rem;
-  margin-right: 10rem;
+  top: 1rem;
+  left:-10rem;
+  bottom: 1rem;
+  right: 1rem;
   z-index:4;
   position: relative;
 }
 .bump-up {
-  margin-top: -3rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  margin-right:1rem;
+  top: -3rem;
+  left: 1rem;
+  bottom: 1rem;
+  right:1rem;
+  position: relative;
   z-index:12;
 }
 .textbox {
@@ -247,13 +248,35 @@ padding: 0;
     max-width: 30%;
 }
 
-.card {
+.shadow {
   padding: 1rem;
-  background-color: white;
+  background-color: transparent;
   /* border-radius: 5px; */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
+.card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.bluecard {
+  padding: 1rem;
+  background-color: #B8DDDD;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.greycard {
+  padding: 1rem;
+  background-color: #D8DDDD;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
 /* .stamp {
   width: 184px;
   height: 184px;
@@ -326,6 +349,7 @@ padding: 0;
             justify-content: center;
             align-items: center;
         }
+
 
 
 .bg-colorblue {
@@ -481,14 +505,7 @@ padding: 0;
 }
 .blueline{
   border: 2px solid #C8F5F5;
-  bottom: -2rem;
-  left: 25%;
-  right: 25%;
-
-}
-.bluelinecloser{
-  border: 2px solid #C8F5F5;
-  bottom: 3rem;
+  bottom: -2vh;
   left: 25%;
   right: 25%;
 
@@ -543,8 +560,8 @@ padding: 0;
 
 .fa-star{
   font-size: 2rem;
-
 }
+
 .quote-marks{
   font-size: 1rem;
   color: grey;
@@ -584,7 +601,7 @@ transform:rotateY(180deg)
 h2{
   font-family: 'Lato', sans-serif;
   color: #78787D;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 1.3rem;
 }
@@ -631,11 +648,10 @@ a{
 }
 
 form input[type=text],
-form input[type=email],
 form textarea {
   width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 2.5rem;
   border: 1px solid rgb(220,220,220);
   line-height: 0.45
 }
@@ -643,11 +659,11 @@ form textarea {
 form input[type=email],
 form input[type=password],
 form input[type=hidden]{
-  width: 30%;
-  margin: 1.5rem auto;
+  width: 90%;
+  margin: 0.5rem auto;
   padding: 1rem;
   border: 1px solid rgb(220,220,220);
-  line-height: 0.5
+  line-height: 1
 }
 
  form input.submit[type="submit"]{
@@ -672,14 +688,16 @@ form input[type=hidden]{
 
 div input[type=text],
 div textarea[type=text]{
-  width: 60%;
+  width: 90%;
   margin: 0.5rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
   border: 1px solid rgb(220,220,220);
   line-height: 1;
 }
 
-form label {
+
+
+.form label{
   margin: 1rem 0 0;
   display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
   /* color: #6C7A89; */
@@ -687,22 +705,10 @@ form label {
   font-weight: bold;
   text-transform: uppercase;
   display: block;
+  font-size: 1rem;
   min-height: 2rem;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-.form label{
-  margin: 1rem 0 0;
-  display: inline-block; /* This ads margin above each label. You need display inline block, because by default it's an inline element that won't accept vertical margin.*/
-  color: #6C7A89;
-  /* color: white; */
-  font-weight: bold;
-  text-transform: uppercase;
-  display: block;
-  min-height: 2rem;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  /* font-weight: 300; */
   letter-spacing: 1px;
 }
 
@@ -769,8 +775,8 @@ form label {
 form h3{
   margin: 1rem 0 0;
 display: inline-block;
-color: #6C7A89;
-/* color: white; */
+/* color: #6C7A89; */
+color: white;
 font-weight: bold;
 text-transform: uppercase;
 display: block;
@@ -1286,93 +1292,24 @@ body {
   margin-left: 10px;
 }
 
-/* 48em = 768px */
-
-@media (max-width: 65em){
-  .mobile-init{
-    order: -3;
-  }
-  .comment-box-fix{
-        display: inline-block;
-        width: 100%;
-        margin-top: 2rem;
-  }
+.action-button {
+  width: 100px;
+  min-height: inherit;
+  background: #B8DDDD;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  display: inline-block;
+  text-decoration: none;
 }
-
-@media(max-width: 65em){
-  nav{
-    text-align: center;
-  }
+.action-button:hover,
+.action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #B8DDDD;
 }
-
-/* @media{
-  .map{
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding top: 5rem;
-}
-
-
-
-} */
-@media(max-width: 65em){
-  [class*=grid]>[class*=col-3].card{
-    flex-basis: 100%;
-    max-width: 100%;
-}
-/* .comment-box{
-  display: none;
-} */
-}
-
-
-@media(max-width: 500px){
-  .mediamap{
-  display: none;
-}
-}
-@media (min-width: 48em) {
-  .header li {
-  float: left;
-  }
-  .header li a {
-    padding: 10px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-  .banner,
-  .banner-with-header {
-    min-height: 80vh;
-  }
-  .map{
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding top: 5rem;
-    /* margin: 2rem; */
-  }
-
-}
-/* .card{
-  font-size: 0.8rem;
-} */
-
-@media(max-width:600px){
-  .hidden{
-    display: none;
-
-  }
-  .comment-box{
-    display: none;
-  }
-
-}
-
 
 
 
@@ -1548,4 +1485,167 @@ body {
     margin-left: -100vw;
     max-width:100%;
 
+}
+
+/* Accordian slides */
+
+.accordion dt a {
+
+  display:block;
+  color: #C8F5F5;
+  position: relative;
+  text-decoration: none;
+}
+
+.accordion dt{
+  padding: 0.25rem 10rem;
+  margin: 0.25rem 0;
+
+}
+
+.accordion dd {
+  padding: 0.5rem;
+}
+
+/* Accordian Icon */
+.accordion dt a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+.accordion dt a::after {
+  content: "+";
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+.open::after {
+  transform: rotateZ(45deg);
+}
+
+/* 48em = 768px */
+@media (max-width: 65em){
+  .mobile-init{
+    order: -3;
+  }
+  .comment-box-fix{
+        display: inline-block;
+        width: 100%;
+        margin-top: 2rem;
+  }
+}
+
+@media(max-width: 65em){
+  nav{
+    text-align: center;
+  }
+}
+
+/* @media{
+  .map{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding top: 5rem;
+}
+
+
+
+} */
+@media(max-width: 65em){
+  [class*=grid]>[class*=col-3].card{
+    flex-basis: 100%;
+    max-width: 100%;
+}
+/* .comment-box{
+  display: none;
+} */
+}
+
+
+@media(max-width: 500px){
+  .mediamap{
+  display: none;
+}
+}
+@media (min-width: 48em) {
+  .header li {
+  float: left;
+  }
+  .header li a {
+    padding: 10px 30px;
+    background-color: #B8DDDD
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .banner,
+  .banner-with-header {
+    min-height: 80vh;
+  }
+  .map{
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding top: 5rem;
+    /* margin: 2rem; */
+  }
+
+}
+/* .card{
+  font-size: 0.8rem;
+} */
+.mobilevisible{
+  display: none;
+}
+
+@media(max-width:600px){
+  .hidden{
+    display: none;
+  }
+
+  .mobileorder9{
+    order:9;
+  }
+
+  .mobileorder3{
+    order:3;
+  }
+
+  .vertical-line{
+        border-left: 0px solid pink;
+          margin: 0px 0;
+      }
+
+  .vertical-line-review{
+    border-right: 0px solid pink;
+      margin: 0px 0;
+  }
+  .mobilevisible{
+    display: block;
+  }
+
+  .comment-box{
+    display: none;
+  }
+
+  .fa-star{
+    font-size: 4vw;
+  }
+
+  .accordion dt{
+    padding: 0.25rem auto;
+    margin: 0.5rem 0;
+  }
 }
