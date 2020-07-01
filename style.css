@@ -1316,7 +1316,9 @@ body {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #B8DDDD;
 }
 
-
+/* .hiddenButton{
+  display: none;
+} */
 
 
 /* step by step form */
@@ -1546,6 +1548,10 @@ body {
         display: inline-block;
         width: 100%;
         margin-top: 2rem;
+  }
+  .min-height{
+    min-height: 15rem;
+
   }
 }
 

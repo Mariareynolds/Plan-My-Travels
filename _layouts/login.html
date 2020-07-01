@@ -10,11 +10,22 @@ banner-image: /images/operahouse.jpg
 
   <h3 class=" padded-1 bluetext">Hi {{page.client-intro}} are you ready for...
   </h3>
-  <h3 class="padded-1 bluetext"><span class="center" id="typed"></span></h3>
+  <h3 class="padded-1 min-height bluetext"><span class="center" id="typed"></span></h3>
   <div  id="typed-strings">
 
+    {% assign day_count = 0 %}
     {% for day in page.day %}
-    <h3> <span>DAY {{ forloop.index }} - {{day.location | replace: "-", " "}}</span></h3>
+
+      {% for itinerary in site.Itinerary_Days %}
+      {% if day.location == itinerary.title %}
+
+            {% if itinerary.type == 'activity' %}
+            {% assign day_count = day_count | plus: 1 %}
+    <h3> <span>DAY {{ day_count }}  - {{day.location | replace: "-", " "}}</span></h3>
+
+    {% endif %}
+    {% endif %}
+    {% endfor %}
     {% endfor %}
   </div>
 

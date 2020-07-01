@@ -188,14 +188,14 @@ finish:
 
     <h3 class="boldheading" for="level"> Pick a country *</h3>
     <select name="level placeholder="select one of the below">
-      <option value="" selected disabled>Please select</option>
+      <option value="Please select" selected disabled>Please select</option>
       {% for country in page.country %}
       <option required value="{{ country.select }}"> {{ country.select }} </option>
 
       {% endfor %}
 
     </select>
-      <a href="#step2" class=" action-button"> Next </a>
+      <a href="#step2" class=" action-button hiddenButton"> Next </a>
     </div>
 </div>
 
@@ -208,13 +208,13 @@ finish:
     <div class="bg-transparent">
     <h3 class="boldheading" for="level"> How long are you planning to travel for? * </h3>
     <select name="level">
-    <option value="" selected disabled>Please select</option>
+    <option value="Please select" selected disabled>Please select</option>
     {% for days in page.days %}
       <option required value="{{days.select}}"> {{days.select}} </option>
     {% endfor %}
     </select>
     <a href="#step1" class=" action-button"> Previous</a>
-    <a href="#step3"  class=" action-button"> Next</a>
+    <a href="#step3"  class=" action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -231,7 +231,7 @@ finish:
       <label for="starting-no">NO
         <input type="radio" id=starting-no name="start" value="NO" />
       </label>
-      <div class="sub-question">
+      <div class="sub-question"id="step3_5">
       <h3 class="boldheading" for="level"> Select your starting location *</h3>
       <select name="level">
         <option value="" selected disabled>Please select</option>
@@ -242,7 +242,7 @@ finish:
        </div>
        </div>
        <a href="#step2" class=" action-button"> Previous</a>
-       <a href="#step4"  class=" action-button"> Next</a>
+       <a href="#step4"  class=" action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -260,18 +260,18 @@ finish:
   <label for="finishing-no">NO
   <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 
-    <div class="finish-question">
+    <div class="finish-question" id="step4_5">
       <h3 class="boldheading" for="level"> Select your finishing location *</h3>
-    <select name="level">
+    <select required name="level">
       <option value="" selected disabled>Please select</option>
      {% for finish in page.finish %}
-       <option required value="{{finish.select}}"> {{finish.select}} </option>
+       <option  value="{{finish.select}}"> {{finish.select}} </option>
      {% endfor %}
      </select>
      </div>
 </div>
 <a href="#step3" class=" action-button"> Previous</a>
-<a href="#step5"  class=" action-button"> Next</a>
+<a href="#step5"  class=" action-button hiddenButton"> Next</a>
 </div>
   </div>
 
@@ -289,7 +289,7 @@ finish:
    {% endfor %}
 </div>
 <a href="#step4" class=" action-button"> Previous</a>
-<a href="#step6"  class=" action-button"> Next</a>
+<a href="#step6"  class=" action-button hiddenButton"> Next</a>
 </div>
 
   </div>
@@ -310,7 +310,7 @@ finish:
      {% endfor %}
      </div>
      <a href="#step5" class=" action-button"> Previous</a>
-     <a href="#step7"  class=" action-button"> Next</a>
+     <a href="#step7"  class=" action-button hiddenButton"> Next</a>
   </div>
   </div>
 
@@ -330,7 +330,7 @@ finish:
   {% endfor %}
     </div>
     <a href="#step6" class=" action-button"> Previous</a>
-    <a href="#step8"  class=" action-button"> Next</a>
+    <a href="#step8"  class=" action-button hiddenButton"> Next</a>
   </div>
   </div>
 
@@ -342,7 +342,7 @@ finish:
     <h3 class="boldheading" for="message"> Any additional comments that would help me plan your trip... </h3>
     <textarea type="text" name="message" id="message" placeholder="Tell me more!"></textarea>
     <a href="#step7" class=" action-button"> Previous</a>
-    <a href="#step9"  class=" action-button"> Next</a>
+    <a href="#step9"  class=" action-button hiddenButton"> Next</a>
     </div>
 
     </div>

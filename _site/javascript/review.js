@@ -1,3 +1,4 @@
+
 var star1 = document.querySelector('.starj1');
 var star2 = document.querySelector('.starj2');
 var star3 = document.querySelector('.starj3');

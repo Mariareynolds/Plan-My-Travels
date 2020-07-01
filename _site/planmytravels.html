@@ -205,7 +205,7 @@
 
     <h3 class="boldheading" for="level"> Pick a country *</h3>
     <select name="level placeholder="select one of the below">
-      <option value="" selected disabled>Please select</option>
+      <option value="Please select" selected disabled>Please select</option>
       
       <option required value="Australia"> Australia </option>
 
@@ -215,7 +215,7 @@
       
 
     </select>
-      <a href="#step2" class=" action-button"> Next </a>
+      <a href="#step2" class=" action-button hiddenButton"> Next </a>
     </div>
 </div>
 
@@ -228,7 +228,7 @@
     <div class="bg-transparent">
     <h3 class="boldheading" for="level"> How long are you planning to travel for? * </h3>
     <select name="level">
-    <option value="" selected disabled>Please select</option>
+    <option value="Please select" selected disabled>Please select</option>
     
       <option required value="1 week"> 1 week </option>
     
@@ -256,7 +256,7 @@
     
     </select>
     <a href="#step1" class=" action-button"> Previous</a>
-    <a href="#step3"  class=" action-button"> Next</a>
+    <a href="#step3"  class=" action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -273,7 +273,7 @@
       <label for="starting-no">NO
         <input type="radio" id=starting-no name="start" value="NO" />
       </label>
-      <div class="sub-question">
+      <div class="sub-question"id="step3_5">
       <h3 class="boldheading" for="level"> Select your starting location *</h3>
       <select name="level">
         <option value="" selected disabled>Please select</option>
@@ -320,7 +320,7 @@
        </div>
        </div>
        <a href="#step2" class=" action-button"> Previous</a>
-       <a href="#step4"  class=" action-button"> Next</a>
+       <a href="#step4"  class=" action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -338,54 +338,54 @@
   <label for="finishing-no">NO
   <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 
-    <div class="finish-question">
+    <div class="finish-question" id="step4_5">
       <h3 class="boldheading" for="level"> Select your finishing location *</h3>
-    <select name="level">
+    <select required name="level">
       <option value="" selected disabled>Please select</option>
      
-       <option required value="Adelaide"> Adelaide </option>
+       <option  value="Adelaide"> Adelaide </option>
      
-       <option required value="Great Ocean Road"> Great Ocean Road </option>
+       <option  value="Great Ocean Road"> Great Ocean Road </option>
      
-       <option required value="melbourne"> melbourne </option>
+       <option  value="melbourne"> melbourne </option>
      
-       <option required value="Canberra"> Canberra </option>
+       <option  value="Canberra"> Canberra </option>
      
-       <option required value="Jervis Bay"> Jervis Bay </option>
+       <option  value="Jervis Bay"> Jervis Bay </option>
      
-       <option required value="Sydney"> Sydney </option>
+       <option  value="Sydney"> Sydney </option>
      
-       <option required value="Central Coast"> Central Coast </option>
+       <option  value="Central Coast"> Central Coast </option>
      
-       <option required value="Newcastle"> Newcastle </option>
+       <option  value="Newcastle"> Newcastle </option>
      
-       <option required value="Byron Bay"> Byron Bay </option>
+       <option  value="Byron Bay"> Byron Bay </option>
      
-       <option required value="Gold Coast"> Gold Coast </option>
+       <option  value="Gold Coast"> Gold Coast </option>
      
-       <option required value="Brisbane"> Brisbane </option>
+       <option  value="Brisbane"> Brisbane </option>
      
-       <option required value="Sunshine Coast"> Sunshine Coast </option>
+       <option  value="Sunshine Coast"> Sunshine Coast </option>
      
-       <option required value="Noosa"> Noosa </option>
+       <option  value="Noosa"> Noosa </option>
      
-       <option required value="Fraser Island"> Fraser Island </option>
+       <option  value="Fraser Island"> Fraser Island </option>
      
-       <option required value="Whitsundays"> Whitsundays </option>
+       <option  value="Whitsundays"> Whitsundays </option>
      
-       <option required value="Airlie Beach"> Airlie Beach </option>
+       <option  value="Airlie Beach"> Airlie Beach </option>
      
-       <option required value="Cairns"> Cairns </option>
+       <option  value="Cairns"> Cairns </option>
      
-       <option required value="Perth"> Perth </option>
+       <option  value="Perth"> Perth </option>
      
-       <option required value="Exmouth"> Exmouth </option>
+       <option  value="Exmouth"> Exmouth </option>
      
      </select>
      </div>
 </div>
 <a href="#step3" class=" action-button"> Previous</a>
-<a href="#step5"  class=" action-button"> Next</a>
+<a href="#step5"  class=" action-button hiddenButton"> Next</a>
 </div>
   </div>
 
@@ -472,7 +472,7 @@
    
 </div>
 <a href="#step4" class=" action-button"> Previous</a>
-<a href="#step6"  class=" action-button"> Next</a>
+<a href="#step6"  class=" action-button hiddenButton"> Next</a>
 </div>
 
   </div>
@@ -513,7 +513,7 @@
      
      </div>
      <a href="#step5" class=" action-button"> Previous</a>
-     <a href="#step7"  class=" action-button"> Next</a>
+     <a href="#step7"  class=" action-button hiddenButton"> Next</a>
   </div>
   </div>
 
@@ -599,7 +599,7 @@
   
     </div>
     <a href="#step6" class=" action-button"> Previous</a>
-    <a href="#step8"  class=" action-button"> Next</a>
+    <a href="#step8"  class=" action-button hiddenButton"> Next</a>
   </div>
   </div>
 
@@ -611,7 +611,7 @@
     <h3 class="boldheading" for="message"> Any additional comments that would help me plan your trip... </h3>
     <textarea type="text" name="message" id="message" placeholder="Tell me more!"></textarea>
     <a href="#step7" class=" action-button"> Previous</a>
-    <a href="#step9"  class=" action-button"> Next</a>
+    <a href="#step9"  class=" action-button hiddenButton"> Next</a>
     </div>
 
     </div>
