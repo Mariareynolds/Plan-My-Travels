@@ -2,9 +2,11 @@
 layout: default
 banner-image: /images/operahouse.jpg
 country:
+
 - select: Australia
 - select: More to come!
 days:
+
 - select: 1 week
 - select: 2 weeks
 - select: 3 weeks
@@ -67,7 +69,6 @@ start:
 - select: melbourne
 - select: Canberra
 - select: Jervis Bay
-- select: Woollongong
 - select: Sydney
 - select: Central Coast
 - select: Newcastle
@@ -78,10 +79,9 @@ start:
 - select: Noosa
 - select: Fraser Island
 - select: Whitsundays
-- select: Airlis Beach
+- select: Airlie Beach
 - select: Cairns
 - select: Perth
-- select: Rottnest Island
 - select: Exmouth
 finish:
 - select: Adelaide
@@ -89,7 +89,6 @@ finish:
 - select: melbourne
 - select: Canberra
 - select: Jervis Bay
-- select: Woollongong
 - select: Sydney
 - select: Central Coast
 - select: Newcastle
@@ -100,10 +99,9 @@ finish:
 - select: Noosa
 - select: Fraser Island
 - select: Whitsundays
-- select: Airlis Beach
+- select: Airlie Beach
 - select: Cairns
 - select: Perth
-- select: Rottnest Island
 - select: Exmouth
 ---
 
@@ -115,12 +113,16 @@ finish:
 
 <section>
   <div class="center hidden">
-    <h3> Let's start planning your trip </h3>
+    <h3 style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;"> Let's start planning your trip </h3>
     <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at the destinations on the map to get a feel for what there is to do in each location so you can pick what you'll enjoy most. </p>
     <p>(Use the +/- buttons on the lower right hand corner of the map to help you zoom in and out to get a closer look at each of the locations)</p>
   </div>
   <div class="center mobilevisible">
-    <h3> Let's start planning your trip </h3>
+    <h3 style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;"> Let's start planning your trip </h3>
     <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at this website on a desktop where you will be able to see a map with all of the pins explaining a little bit about each location </p>
     <p>Unfortunatley the map of Australia is just too big to be viewed on a mobile!</p>
   </div>
@@ -171,29 +173,29 @@ finish:
 
 <!-- -------- This is my form page ---------------- -->
 
-<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
+<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 
 <section class="">
-<div class="slideinleft">
+<div class="">
 
 
-  <div id="step1"  class="col-5_sm-12-middle-spaceAround shadow padded bg-image-apostlessoft padded center hiddenform form relative">
+  <div id="step1"  class="col-5_sm-12-middle-spaceAround  padded bg-image-apostlessoft padded center hiddenform form relative">
     <div class="formcover paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
     <div class="bg-transparent">
 
 
-    <h3 class="boldheading" for="level"> Pick a country </h3>
-    <select name="level">
-
+    <h3 class="boldheading" for="level"> Pick a country *</h3>
+    <select name="level placeholder="select one of the below">
+      <option value="" selected disabled>Please select</option>
       {% for country in page.country %}
       <option required value="{{ country.select }}"> {{ country.select }} </option>
 
       {% endfor %}
 
     </select>
-      <a href="#step2" class=" action-button"> NEXT </a>
+      <a href="#step2" class=" action-button"> Next </a>
     </div>
 </div>
 
@@ -204,8 +206,9 @@ finish:
       <h3> Step Two </h3>
     </div>
     <div class="bg-transparent">
-    <h3 class="boldheading" for="level"> How long are you planning to travel for? </h3>
+    <h3 class="boldheading" for="level"> How long are you planning to travel for? * </h3>
     <select name="level">
+    <option value="" selected disabled>Please select</option>
     {% for days in page.days %}
       <option required value="{{days.select}}"> {{days.select}} </option>
     {% endfor %}
@@ -220,7 +223,7 @@ finish:
       <h3> Step Three </h3>
     </div>
     <div class="bg-transparent">
-    <h3 class="boldheading">  Do you have a starting location?  </h3>
+    <h3 class="boldheading">  Do you have a starting location? * </h3>
     <div class="radio checkboxes">
       <label for="starting-yes">YES
         <input class="start-location" type="radio" id=starting-yes name="start" value="YES" />
@@ -229,11 +232,11 @@ finish:
         <input type="radio" id=starting-no name="start" value="NO" />
       </label>
       <div class="sub-question">
-      <h3 class="boldheading" for="level"> Select your starting location </h3>
+      <h3 class="boldheading" for="level"> Select your starting location *</h3>
       <select name="level">
-
+        <option value="" selected disabled>Please select</option>
        {% for start in page.start %}
-         <option value="{{start.select}}"> {{start.select}} </option>
+         <option required value="{{start.select}}"> {{start.select}} </option>
        {% endfor %}
        </select>
        </div>
@@ -248,7 +251,7 @@ finish:
 <h3> Step Four </h3>
 </div>
 <div class="bg-transparent">
- <h3 class="boldheading">  Do you have a finishing location?  </h3>
+ <h3 class="boldheading">  Do you have a finishing location? * </h3>
 <div  class="radio">
   <label for="finishing-yes">YES
   <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
@@ -258,9 +261,9 @@ finish:
   <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 
     <div class="finish-question">
-      <h3 class="boldheading" for="level"> Select your finishing location </h3>
+      <h3 class="boldheading" for="level"> Select your finishing location *</h3>
     <select name="level">
-
+      <option value="" selected disabled>Please select</option>
      {% for finish in page.finish %}
        <option required value="{{finish.select}}"> {{finish.select}} </option>
      {% endfor %}
@@ -277,7 +280,7 @@ finish:
 <h3> Step Five </h3>
  </div>
 <div class="bg-transparent">
-  <h3 class="boldheading"> Where would you like to stop?  <h3>
+  <h3 class="boldheading"> Where would you like to stop? *<h3>
 <div class="checkboxes center wrap">
 
 {% for stops in page.stops %}
@@ -297,12 +300,12 @@ finish:
     <h3> Step Six </h3>
   </div>
   <div class="bg-transparent">
-    <h3 class="boldheading">  What modes of transport do you want to use during your trip?  </h3>
+    <h3 class="boldheading">  What modes of transport do you want to use during your trip? * </h3>
     <div class="checkboxes wrap center">
     {% for transport in page.transport %}
 
    <label for="{{transport.select}}">{{transport.select}}
-     <input id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
+     <input  id="{{transport.select}}"  type="checkbox" name="transport" value="{{transport.select}}" />
      </label>
      {% endfor %}
      </div>
@@ -316,7 +319,7 @@ finish:
     <h3> Step Seven </h3>
   </div>
   <div class="bg-transparent">
-    <h3 class="boldheading">  what activities do you enjoy? </h3>
+    <h3 class="boldheading">  what activities do you enjoy? * </h3>
       <div  class="checkboxes wrap right">
     {% for activities in page.activities %}
 
@@ -350,15 +353,14 @@ finish:
   </div>
     <div class="bg-transparent">
 
-      <label for="name"> Your Name </label>
+      <label for="name"> Your Name *</label>
       <input required type="text" name="name" id="name" placeholder="Name" />
 
-      <label for="email"> Your Email </label>
+      <label for="email"> Your Email * </label>
       <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
 <p> <input type="submit" value="Submit for a quote"> </p>
 <a href="#step8" class=" action-button"> Previous</a>
-<a href="#step10"  class=" action-button"> Next</a>
   </div>
   </div>
 <div id="step10" style="margin-left: 0px;" class="form padded center relative">

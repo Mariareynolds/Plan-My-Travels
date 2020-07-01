@@ -130,12 +130,16 @@
 
 <section>
   <div class="center hidden">
-    <h3> Let's start planning your trip </h3>
+    <h3 style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;"> Let's start planning your trip </h3>
     <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at the destinations on the map to get a feel for what there is to do in each location so you can pick what you'll enjoy most. </p>
     <p>(Use the +/- buttons on the lower right hand corner of the map to help you zoom in and out to get a closer look at each of the locations)</p>
   </div>
   <div class="center mobilevisible">
-    <h3> Let's start planning your trip </h3>
+    <h3 style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;"> Let's start planning your trip </h3>
     <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at this website on a desktop where you will be able to see a map with all of the pins explaining a little bit about each location </p>
     <p>Unfortunatley the map of Australia is just too big to be viewed on a mobile!</p>
   </div>
@@ -186,22 +190,22 @@
 
 <!-- -------- This is my form page ---------------- -->
 
-<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST">
+<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 
 <section class="">
-<div class="slideinleft">
+<div class="">
 
 
-  <div id="step1"  class="col-5_sm-12-middle-spaceAround shadow padded bg-image-apostlessoft padded center hiddenform form relative">
+  <div id="step1"  class="col-5_sm-12-middle-spaceAround  padded bg-image-apostlessoft padded center hiddenform form relative">
     <div class="formcover paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
     <div class="bg-transparent">
 
 
-    <h3 class="boldheading" for="level"> Pick a country </h3>
-    <select name="level">
-
+    <h3 class="boldheading" for="level"> Pick a country *</h3>
+    <select name="level placeholder="select one of the below">
+      <option value="" selected disabled>Please select</option>
       
       <option required value="Australia"> Australia </option>
 
@@ -211,7 +215,7 @@
       
 
     </select>
-      <a href="#step2" class=" action-button"> NEXT </a>
+      <a href="#step2" class=" action-button"> Next </a>
     </div>
 </div>
 
@@ -222,8 +226,9 @@
       <h3> Step Two </h3>
     </div>
     <div class="bg-transparent">
-    <h3 class="boldheading" for="level"> How long are you planning to travel for? </h3>
+    <h3 class="boldheading" for="level"> How long are you planning to travel for? * </h3>
     <select name="level">
+    <option value="" selected disabled>Please select</option>
     
       <option required value="1 week"> 1 week </option>
     
@@ -260,7 +265,7 @@
       <h3> Step Three </h3>
     </div>
     <div class="bg-transparent">
-    <h3 class="boldheading">  Do you have a starting location?  </h3>
+    <h3 class="boldheading">  Do you have a starting location? * </h3>
     <div class="radio checkboxes">
       <label for="starting-yes">YES
         <input class="start-location" type="radio" id=starting-yes name="start" value="YES" />
@@ -269,51 +274,47 @@
         <input type="radio" id=starting-no name="start" value="NO" />
       </label>
       <div class="sub-question">
-      <h3 class="boldheading" for="level"> Select your starting location </h3>
+      <h3 class="boldheading" for="level"> Select your starting location *</h3>
       <select name="level">
-
+        <option value="" selected disabled>Please select</option>
        
-         <option value="Adelaide"> Adelaide </option>
+         <option required value="Adelaide"> Adelaide </option>
        
-         <option value="Great Ocean Road"> Great Ocean Road </option>
+         <option required value="Great Ocean Road"> Great Ocean Road </option>
        
-         <option value="melbourne"> melbourne </option>
+         <option required value="melbourne"> melbourne </option>
        
-         <option value="Canberra"> Canberra </option>
+         <option required value="Canberra"> Canberra </option>
        
-         <option value="Jervis Bay"> Jervis Bay </option>
+         <option required value="Jervis Bay"> Jervis Bay </option>
        
-         <option value="Woollongong"> Woollongong </option>
+         <option required value="Sydney"> Sydney </option>
        
-         <option value="Sydney"> Sydney </option>
+         <option required value="Central Coast"> Central Coast </option>
        
-         <option value="Central Coast"> Central Coast </option>
+         <option required value="Newcastle"> Newcastle </option>
        
-         <option value="Newcastle"> Newcastle </option>
+         <option required value="Byron Bay"> Byron Bay </option>
        
-         <option value="Byron Bay"> Byron Bay </option>
+         <option required value="Gold Coast"> Gold Coast </option>
        
-         <option value="Gold Coast"> Gold Coast </option>
+         <option required value="Brisbane"> Brisbane </option>
        
-         <option value="Brisbane"> Brisbane </option>
+         <option required value="Sunshine Coast"> Sunshine Coast </option>
        
-         <option value="Sunshine Coast"> Sunshine Coast </option>
+         <option required value="Noosa"> Noosa </option>
        
-         <option value="Noosa"> Noosa </option>
+         <option required value="Fraser Island"> Fraser Island </option>
        
-         <option value="Fraser Island"> Fraser Island </option>
+         <option required value="Whitsundays"> Whitsundays </option>
        
-         <option value="Whitsundays"> Whitsundays </option>
+         <option required value="Airlie Beach"> Airlie Beach </option>
        
-         <option value="Airlis Beach"> Airlis Beach </option>
+         <option required value="Cairns"> Cairns </option>
        
-         <option value="Cairns"> Cairns </option>
+         <option required value="Perth"> Perth </option>
        
-         <option value="Perth"> Perth </option>
-       
-         <option value="Rottnest Island"> Rottnest Island </option>
-       
-         <option value="Exmouth"> Exmouth </option>
+         <option required value="Exmouth"> Exmouth </option>
        
        </select>
        </div>
@@ -328,7 +329,7 @@
 <h3> Step Four </h3>
 </div>
 <div class="bg-transparent">
- <h3 class="boldheading">  Do you have a finishing location?  </h3>
+ <h3 class="boldheading">  Do you have a finishing location? * </h3>
 <div  class="radio">
   <label for="finishing-yes">YES
   <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
@@ -338,9 +339,9 @@
   <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
 
     <div class="finish-question">
-      <h3 class="boldheading" for="level"> Select your finishing location </h3>
+      <h3 class="boldheading" for="level"> Select your finishing location *</h3>
     <select name="level">
-
+      <option value="" selected disabled>Please select</option>
      
        <option required value="Adelaide"> Adelaide </option>
      
@@ -351,8 +352,6 @@
        <option required value="Canberra"> Canberra </option>
      
        <option required value="Jervis Bay"> Jervis Bay </option>
-     
-       <option required value="Woollongong"> Woollongong </option>
      
        <option required value="Sydney"> Sydney </option>
      
@@ -374,13 +373,11 @@
      
        <option required value="Whitsundays"> Whitsundays </option>
      
-       <option required value="Airlis Beach"> Airlis Beach </option>
+       <option required value="Airlie Beach"> Airlie Beach </option>
      
        <option required value="Cairns"> Cairns </option>
      
        <option required value="Perth"> Perth </option>
-     
-       <option required value="Rottnest Island"> Rottnest Island </option>
      
        <option required value="Exmouth"> Exmouth </option>
      
@@ -397,7 +394,7 @@
 <h3> Step Five </h3>
  </div>
 <div class="bg-transparent">
-  <h3 class="boldheading"> Where would you like to stop?  <h3>
+  <h3 class="boldheading"> Where would you like to stop? *<h3>
 <div class="checkboxes center wrap">
 
 
@@ -486,32 +483,32 @@
     <h3> Step Six </h3>
   </div>
   <div class="bg-transparent">
-    <h3 class="boldheading">  What modes of transport do you want to use during your trip?  </h3>
+    <h3 class="boldheading">  What modes of transport do you want to use during your trip? * </h3>
     <div class="checkboxes wrap center">
     
 
    <label for="Car Hire">Car Hire
-     <input id="Car Hire"  type="checkbox" name="transport" value="Car Hire" />
+     <input  id="Car Hire"  type="checkbox" name="transport" value="Car Hire" />
      </label>
      
 
    <label for="Train">Train
-     <input id="Train"  type="checkbox" name="transport" value="Train" />
+     <input  id="Train"  type="checkbox" name="transport" value="Train" />
      </label>
      
 
    <label for="Greyhound Bus">Greyhound Bus
-     <input id="Greyhound Bus"  type="checkbox" name="transport" value="Greyhound Bus" />
+     <input  id="Greyhound Bus"  type="checkbox" name="transport" value="Greyhound Bus" />
      </label>
      
 
    <label for="Plane">Plane
-     <input id="Plane"  type="checkbox" name="transport" value="Plane" />
+     <input  id="Plane"  type="checkbox" name="transport" value="Plane" />
      </label>
      
 
    <label for="Bus">Bus
-     <input id="Bus"  type="checkbox" name="transport" value="Bus" />
+     <input  id="Bus"  type="checkbox" name="transport" value="Bus" />
      </label>
      
      </div>
@@ -525,7 +522,7 @@
     <h3> Step Seven </h3>
   </div>
   <div class="bg-transparent">
-    <h3 class="boldheading">  what activities do you enjoy? </h3>
+    <h3 class="boldheading">  what activities do you enjoy? * </h3>
       <div  class="checkboxes wrap right">
     
 
@@ -625,15 +622,14 @@
   </div>
     <div class="bg-transparent">
 
-      <label for="name"> Your Name </label>
+      <label for="name"> Your Name *</label>
       <input required type="text" name="name" id="name" placeholder="Name" />
 
-      <label for="email"> Your Email </label>
+      <label for="email"> Your Email * </label>
       <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
 <p> <input type="submit" value="Submit for a quote"> </p>
 <a href="#step8" class=" action-button"> Previous</a>
-<a href="#step10"  class=" action-button"> Next</a>
   </div>
   </div>
 <div id="step10" style="margin-left: 0px;" class="form padded center relative">

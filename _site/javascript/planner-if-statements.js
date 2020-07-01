@@ -23,6 +23,7 @@
   var step2 = $("#step2 select").val();
   console.log(step2);
 
+
   if (step2 != ""){
     $("#step3").addClass("ready");
   }

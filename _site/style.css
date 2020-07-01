@@ -835,6 +835,9 @@ nav{
 .center a{
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
 
 hr{
 border: 0px solid;
@@ -1528,6 +1531,7 @@ body {
   content: "+";
   font-size: 1.5rem;
   padding: 2rem;
+  color: white;
 }
 .open::after {
   transform: rotateZ(45deg);
@@ -1575,9 +1579,6 @@ body {
 @media(max-width: 500px){
   .mediamap{
   display: none;
-}
-.header ul {
-  background-color: #B8DDDD;
 }
 }
 @media (min-width: 48em) {
@@ -1659,5 +1660,8 @@ body {
   .accordion dt{
     padding: 0.25rem 1rem;
     margin: 0.5rem 0;
+  }
+  .header ul {
+    background-color: #B8DDDD;
   }
 }
