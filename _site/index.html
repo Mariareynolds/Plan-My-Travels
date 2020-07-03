@@ -34,6 +34,7 @@
     <script src="/javascript/grt-cookie-consent.js" defer></script>
     <script src="/javascript/slide.js" defer></script>
     <script src="/javascript/accordian.js" defer></script>
+    <script src="/javascript/thankyou.js" defer></script>
 
     <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
 
@@ -284,7 +285,7 @@
 
 
   <div class="button">
-    <a href="planner-page.html" class="calltoactionheart"> Plan My Travels <span> ♥ </span> </a>
+    <a href="planmytravels.html" class="calltoactionheart"> Plan My Travels <span> ♥ </span> </a>
   </div>
 
 
@@ -591,12 +592,12 @@
     </div>
     <div class="names grid padding0">
       <h3>Leave us a review</h3>
-      <input class="col-12" type="text" class="firstname" placeholder="First name" required>
-      <input class="col-12" type="text" class="lastname" placeholder="Last name" required>
+      <input class="col-12" type="text" class="firstname" name="First name" placeholder="First name" required>
+      <input class="col-12" type="text" class="lastname" name="Last name"placeholder="Last name" required>
     </div>
     <div class="input grid padding0">
       <div class="center col-12">
-        <textarea type="text" class="reviewinp" placeholder="Write a review" required></textarea>
+        <textarea type="text" class="reviewinp" name="Message"placeholder="Write a review" required></textarea>
       </div>
       <div class="stars center ">
         <div class="star1"><i class="far fa-star starj1"></i></div>
@@ -606,7 +607,16 @@
         <div class="star5"><i class="far fa-star starj5"></i></div>
       </div>
       <div class="submitbtn col-12">
-        <button class="submit">Submit Review</button>
+
+
+
+        <button class="submitreview button" type="submit" value="Submit Review">Submit Review</button>
+
+        <!-- <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com"> -->
+
+        <!-- <input type="text" name="_gotcha" style="display: none;"> -->
+
+        <!-- <input class="submitreview button" type="submit" value="Submit Review"> -->
       </div>
     </div>
   </div>

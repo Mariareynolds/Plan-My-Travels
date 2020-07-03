@@ -59,19 +59,21 @@
   console.log(step3_5);
 
   $('#step3 input').on("change", function(){
-    var step3 = $("#step3 input").val();
+    var step3 = $(this).val();
     console.log(step3);
     if( step3 =="NO"){
       $("#step4").addClass("ready");
       $('#step3 .next').removeClass("hiddenButton")
     }
   });
+
+
   $('#step3_5 select').on("change", function(){
     var step3_5 = $("#step3_5 select").val();
     console.log(step3_5);
     if(step3_5 != null ){
       $("#step4").addClass("ready");
-      $('#step3 .next').removeClass("hiddenButton")
+      $('#step3_5 .next').removeClass("hiddenButton")
     }
   });
 
@@ -84,9 +86,9 @@
 
 $('#step3 input').on("change", function(){
 if($('.start-location').is(':checked'))  {
-  $(".sub-question").addClass("visible");
+  $(".start-question").addClass("visible");
 } else {
-  $(".sub-question").removeClass("visible");
+  $(".start-question").removeClass("visible");
 }
 });
 
@@ -105,7 +107,7 @@ if($('.start-location').is(':checked'))  {
       $('#step4 .next').removeClass("hiddenButton")
     }
   });
-  $('#step4 select').on("change", function(){
+  $('#step4_5 select').on("change", function(){
     var step4_5 = $("#step4_5 select").val();
     console.log(step4_5);
     if(step4_5 != null ){

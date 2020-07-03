@@ -1,4 +1,4 @@
-
+alert('bob')
 var star1 = document.querySelector('.starj1');
 var star2 = document.querySelector('.starj2');
 var star3 = document.querySelector('.starj3');
@@ -203,3 +203,43 @@ submitBtn.addEventListener('click', function(){
     }
   }
 })
+
+//
+// <script src="https://www.google.com/recaptcha/api.js?render=SITE_ID"></script>
+// <script>
+//     var submitted = false;
+//     var tokenCreated = false;
+//     var formEl = document.getElementById('my-form');
+//
+//     formEl.addEventListener("submit", function (event) {
+//
+//         // Check if the recaptcha exists
+//         if (!tokenCreated) {
+//
+//             // Prevent submission
+//             event.preventDefault();
+//
+//             // Prevent more than one submission
+//             if (!submitted) {
+//                 submitted = true;
+//                 // needs for recaptacha ready
+//                 grecaptcha.ready(function() {
+//                     // do request for recaptcha token
+//                     // response is promise with passed token
+//                     grecaptcha.execute('SITE_ID', {action: 'create_comment'}).then(function (token) {
+//                         // add token to form
+//                         var input = document.createElement("input");
+//                         input.type = "hidden";
+//                         input.name = "g-recaptcha-response";
+//                         input.value = token;
+//                         formEl.appendChild(input);
+//
+//                         // resubmit the form
+//                         tokenCreated = true;
+//                         formEl.submit();
+//                     });;
+//                 });
+//             }
+//         }
+//   });
+// </script>
