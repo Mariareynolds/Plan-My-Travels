@@ -167,6 +167,7 @@ padding: 0;
 }
 
 .calltoactionheart{
+  font-family: 'Lato', sans-serif;
   padding: 0rem 0.2rem;
   display: inline-block;
   text-decoration: none;
@@ -186,6 +187,7 @@ padding: 0;
 
 
   .returnhome{
+    font-family: 'Lato', sans-serif;
     padding: 0rem 0.2rem;
     display: inline-block;
     text-decoration: none;
