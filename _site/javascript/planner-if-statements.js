@@ -18,7 +18,7 @@
       console.log(step1);
     if(step1 != null){
       $("#step2").addClass("ready");
-      $('#step1 .next').removeClass("hiddenButton")
+      $('#step1 .action-button').removeClass("hiddenButton")
     }
   });
 
@@ -42,12 +42,12 @@
       console.log(step2);
     if(step2 != null){
       $("#step3").addClass("ready");
+      $('#step2 .action-button').removeClass("hiddenButton")
     }
   });
   $("#step3").on("mouseover", function(){
     if ($("#step3").hasClass("ready")){
       $("#step3").addClass("hidecover");
-      $('#step2 .next').removeClass("hiddenButton")
     }
   });
 
@@ -63,7 +63,7 @@
     console.log(step3);
     if( step3 =="NO"){
       $("#step4").addClass("ready");
-      $('#step3 .next').removeClass("hiddenButton")
+      $('#step3 .action-button').removeClass("hiddenButton")
     }
   });
 
@@ -73,7 +73,7 @@
     console.log(step3_5);
     if(step3_5 != null ){
       $("#step4").addClass("ready");
-      $('#step3_5 .next').removeClass("hiddenButton")
+      $('#step3 .action-button').removeClass("hiddenButton")
     }
   });
 
@@ -112,7 +112,7 @@ if($('.start-location').is(':checked'))  {
     console.log(step4_5);
     if(step4_5 != null ){
       $("#step5").addClass("ready");
-      $('#step4 .next').removeClass("hiddenButton")
+      $('#step4 .action-button').removeClass("hiddenButton")
     }
   });
 
@@ -158,28 +158,62 @@ if($('.finish-location').is(':checked'))  {
 
   // step 6
   var step6 = $("#step6 input").val();
+  console.log(step6);
 
-  $('#step6').on("click", function(){
-    $("#step7").addClass("ready");
-    $("#step8").addClass("ready");
-    $("#step9").addClass("ready");
-    $('#step6 .next').removeClass("hiddenButton")
+
+  $("#step6").on("mouseover", function(){
+    if ($("#step6").hasClass("ready")){
+      $("#step6").addClass("hidecover");
+    }
   });
+
+  $('#step6 span').on("click", function(){
+    $("#step7").addClass("ready");
+    $('#step6 .action-button').removeClass("hiddenButton")
+  });
+
+  $("#step7").on("mouseover", function(){
+    if ($("#step7").hasClass("ready")){
+      $("#step7").addClass("hidecover");
+
+    }
+  });
+
+  // step 7
+  var step7 = $("#step7 input").val();
+  console.log(step7);
+
 
   $("#step7").on("mouseover", function(){
     if ($("#step7").hasClass("ready")){
       $("#step7").addClass("hidecover");
     }
   });
+
+  $('#step7 span').on("click", function(){
+    $("#step8").addClass("ready");
+    $('#step7 .action-button').removeClass("hiddenButton")
+  });
+
+  $('#step7').on("click", function(){
+    $("#step8").addClass("ready");
+    $("#step9").addClass("ready");
+
+
   $("#step8").on("mouseover", function(){
     if ($("#step8").hasClass("ready")){
       $("#step8").addClass("hidecover");
+
     }
   });
+
   $("#step9").on("mouseover", function(){
-    if ($("#step9").hasClass("ready")){
-      $("#step9").addClass("hidecover");
-    }
-  });
+  if ($("#step9").hasClass("ready")){
+    $("#step9").addClass("hidecover");
+  }
+});
+
+
+});
 
 });

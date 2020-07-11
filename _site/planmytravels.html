@@ -3,15 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"> 
     <title> Plan My Travels </title>
-  </head>
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-    <head>
 
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title> Plan My Travels </title>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
@@ -197,8 +191,8 @@
 <div class="">
 
 
-  <div id="step1"  class="col-5_sm-12-middle-spaceAround  padded bg-image-apostlessoft padded center hiddenform form relative">
-    <div class="formcover paddingtop50 bg-image-apostlessoft">
+  <div id="step1"  class="col-5_sm-12-middle-spaceAround  padded bg-image-apostlessoft padded center hiddenform form  relative">
+    <div class="formcover  paddingtop50 bg-image-apostlessoft">
       <h3> Step One </h3>
     </div>
     <div class="bg-transparent">
@@ -321,7 +315,7 @@
        </div>
        </div>
        <a href="#step2" class=" action-button"> Previous</a>
-       <a href="#step4"  class="next action-button hiddenButton"> Next</a>
+       <a href="#step4"  class=" action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -386,11 +380,11 @@
      </div>
 </div>
 <a href="#step3" class=" action-button"> Previous</a>
-<a href="#step5"  class=" next action-button hiddenButton"> Next</a>
+<a href="#step5"  class=" action-button hiddenButton"> Next</a>
 </div>
   </div>
 
-  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle ready bg-image-pinkbeach form slideinleft padded center relative">
+  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle  bg-image-pinkbeach form slideinleft padded center relative">
 <div class="formcover paddingtop50 bg-image-pinkbeach bg-colour-pinkbeach">
 <h3> Step Five </h3>
  </div>
@@ -551,37 +545,47 @@
   </div>
 
 
-  <div id="step6" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-koala1 form slideinright center relative">
-    <div class="formcover paddingtop50 bg-image-koala1 bg-image-paper">
+  <div id="step6" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-koala1 ready form slideinright center relative">
+    <div class="formcover ready paddingtop50 bg-image-koala1 bg-image-paper">
     <h3> Step Six </h3>
   </div>
-  <div class="bg-transparent">
+  <div class="bg-transparent ">
     <h3 class="boldheading">  What modes of transport do you want to use during your trip? * </h3>
-    <div class="checkboxes wrap center">
+    <div class="checkboxes  center">
     
 
-   <label for="Car Hire">Car Hire
-     <input  id="Car Hire"  type="checkbox" name="transport" value="Car Hire" />
+
+   <label class="label-container" for="Car Hire">
+     <input class="buttons buttonsselected " id="Car Hire"  role="button" type="checkbox" style="center" name="transport" value="Car Hire"/>
+     <span class="checkmark">Car Hire</span>
      </label>
      
 
-   <label for="Train">Train
-     <input  id="Train"  type="checkbox" name="transport" value="Train" />
+
+   <label class="label-container" for="Train">
+     <input class="buttons buttonsselected " id="Train"  role="button" type="checkbox" style="center" name="transport" value="Train"/>
+     <span class="checkmark">Train</span>
      </label>
      
 
-   <label for="Greyhound Bus">Greyhound Bus
-     <input  id="Greyhound Bus"  type="checkbox" name="transport" value="Greyhound Bus" />
+
+   <label class="label-container" for="Greyhound Bus">
+     <input class="buttons buttonsselected " id="Greyhound Bus"  role="button" type="checkbox" style="center" name="transport" value="Greyhound Bus"/>
+     <span class="checkmark">Greyhound Bus</span>
      </label>
      
 
-   <label for="Plane">Plane
-     <input  id="Plane"  type="checkbox" name="transport" value="Plane" />
+
+   <label class="label-container" for="Plane">
+     <input class="buttons buttonsselected " id="Plane"  role="button" type="checkbox" style="center" name="transport" value="Plane"/>
+     <span class="checkmark">Plane</span>
      </label>
      
 
-   <label for="Bus">Bus
-     <input  id="Bus"  type="checkbox" name="transport" value="Bus" />
+
+   <label class="label-container" for="Bus">
+     <input class="buttons buttonsselected " id="Bus"  role="button" type="checkbox" style="center" name="transport" value="Bus"/>
+     <span class="checkmark">Bus</span>
      </label>
      
      </div>
@@ -590,89 +594,113 @@
   </div>
   </div>
 
-  <div id="step7" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround bg-image-noosafairypools slideinleft form  center relative">
-    <div class="formcover bg-image-noosafairypools paddingtop50 bg-image-paper">
+  <div id="step7" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround bg-image-noosafairypools  slideinleft form  center relative">
+    <div class="formcover  bg-image-noosafairypools paddingtop50 bg-image-paper">
     <h3> Step Seven </h3>
   </div>
   <div class="bg-transparent">
     <h3 class="boldheading">  What activities do you enjoy? * </h3>
-      <div  class="checkboxes wrap right">
+      <div  class="checkboxes">
     
 
-    <label for="Beach Days"> Beach Days
-      <input id="Beach Days" type="checkbox" name="Beach Days" value="Beach Days"/>
 
+
+    <label class="label-container" for="Beach Days">
+      <input class="buttons center buttonsselected " id="Beach Days" role="button" type="checkbox" style="center" name="activities" value="Beach Days"/>
+      <span class="checkmark">Beach Days</span>
     </label>
   
 
-    <label for="Hiking"> Hiking
-      <input id="Hiking" type="checkbox" name="Hiking" value="Hiking"/>
 
+
+    <label class="label-container" for="Hiking">
+      <input class="buttons center buttonsselected " id="Hiking" role="button" type="checkbox" style="center" name="activities" value="Hiking"/>
+      <span class="checkmark">Hiking</span>
     </label>
   
 
-    <label for="Watersports"> Watersports
-      <input id="Watersports" type="checkbox" name="Watersports" value="Watersports"/>
 
+
+    <label class="label-container" for="Watersports">
+      <input class="buttons center buttonsselected " id="Watersports" role="button" type="checkbox" style="center" name="activities" value="Watersports"/>
+      <span class="checkmark">Watersports</span>
     </label>
   
 
-    <label for="Museums"> Museums
-      <input id="Museums" type="checkbox" name="Museums" value="Museums"/>
 
+
+    <label class="label-container" for="Museums">
+      <input class="buttons center buttonsselected " id="Museums" role="button" type="checkbox" style="center" name="activities" value="Museums"/>
+      <span class="checkmark">Museums</span>
     </label>
   
 
-    <label for="History"> History
-      <input id="History" type="checkbox" name="History" value="History"/>
 
+
+    <label class="label-container" for="History">
+      <input class="buttons center buttonsselected " id="History" role="button" type="checkbox" style="center" name="activities" value="History"/>
+      <span class="checkmark">History</span>
     </label>
   
 
-    <label for="Animal Encounters"> Animal Encounters
-      <input id="Animal Encounters" type="checkbox" name="Animal Encounters" value="Animal Encounters"/>
 
+
+    <label class="label-container" for="Animal Encounters">
+      <input class="buttons center buttonsselected " id="Animal Encounters" role="button" type="checkbox" style="center" name="activities" value="Animal Encounters"/>
+      <span class="checkmark">Animal Encounters</span>
     </label>
   
 
-    <label for="Landmarks"> Landmarks
-      <input id="Landmarks" type="checkbox" name="Landmarks" value="Landmarks"/>
 
+
+    <label class="label-container" for="Landmarks">
+      <input class="buttons center buttonsselected " id="Landmarks" role="button" type="checkbox" style="center" name="activities" value="Landmarks"/>
+      <span class="checkmark">Landmarks</span>
     </label>
   
 
-    <label for="Photography"> Photography
-      <input id="Photography" type="checkbox" name="Photography" value="Photography"/>
 
+
+    <label class="label-container" for="Photography">
+      <input class="buttons center buttonsselected " id="Photography" role="button" type="checkbox" style="center" name="activities" value="Photography"/>
+      <span class="checkmark">Photography</span>
     </label>
   
 
-    <label for="Sailing"> Sailing
-      <input id="Sailing" type="checkbox" name="Sailing" value="Sailing"/>
 
+
+    <label class="label-container" for="Sailing">
+      <input class="buttons center buttonsselected " id="Sailing" role="button" type="checkbox" style="center" name="activities" value="Sailing"/>
+      <span class="checkmark">Sailing</span>
     </label>
   
 
-    <label for="Theme Parks"> Theme Parks
-      <input id="Theme Parks" type="checkbox" name="Theme Parks" value="Theme Parks"/>
 
+
+    <label class="label-container" for="Theme Parks">
+      <input class="buttons center buttonsselected " id="Theme Parks" role="button" type="checkbox" style="center" name="activities" value="Theme Parks"/>
+      <span class="checkmark">Theme Parks</span>
     </label>
   
 
-    <label for="Nightlife"> Nightlife
-      <input id="Nightlife" type="checkbox" name="Nightlife" value="Nightlife"/>
 
+
+    <label class="label-container" for="Nightlife">
+      <input class="buttons center buttonsselected " id="Nightlife" role="button" type="checkbox" style="center" name="activities" value="Nightlife"/>
+      <span class="checkmark">Nightlife</span>
     </label>
   
 
-    <label for="Wineries"> Wineries
-      <input id="Wineries" type="checkbox" name="Wineries" value="Wineries"/>
 
+
+    <label class="label-container" for="Wineries">
+      <input class="buttons center buttonsselected " id="Wineries" role="button" type="checkbox" style="center" name="activities" value="Wineries"/>
+      <span class="checkmark">Wineries</span>
     </label>
   
     </div>
     <a href="#step6" class=" action-button"> Previous</a>
-    <a href="#step8"  class=" action-button hiddenButton"> Next</a>
+    <a href="#step8"  class="action-button hiddenButton"> Next</a>
   </div>
   </div>
 
@@ -684,7 +712,7 @@
     <h3 class="boldheading" for="message"> Any additional comments that would help us plan your trip... </h3>
     <textarea type="text" name="message" id="message" placeholder="Tell me more!"></textarea>
     <a href="#step7" class=" action-button"> Previous</a>
-    <a href="#step9"  class=" action-button hiddenButton"> Next</a>
+    <a href="#step9"  class=" action-button"> Next</a>
     </div>
 
     </div>
@@ -702,11 +730,11 @@
       <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
       <label for="name"> Discount Code</label>
-      <input  type="text" name="name" id="name" placeholder="Discount code" />
+      <input  type="text" name="name" id="discount" placeholder="Discount code" />
 
       <input type="text" name="_gotcha" style="display: none;">
       <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
-
+       <input type="hidden" name="_cc" value="aussieme@gmail.com">
 <p> <input type="submit" value="Submit for a quote"> </p>
 
 

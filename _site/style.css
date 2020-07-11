@@ -611,7 +611,7 @@ transform:rotateY(180deg)
 
 /* When the checkbox is checked, add a blue background */
 .label-container input:checked ~ .checkmark {
-  background-color: #D8888b;
+  background-color: #B8DDDD;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
