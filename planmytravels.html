@@ -189,7 +189,7 @@ finish:
 
 
     <h3 class="boldheading" for="level"> Pick a country *</h3>
-    <select name="level placeholder="select one of the below">
+    <select name="Country placeholder="select one of the below">
       <option value="Please select" selected disabled>Please select</option>
       {% for country in page.country %}
       <option required value="{{ country.select }}"> {{ country.select }} </option>
@@ -209,7 +209,7 @@ finish:
     </div>
     <div class="bg-transparent">
     <h3 class="boldheading" for="level"> How long are you planning to travel for? * </h3>
-    <select name="level">
+    <select name="travellength">
     <option value="Please select" selected disabled>Please select</option>
     {% for days in page.days %}
       <option required value="{{days.select}}"> {{days.select}} </option>
@@ -235,7 +235,7 @@ finish:
       </label>
       <div class="start-question" id="step3_5">
       <h3 class="boldheading" for="level"> Select your starting location *</h3>
-      <select name="level">
+      <select name="start-loc">
         <option value="" selected disabled>Please select</option>
        {% for start in page.start %}
          <option  value="{{start.select}}"> {{start.select}} </option>
@@ -264,7 +264,7 @@ finish:
 
     <div class="finish-question" id="step4_5">
       <h3 class="boldheading" for="level"> Select your finishing location *</h3>
-    <select  name="level">
+    <select  name="finish-loc">
       <option value="" selected disabled>Please select</option>
      {% for finish in page.finish %}
        <option  value="{{finish.select}}"> {{finish.select}} </option>
@@ -369,7 +369,7 @@ finish:
       <input type="email" name="_replyto" required id="email" placeholder="Email" />
 
       <label for="name"> Discount Code</label>
-      <input  type="text" name="name" id="discount" placeholder="Discount code" />
+      <input  type="text" name="discount" id="discount" placeholder="Discount code" />
 
       <input type="text" name="_gotcha" style="display: none;">
       <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
