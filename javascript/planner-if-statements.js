@@ -104,7 +104,7 @@ if($('.start-location').is(':checked'))  {
     console.log(step4);
     if( step4 == "NO"){
       $("#step5").addClass("ready");
-      $('#step4 .next').removeClass("hiddenButton")
+      $('#step4 .action-button').removeClass("hiddenButton")
     }
   });
   $('#step4_5 select').on("change", function(){
@@ -137,11 +137,6 @@ if($('.finish-location').is(':checked'))  {
   var step5 = $("#step5 input").val();
   console.log(step5);
 
-  $('#step4 input').on("change", function(){
-    if(step4 != ""){
-      $("#step5").addClass("ready");
-    }
-  });
 
   $("#step5").on("mouseover", function(){
     if ($("#step5").hasClass("ready")){
@@ -149,14 +144,15 @@ if($('.finish-location').is(':checked'))  {
     }
   });
 
-  $('#step5').on("click", function(){
+  $('#step5 span').on("click", function(){
     $("#step6").addClass("ready");
+    $('#step5 .action-button').removeClass("hiddenButton")
   });
 
   $("#step6").on("mouseover", function(){
     if ($("#step6").hasClass("ready")){
       $("#step6").addClass("hidecover");
-      $('#step5 .next').removeClass("hiddenButton")
+
     }
   });
 

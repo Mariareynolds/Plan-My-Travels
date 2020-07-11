@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Plan My Travels
+description:
 banner-image: /images/operahouse.jpg
 country:
 
@@ -173,7 +175,7 @@ finish:
 
 <!-- -------- This is my form page ---------------- -->
 
-<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+<form action="/success.html" method="POST" target="hidden_iframe">
 
 <section class="">
 <div class="">
@@ -242,7 +244,7 @@ finish:
        </div>
        </div>
        <a href="#step2" class=" action-button"> Previous</a>
-       <a href="#step4"  class=" action-button hiddenButton"> Next</a>
+       <a href="#step4"  class="next action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -271,25 +273,28 @@ finish:
      </div>
 </div>
 <a href="#step3" class=" action-button"> Previous</a>
-<a href="#step5"  class=" action-button hiddenButton"> Next</a>
+<a href="#step5"  class=" next action-button hiddenButton"> Next</a>
 </div>
   </div>
 
-  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle bg-image-pinkbeach form slideinleft padded center relative">
+  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle ready bg-image-pinkbeach form slideinleft padded center relative">
 <div class="formcover paddingtop50 bg-image-pinkbeach bg-colour-pinkbeach">
 <h3> Step Five </h3>
  </div>
 <div class="bg-transparent">
-  <h3 class="boldheading"> Where would you like to stop? *<h3>
-<div class="checkboxes center wrap">
+  <h3 class="boldheading"> Where would you like to stop? *</h3>
+<div class="checkboxes center">
 
 {% for stops in page.stops %}
- <label for="{{stops.select}}">{{stops.select}}  <input id="{{stops.select}}" type="checkbox" style="left" name="Stops" value="{{stops.select}}" />
+ <label class="label-container" for="{{stops.select}}"> <input class="buttons buttonsselected "  id="{{stops.select}}" role="button" type="checkbox" style="left" name="Stops" value="{{stops.select}}"/>
+<span class="checkmark">{{stops.select}}</span>
  </label>
+
+
    {% endfor %}
 </div>
-<a  href="#step4" class=" action-button action-button"> Previous</a>
-<a class="texttransform" href="#step6"  class=" action-button hiddenButton"> Next</a>
+<a  href="#step4" class=" action-button"> Previous</a>
+<a href="#step6"  class="action-button  hiddenButton"> Next</a>
 </div>
 
   </div>
@@ -362,9 +367,12 @@ finish:
       <label for="name"> Discount Code</label>
       <input  type="text" name="name" id="name" placeholder="Discount code" />
 
+      <input type="text" name="_gotcha" style="display: none;">
+      <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
+
 <p> <input type="submit" value="Submit for a quote"> </p>
-<input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
-<input type="text" name="_gotcha" style="display: none;">
+
+
 
 
 <a href="#step8" class=" action-button"> Previous</a>

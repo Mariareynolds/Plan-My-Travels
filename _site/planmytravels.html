@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>  </title>
+    <title> Plan My Travels </title>
   </head>
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
@@ -11,7 +11,7 @@
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>  </title>
+      <title> Plan My Travels </title>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
@@ -191,7 +191,7 @@
 
 <!-- -------- This is my form page ---------------- -->
 
-<form action="https://formspree.io/mariafrancesca@postcardsfrommaria.com" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+<form action="/success.html" method="POST" target="hidden_iframe">
 
 <section class="">
 <div class="">
@@ -321,7 +321,7 @@
        </div>
        </div>
        <a href="#step2" class=" action-button"> Previous</a>
-       <a href="#step4"  class=" action-button hiddenButton"> Next</a>
+       <a href="#step4"  class="next action-button hiddenButton"> Next</a>
     </div>
   </div>
 
@@ -386,94 +386,166 @@
      </div>
 </div>
 <a href="#step3" class=" action-button"> Previous</a>
-<a href="#step5"  class=" action-button hiddenButton"> Next</a>
+<a href="#step5"  class=" next action-button hiddenButton"> Next</a>
 </div>
   </div>
 
-  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle bg-image-pinkbeach form slideinleft padded center relative">
+  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle ready bg-image-pinkbeach form slideinleft padded center relative">
 <div class="formcover paddingtop50 bg-image-pinkbeach bg-colour-pinkbeach">
 <h3> Step Five </h3>
  </div>
 <div class="bg-transparent">
-  <h3 class="boldheading"> Where would you like to stop? *<h3>
-<div class="checkboxes center wrap">
+  <h3 class="boldheading"> Where would you like to stop? *</h3>
+<div class="checkboxes center">
 
 
- <label for="Adelaide">Adelaide  <input id="Adelaide" type="checkbox" style="left" name="Stops" value="Adelaide" />
+ <label class="label-container" for="Adelaide"> <input class="buttons buttonsselected "  id="Adelaide" role="button" type="checkbox" style="left" name="Stops" value="Adelaide"/>
+<span class="checkmark">Adelaide</span>
  </label>
+
+
    
- <label for="Kangaroo Island">Kangaroo Island  <input id="Kangaroo Island" type="checkbox" style="left" name="Stops" value="Kangaroo Island" />
+ <label class="label-container" for="Kangaroo Island"> <input class="buttons buttonsselected "  id="Kangaroo Island" role="button" type="checkbox" style="left" name="Stops" value="Kangaroo Island"/>
+<span class="checkmark">Kangaroo Island</span>
  </label>
+
+
    
- <label for="Great Ocean Road">Great Ocean Road  <input id="Great Ocean Road" type="checkbox" style="left" name="Stops" value="Great Ocean Road" />
+ <label class="label-container" for="Great Ocean Road"> <input class="buttons buttonsselected "  id="Great Ocean Road" role="button" type="checkbox" style="left" name="Stops" value="Great Ocean Road"/>
+<span class="checkmark">Great Ocean Road</span>
  </label>
+
+
    
- <label for="Melbourne">Melbourne  <input id="Melbourne" type="checkbox" style="left" name="Stops" value="Melbourne" />
+ <label class="label-container" for="Melbourne"> <input class="buttons buttonsselected "  id="Melbourne" role="button" type="checkbox" style="left" name="Stops" value="Melbourne"/>
+<span class="checkmark">Melbourne</span>
  </label>
+
+
    
- <label for="Canberra">Canberra  <input id="Canberra" type="checkbox" style="left" name="Stops" value="Canberra" />
+ <label class="label-container" for="Canberra"> <input class="buttons buttonsselected "  id="Canberra" role="button" type="checkbox" style="left" name="Stops" value="Canberra"/>
+<span class="checkmark">Canberra</span>
  </label>
+
+
    
- <label for="Jervis Bay">Jervis Bay  <input id="Jervis Bay" type="checkbox" style="left" name="Stops" value="Jervis Bay" />
+ <label class="label-container" for="Jervis Bay"> <input class="buttons buttonsselected "  id="Jervis Bay" role="button" type="checkbox" style="left" name="Stops" value="Jervis Bay"/>
+<span class="checkmark">Jervis Bay</span>
  </label>
+
+
    
- <label for="The Cove">The Cove  <input id="The Cove" type="checkbox" style="left" name="Stops" value="The Cove" />
+ <label class="label-container" for="The Cove"> <input class="buttons buttonsselected "  id="The Cove" role="button" type="checkbox" style="left" name="Stops" value="The Cove"/>
+<span class="checkmark">The Cove</span>
  </label>
+
+
    
- <label for="Blue Mountains">Blue Mountains  <input id="Blue Mountains" type="checkbox" style="left" name="Stops" value="Blue Mountains" />
+ <label class="label-container" for="Blue Mountains"> <input class="buttons buttonsselected "  id="Blue Mountains" role="button" type="checkbox" style="left" name="Stops" value="Blue Mountains"/>
+<span class="checkmark">Blue Mountains</span>
  </label>
+
+
    
- <label for="Sydney">Sydney  <input id="Sydney" type="checkbox" style="left" name="Stops" value="Sydney" />
+ <label class="label-container" for="Sydney"> <input class="buttons buttonsselected "  id="Sydney" role="button" type="checkbox" style="left" name="Stops" value="Sydney"/>
+<span class="checkmark">Sydney</span>
  </label>
+
+
    
- <label for="Central Coast">Central Coast  <input id="Central Coast" type="checkbox" style="left" name="Stops" value="Central Coast" />
+ <label class="label-container" for="Central Coast"> <input class="buttons buttonsselected "  id="Central Coast" role="button" type="checkbox" style="left" name="Stops" value="Central Coast"/>
+<span class="checkmark">Central Coast</span>
  </label>
+
+
    
- <label for="Newcastle">Newcastle  <input id="Newcastle" type="checkbox" style="left" name="Stops" value="Newcastle" />
+ <label class="label-container" for="Newcastle"> <input class="buttons buttonsselected "  id="Newcastle" role="button" type="checkbox" style="left" name="Stops" value="Newcastle"/>
+<span class="checkmark">Newcastle</span>
  </label>
+
+
    
- <label for="Byron Bay">Byron Bay  <input id="Byron Bay" type="checkbox" style="left" name="Stops" value="Byron Bay" />
+ <label class="label-container" for="Byron Bay"> <input class="buttons buttonsselected "  id="Byron Bay" role="button" type="checkbox" style="left" name="Stops" value="Byron Bay"/>
+<span class="checkmark">Byron Bay</span>
  </label>
+
+
    
- <label for="Gold Coast">Gold Coast  <input id="Gold Coast" type="checkbox" style="left" name="Stops" value="Gold Coast" />
+ <label class="label-container" for="Gold Coast"> <input class="buttons buttonsselected "  id="Gold Coast" role="button" type="checkbox" style="left" name="Stops" value="Gold Coast"/>
+<span class="checkmark">Gold Coast</span>
  </label>
+
+
    
- <label for="Brisbane">Brisbane  <input id="Brisbane" type="checkbox" style="left" name="Stops" value="Brisbane" />
+ <label class="label-container" for="Brisbane"> <input class="buttons buttonsselected "  id="Brisbane" role="button" type="checkbox" style="left" name="Stops" value="Brisbane"/>
+<span class="checkmark">Brisbane</span>
  </label>
+
+
    
- <label for="Sunshine Coast">Sunshine Coast  <input id="Sunshine Coast" type="checkbox" style="left" name="Stops" value="Sunshine Coast" />
+ <label class="label-container" for="Sunshine Coast"> <input class="buttons buttonsselected "  id="Sunshine Coast" role="button" type="checkbox" style="left" name="Stops" value="Sunshine Coast"/>
+<span class="checkmark">Sunshine Coast</span>
  </label>
+
+
    
- <label for="Noosa">Noosa  <input id="Noosa" type="checkbox" style="left" name="Stops" value="Noosa" />
+ <label class="label-container" for="Noosa"> <input class="buttons buttonsselected "  id="Noosa" role="button" type="checkbox" style="left" name="Stops" value="Noosa"/>
+<span class="checkmark">Noosa</span>
  </label>
+
+
    
- <label for="Fraser Island">Fraser Island  <input id="Fraser Island" type="checkbox" style="left" name="Stops" value="Fraser Island" />
+ <label class="label-container" for="Fraser Island"> <input class="buttons buttonsselected "  id="Fraser Island" role="button" type="checkbox" style="left" name="Stops" value="Fraser Island"/>
+<span class="checkmark">Fraser Island</span>
  </label>
+
+
    
- <label for="Whitsundays">Whitsundays  <input id="Whitsundays" type="checkbox" style="left" name="Stops" value="Whitsundays" />
+ <label class="label-container" for="Whitsundays"> <input class="buttons buttonsselected "  id="Whitsundays" role="button" type="checkbox" style="left" name="Stops" value="Whitsundays"/>
+<span class="checkmark">Whitsundays</span>
  </label>
+
+
    
- <label for="Airlie Beach">Airlie Beach  <input id="Airlie Beach" type="checkbox" style="left" name="Stops" value="Airlie Beach" />
+ <label class="label-container" for="Airlie Beach"> <input class="buttons buttonsselected "  id="Airlie Beach" role="button" type="checkbox" style="left" name="Stops" value="Airlie Beach"/>
+<span class="checkmark">Airlie Beach</span>
  </label>
+
+
    
- <label for="Magnetic Island">Magnetic Island  <input id="Magnetic Island" type="checkbox" style="left" name="Stops" value="Magnetic Island" />
+ <label class="label-container" for="Magnetic Island"> <input class="buttons buttonsselected "  id="Magnetic Island" role="button" type="checkbox" style="left" name="Stops" value="Magnetic Island"/>
+<span class="checkmark">Magnetic Island</span>
  </label>
+
+
    
- <label for="Cairns">Cairns  <input id="Cairns" type="checkbox" style="left" name="Stops" value="Cairns" />
+ <label class="label-container" for="Cairns"> <input class="buttons buttonsselected "  id="Cairns" role="button" type="checkbox" style="left" name="Stops" value="Cairns"/>
+<span class="checkmark">Cairns</span>
  </label>
+
+
    
- <label for="Perth">Perth  <input id="Perth" type="checkbox" style="left" name="Stops" value="Perth" />
+ <label class="label-container" for="Perth"> <input class="buttons buttonsselected "  id="Perth" role="button" type="checkbox" style="left" name="Stops" value="Perth"/>
+<span class="checkmark">Perth</span>
  </label>
+
+
    
- <label for="Rottnest Island">Rottnest Island  <input id="Rottnest Island" type="checkbox" style="left" name="Stops" value="Rottnest Island" />
+ <label class="label-container" for="Rottnest Island"> <input class="buttons buttonsselected "  id="Rottnest Island" role="button" type="checkbox" style="left" name="Stops" value="Rottnest Island"/>
+<span class="checkmark">Rottnest Island</span>
  </label>
+
+
    
- <label for="Exmouth">Exmouth  <input id="Exmouth" type="checkbox" style="left" name="Stops" value="Exmouth" />
+ <label class="label-container" for="Exmouth"> <input class="buttons buttonsselected "  id="Exmouth" role="button" type="checkbox" style="left" name="Stops" value="Exmouth"/>
+<span class="checkmark">Exmouth</span>
  </label>
+
+
    
 </div>
-<a  href="#step4" class=" action-button action-button"> Previous</a>
-<a class="texttransform" href="#step6"  class=" action-button hiddenButton"> Next</a>
+<a  href="#step4" class=" action-button"> Previous</a>
+<a href="#step6"  class="action-button  hiddenButton"> Next</a>
 </div>
 
   </div>
@@ -632,9 +704,12 @@
       <label for="name"> Discount Code</label>
       <input  type="text" name="name" id="name" placeholder="Discount code" />
 
+      <input type="text" name="_gotcha" style="display: none;">
+      <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
+
 <p> <input type="submit" value="Submit for a quote"> </p>
-<input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
-<input type="text" name="_gotcha" style="display: none;">
+
+
 
 
 <a href="#step8" class=" action-button"> Previous</a>
@@ -729,6 +804,19 @@
   });
 
   </script>
+
+
+<!-- Google analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171580968-1');
+</script>
 
   </body>
 </html>
