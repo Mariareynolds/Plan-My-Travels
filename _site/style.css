@@ -1306,7 +1306,7 @@ body {
 
 .stars {
   display: flex;
-  padding: 0 20px;
+  padding: 0 5px;
 }
 
 .star1, .star2, .star3, .star4, .star5 {
