@@ -216,4 +216,40 @@ if($('.finish-location').is(':checked'))  {
 
 });
 
+// toggle
+
+// has jqurey as a dependcy
+
+  /* filtering */
+
+  $('.toggleselect').click(function(e){
+  
+    /* make this <li> class active and remove class 'active' from any other <li>s */
+    $('.toggleselect.active').removeClass('active');
+    $(this).addClass('active');
+
+    /* get the name of the cateory from this link */
+    var filterVal = $(this).text().replace(' ','-');
+
+    $('.toggleboxes .toggledbox').each(function() {
+        if(filterVal == 'all'){
+          $(this).removeClass('toggledout');
+        }else{
+          if(!$(this).hasClass(filterVal)) {
+            $(this).addClass('toggledout'); // hide those that don't have the filter
+          }else{
+            $(this).removeClass('toggledout'); // show those that do have the filter
+          }
+};
+        });
+
+
+});
+
+
+
+
+
+
+
 });
