@@ -820,6 +820,7 @@ a{
 
 form input[type=text],
 form textarea {
+  font-family: 'Lato', sans-serif;
   width: 100%;
   margin: 1.5rem 0;
   padding: 2.5rem;
@@ -845,9 +846,7 @@ form input[type=hidden]{
   width: 30%;
   }
 
-/* textarea {
-  min-height: 4rem;
-} */
+
 
 .textarea textarea {
   width: 100%;

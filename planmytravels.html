@@ -72,15 +72,15 @@ stops:
   description:
 transport:
 - select: Car Hire
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: If you plan on hiring a car or van to travel Australia you're likely to have that little extra freedom to be able to explore some hidden spots off the beaten path. We can provide recommendations for can and van hire across Australia so you have several options and you can pick whats most suitable for you.
 - select: Train
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: The East Coast of Australia is well connected by train routes and It's definitely possible to cover the majority of locations. However if you're looking to travel across country you will need to be open to using other means of transport.
 - select: Greyhound Bus
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Greyhound buses cover all tourist hotspot along the East Coast of Australia. Some journeys can be up to 12 hours so if you're looking to save time on the roads you select other modes of transport as well.
 - select: Plane
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Flying is definitely the best mode of transport if the locations you wish to visit are farely spreadout, for example Adelaide, Melbourne, Sydney, Brisbane and Cairns. These locations are often favourites but involve long travel days inbetween if you don't plan to stop at other locations to break up the journey, which makes flying the best option. (Flights across Australia can be really cheap if booked in advance)
 - select: Bus
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: The East Coast of Australia is well connected by bus routes and It's definitely possible to cover the majority of locations however we suggest you will need to be open to using other means of transport in order to reduce travel time. If you're looking to travel across country you we need to fly or use the train services.
 activities:
 - select: Beach Days
   description: Ones of Australia's best features are the famous white sand beaches. Beach days will be slower paced with recommendations for both hidden gems and hot spots and include recommended food spots nearby.
@@ -89,19 +89,19 @@ activities:
 - select: Watersports
   description: Examples of watersports include white water rafting, Surfing, Kayaking, Stand Up Paddle Boarding and Diving.
 - select: Museums
-  description: Discover the local culture at Museums in most major cities within Australia. You can expect specialist Museums for each location. The musuems are often History based however you will be given other options also. 
-- select: History
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Discover the local culture at Museums in most major cities within Australia. You can expect specialist Museums for each location. The musuems are often History based however you will be given other options also.
+- select: Galleries
+  description: Most Galleries are located in the larger cities such as Melbourne, Sydney and Brisbane so make sure you are travelling to these locations if you wish to visit Australia's best known art galleries.
 - select: Animal Encounters
   description: Visit famous Zoo's or small wildlife sanctuary's. Australia loves to share it's unique animals and many locations offer up close encounters such as feeding Kangaroos and cuddling Koala's. Itineraries may also include Aquariums or Whale watching experiences as other examples.
 - select: Landmarks
   description: Landmarks cover all the tourist hotspots and often involve a busy day of exploring and navigating a new destination. Sightseeing days can be quite busy!
 - select: Photography
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Photography hotspots can be found all over Australia however these itineraies will be designed specifically to make sure you get the best shots. For example sunrise walks to Lighthouses and the best walking tours of the city. Other activities will be recommended whilst at each location to ensure you make the most of each stop.
 - select: Sailing
   description: Sailing experiences range from Harbour Cruises with high tea to lunch to yacht socials or even Overnight sailing tours in the Whitsundays.
 - select: Theme Parks
-  description: The Gold Coast is known for it's Theme Parks and this a popular attraction on the East Coast. THeme parks also include Luna Parks and Circus's.
+  description: The Gold Coast is known for it's Theme Parks and this a popular attraction on the East Coast. Theme parks also include Luna Parks and Circus's in Sydney and Melbourne.
 - select: Nightlife
   description: Certain City's are known in particular for their nightlife. Nightlife itineraries are usually slower paced days with recommendations for the best bars and clubs in the evenings.
 - select: Wineries
@@ -321,8 +321,8 @@ finish:
 </div>
   </div>
 
-  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle  bg-image-pinkbeach ready form slideinleft padded center relative">
-<div class="formcover ready paddingtop50 bg-image-pinkbeach bg-colour-pinkbeach">
+  <div id="step5" style="margin-left: 0px;" class="col-12_sm-12-middle  bg-image-pinkbeach form slideinleft padded center relative">
+<div class="formcover paddingtop50 bg-image-pinkbeach bg-colour-pinkbeach">
 <h3> Step Five </h3>
  </div>
 <div class="bg-transparent">
@@ -337,7 +337,7 @@ finish:
 
 
    {% endfor %}
-   <div class="toggleboxes">
+   <div class="toggleboxes bordertop">
 
      {% for stops in page.stops %}
 
@@ -356,8 +356,8 @@ finish:
   </div>
 
 
-  <div id="step6" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-koala1 ready form slideinright center relative">
-    <div class="formcover ready paddingtop50 bg-image-koala1 bg-image-paper">
+  <div id="step6" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-koala1 form slideinright center relative">
+    <div class="formcover  paddingtop50 bg-image-koala1 bg-image-paper">
     <h3> Step Six </h3>
   </div>
   <div class="bg-transparent ">
@@ -371,7 +371,7 @@ finish:
      <span class="checkmark toggleselect">{{transport.select}}</span>
      </label>
      {% endfor %}
-     <div class="toggleboxes">
+     <div class="toggleboxes bordertop">
 
        {% for transport in page.transport %}
 
