@@ -13,11 +13,11 @@
 //   });
 // });
 
+// this bit below
 
-
-$(document).ready(function(){
-  $(".more-text-button").click(function(){
-    $(".more-text").toggle();
-  })
-
-})
+// $(document).ready(function(){
+//   $(".more-text-button").click(function(){
+//     $(".more-text").toggle();
+//   })
+//
+// })
