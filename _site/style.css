@@ -942,6 +942,11 @@ form label {
   text-transform: uppercase;
   display: block;
 }
+.font{
+  font-family: 'Lato', sans-serif;
+  color: white;
+  padding-top: 1.5rem;
+}
 form h3{
   margin: 1rem 0 0;
 display: inline-block;
@@ -1007,6 +1012,7 @@ nav{
 }
 a {
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
 }
 
 hr{
