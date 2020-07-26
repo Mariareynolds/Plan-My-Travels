@@ -150,6 +150,7 @@ padding: 0;
   width: 50%;
 }
 
+
 .bordertop{
   border-top: 1px solid white;
   left: 25%;
@@ -816,6 +817,10 @@ a{
     font-size: 1.2rem;
     letter-spacing: 1.3px;
     margin-bottom: 1.3rem;
+}
+.textinput .inputtext {
+  padding: 1rem;
+  width: 50%;
 }
 
 form input[type=text],

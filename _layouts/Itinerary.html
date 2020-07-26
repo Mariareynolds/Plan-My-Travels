@@ -54,15 +54,21 @@ banner-image: /images/operahouse.jpg
           {% endif %}
 
             {% if itinerary.type == 'direction' %}
-          <h2 class="greycard"> Travel Directions : {{itinerary.location}}</h2>
+          <h2 class="greycard"> Travel Directions: {{itinerary.location}}</h2>
 
           {% endif %}
 
           {% if itinerary.type == 'tips' %}
-        <h2> location Tips </h2>
+        <h2 class="greycard"> Travel Tips </h2>
 
-        <p> <span>Activity:</span> {{itinerary.activity}} </p>
+        <!-- <p> <span>Tips:</span> {{itinerary.tips}} </p> -->
         {% endif %}
+
+        {% if itinerary.type == 'Intro' %}
+      <h2 class="greycard"> Introduction to: {{itinerary.activity}}</h2>
+
+      {% endif %}
+
         </a>
       </dt>
       <dd>
@@ -145,7 +151,7 @@ banner-image: /images/operahouse.jpg
 
   <section class="bg-image-paper-login grid-spaceAround flip-flex">
 
-
+<!--
     <div class="col-3-middle vertical-line padded">
       <div class="">
 
@@ -155,18 +161,52 @@ banner-image: /images/operahouse.jpg
     <p> <span> Location: </span>{{itinerary.location}} </p>
     <p> <span>Activity:</span> {{itinerary.activity}} </p>
     </div>
-    </div>
+    </div> -->
 
-    <div class="col-9-middle padded">
+    <div class="col-12-middle padded">
 
 
     <p>  {{itinerary.text}}
-      <a href="/thing.pdf" download>download</a>
+      <!-- <a href="/thing.pdf" download>download</a> -->
    </p>
       </div>
   </section>
 <!-- end of tips -->
   {% endif %}
+
+  <!-- Intro <section> -->
+  {% if itinerary.type == 'Intro' %}
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+    <!-- <div class="col-3-middle vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div> -->
+
+    <div class="col-12-middle padded">
+
+
+    <p>  {{itinerary.text}}
+      <!-- <a href="/thing.pdf" download>download</a> -->
+   </p>
+      </div>
+  </section>
+<!-- end of Intro -->
+  {% endif %}
+
+
+
+
+
+
 <!-- end checking of IF and ARRAYS being the same  -->
   {% endif %}
 </dd>
