@@ -87,69 +87,68 @@
     </section>
   </header>-->
 
-  <!DOCTYPE html>
-
-<html>
-  <head>
-    <title>Set Password</title>
-    <style>
-      .password-mismatch-message,
-      .invalid-link-message,
-      .token-expired-message,
-      .success-message {
-        display: none;
-      }
-
-      .has-password-mismatch .password-mismatch-message,
-      .has-invalid-link .invalid-link-message,
-      .has-token-expired .token-expired-message,
-      .has-success .success-message {
-        display: block;
-      }
-
-      .has-success label,
-      .has-success input {
-        display: none;
-      }
-    </style>
-  </head>
-  <body class="{{messageClasses}} bg-image-island">
-    <h4 class="center padding-login">Set a Password</h4>
-    <form action="/set-password" method="post" class="loginform">
-      <div class="password-mismatch-message center padded ">
-        Password did not match confirmation.
-      </div>
-      <div class="invalid-link-message center padded">
-        Your reset link is no longer valid.
-        <a class="center padded" href="/reset-password">Reset your password</a> to get another.
-      </div>
-      <div class="token-expired-message center padded">
-        Your reset link has expired.
-        <a class="center padded" href="/reset-password">Reset your password</a> to get another.
-      </div>
-      <div class="success-message center padded">
-        Successfully set your password.
-      </div>
-      <div class="center paddingnone">
-      <label class="center font" for="password">Password</label>
-      <input class="center "id="password" type="password" name="password" >
+  <section class="banner grid-center fixed" style="background-image:url('/images/rottnestisland.JPG'); background-position: center;">
+  <div class="col-6_sm-12-middle centered">
+    <h2 class="big-bold font-color"> </h2>
+    <h3 class="not-bold font-color">  </h3>
+  </div>
+</section>
 
 
 
+<section class=" margin-bottom7">
+  <div>
+  <dl class="accordion light-bg padded-1">
 
-        </div>
-        <div class="center paddingnone">
-      <label class="center font" for="password-confirm">Confirm Password</label>
-      <input class="center " id="password-confirm" type="password" name="password-confirm">
+    <h2 class=" center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      position:relative;
+      ">
+      FAQ's
+      <hr class="blueline">
+    </h2>
 
-      <input class="center " type="hidden" name="token" value="{{token}}">
-        </div>
-        <div class="center paddingnone">
-      <input class="center submitreview" type="submit" value="Set Password">
-        </div>
-    </form>
-  </body>
-</html>
+    <dt><a href=""><h2 class="bluecard"> What does Plan My Travels do?</h2></a></dt>
+    <dd><p class="padded">Plan my travels explores destinations all over Australia (and more countries in the pipeline) showing off the best of each location. Once you have selected which locations appeal to you, you will submit your preferences and will then be sent a full itinerary for your own trip. Plan My Travels bespoke itineraries are designed around the locations you’d like to visit, how long you’re traveling for and your personal interests.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">Why would I use Plan My Travels?</h2></a></dt>
+    <dd><p class="padded">Are you looking to travel a country you know nothing about? Planning a trip with no ideal start or finishing point? Or are you simply working long hours and don’t have the time to do your research but you also don’t want to miss out on anything. Plan my travels was born to fill that void.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">What's included in my itineray?</h2></a></dt>
+    <dd><p class="padded">The itinerary will give you a plan for each day of your trip. We like to cover all the must see landmarks as well as hidden gems you wouldn't have otherwise come across. The itinerary will detail how to get to each location depending of the modes of transport you select and will also give you tips on the area such as popular restaurants and links to nearby attractions.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">What's the process?</h2></a></dt>
+    <dd><p class="padded">Complete a quick questionnaire about your desired trip and you will recieve an email in 24 hours with a quote. If you are happy to go ahead you will receive a link to your own personalised login page detailing your trip day by day. It’s as simple as that.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">How do you create a bespoke itinerary?</h2></a></dt>
+    <dd><p class="padded">Answer just 9 short questions to allow us to customise an itinerary that will not only point out where you should visit during your stay but also how to get from A to B and also tips on restaurants and hotels along the way. </p></dd>
+
+    <dt><a href=""><h2 class="bluecard">Can I give more information to tailor my trip?</h2></a></dt>
+    <dd><p class="padded">If you have more questions you are welcome you use the additional comments box when submitting your travel preferences for a quote and we will come back to you to help your with your plans as best as we can.</p></dd>
+
+  </dl>
+  </div>
+</section>
+
+<section class="center margin-bottom7 bg-image-pinkbeachbottom padding-top-15 bg-color nopaddingbottom comment-box-fix">
+<div class="paddingnone">
+  <h2>Let's do this</h2>
+  <p>Complete a short questionnaire to help more personalise your trip...</p>
+
+</div>
+
+
+  <div class="">
+    <a href="planmytravels.html" class="calltoactionheart"> Plan My Travels <span> ♥ </span> </a>
+  </div>
+
+
+
+</section>
+<section class="margin-bottom7">
+
+</section>
 
 
 
