@@ -487,7 +487,7 @@ padding: 0;
   background-image: url("/images/beachcanoe.jpg");
   background-size: cover;
   background-position: center;
-  padding-bottom: 20%;
+  /* padding-bottom: 20%; */
   border: 5px solid white;
 }
 
