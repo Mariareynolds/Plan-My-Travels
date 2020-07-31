@@ -396,9 +396,7 @@ padding: 0;
   background-color: red;
 } */
 
-.hiddenform:hover{
-  color: pink;
-}
+
 
 .bg-transparent{
   border: 7px solid white;
