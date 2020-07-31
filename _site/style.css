@@ -411,7 +411,8 @@ padding: 0;
   z-index: 5;
   top: 0;
   left: 0;
-
+  bottom: 0;
+ right: 0;
 }
 
 .formcover h3{
@@ -1711,7 +1712,7 @@ button, .submitreview, .button {
 .fadein {  opacity: 0;}
 
 .slideinleft, .slideinright{
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;

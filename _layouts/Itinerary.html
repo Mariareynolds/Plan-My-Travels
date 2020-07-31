@@ -75,7 +75,8 @@ banner-image: /images/operahouse.jpg
 
 
 {% if itinerary.type == 'activity' %}
-
+ {% if itinerary.img %}
+ 
   <section class="bg-image-paper-login popup-gallery grid flip-flex">
 
   <div class="col-4-middle center padded mobileorder2">
@@ -111,7 +112,32 @@ banner-image: /images/operahouse.jpg
    </p>
       </div>
   </section>
+{% else %}
+<section class="bg-image-paper-login grid-spaceAround flip-flex">
 
+
+<div class="col-3-middle_sm-12 vertical-line padded">
+  <div class="">
+
+
+<h2>  </h2>
+
+<p> <span> Location: </span>{{itinerary.location}} </p>
+<p> <span>Activity:</span> {{itinerary.activity}} </p>
+</div>
+</div>
+
+<div class="col-9-middle_sm-12 padded">
+
+
+<p>  {{itinerary.text}}
+
+</p>
+  </div>
+
+  </section>
+
+  {% endif %}
   {% endif %}
 
 
