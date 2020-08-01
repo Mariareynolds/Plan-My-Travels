@@ -72,6 +72,12 @@ html {
 .padding-left{
   padding-left: 1.25%;
 }
+.padded-left{
+  padding-left: 35%;
+}
+.padding-right{
+  padding-right: 35%;
+}
 .paddingnone{
 padding: 0;
 }
@@ -491,7 +497,7 @@ padding: 0;
   background-image: url("/images/beachcanoe.jpg");
   background-size: cover;
   background-position: center;
-  /* padding-bottom: 20%; */
+  padding-bottom: 20%;
   border: 5px solid white;
 }
 
@@ -520,6 +526,7 @@ padding: 0;
   background-image: url("/images/koala1.JPG");
   background-size: cover;
   background-position: center;
+  padding-bottom: 20%;
   border: 5px solid white;
 }
 
@@ -534,6 +541,7 @@ padding: 0;
   background-image: url("/images/lakewabby.JPG");
   background-size: cover;
   background-position: center;
+  padding-bottom: 20%;
   border: 5px solid white;
 }
 
@@ -1873,7 +1881,12 @@ button, .submitreview, .button {
   .hidden{
     display: none;
   }
-
+  .padded-left{
+    padding-left: 20%;
+  }
+  .padding-right{
+    padding-right: 20%;
+  }
   .mobileorder9{
     order:9;
   }

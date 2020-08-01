@@ -223,13 +223,13 @@ if($('.finish-location').is(':checked'))  {
   /* filtering */
 
   $('.toggleselect').click(function(e){
-  
+
     /* make this <li> class active and remove class 'active' from any other <li>s */
     $('.toggleselect.active').removeClass('active');
     $(this).addClass('active');
 
     /* get the name of the cateory from this link */
-    var filterVal = $(this).text().replace(' ','-');
+    var filterVal = $(this).text().replace(' ','-').replace(' ','-');
 
     $('.toggleboxes .toggledbox').each(function() {
         if(filterVal == 'all'){
