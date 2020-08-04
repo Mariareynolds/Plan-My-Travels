@@ -47,6 +47,9 @@ html {
   padding: 3%;
 }
 
+.padded1.5{
+  padding: 1.5%;
+}
 .padding-bottom{
   padding-bottom: 2rem;
 }
