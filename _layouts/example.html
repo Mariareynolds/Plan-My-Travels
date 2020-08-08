@@ -1,0 +1,264 @@
+---
+layout: default
+banner-image: /images/operahouse.jpg
+title: Plan My Travels
+description:
+---
+
+<!-- itinerary days -->
+
+{% include fixed-banner.html %}
+
+<section>
+  <div class="padded center">
+    <h2 class="center">Example Itinerary</h2>
+    <p class="center">Here's a quick example of a 5 day itinerary for Sydney to Byron to give you an example of what you will receive in your full itinerary.</p>
+    <p class="center ">Our itineraries are broken down in to 4 categories:
+      <p class="textalign titles"> <span class="titles">Intro to a location: </span>Explaining how to get around, travel options and travel cards, hotel suggestions and a location description</p>
+    <p class="textalign titles"> <span class="titles">Activities: </span>All the things you need to know about the days activity. Including how to get there, what you will be doing and the best places to eat</p>
+    <p class="textalign titles"> <span class="titles">Tips: </span>Recommended Apps to download to get the best out of your trip including travel apps, happy hour apps and campsite apps.</p>
+    <p class="textalign titles"> <span class="titles">Travel Directions: </span>Explaining how to get from one location to another using different modes of transport.</p>
+
+  </div>
+</section>
+
+<section class="paddedexample  margin">
+  <div class="paddedexample blueborder margin">
+
+{% include fixed-banner.html %}
+<div class="padding-bottom">
+
+  <h3 class=" padded-1 bluetext">Hi {{page.client-intro}} are you ready for...
+  </h3>
+  <h3 class="padded-1 min-height bluetext"><span class="center" id="typed"></span></h3>
+  <div  id="typed-strings">
+
+    {% assign day_count = 0 %}
+    {% for day in page.day %}
+
+      {% for itinerary in site.Itinerary_Days %}
+      {% if day.location == itinerary.title %}
+
+            {% if itinerary.type == 'activity' %}
+            {% assign day_count = day_count | plus: 1 %}
+    <h3> <span>DAY {{ day_count }}  - {{day.location | replace: "-", " "}}</span></h3>
+
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </div>
+
+</div>
+
+
+
+<div class="hidecontent" id="expire-date">
+  {{page.expire-date}}
+</div>
+
+<dl class="accordion  light-bg padded-1">
+{% assign day_count = 0 %}
+{% for day in page.day %}
+
+  {% for itinerary in site.Itinerary_Days %}
+  {% if day.location == itinerary.title %}
+
+
+      <dt>
+        <a href="">
+
+            {% if itinerary.type == 'activity' %}
+            {% assign day_count = day_count | plus: 1 %}
+            <h2 class="bluecard"> DAY {{ day_count }} : {{itinerary.activity}} </h2>
+          {% endif %}
+
+            {% if itinerary.type == 'direction' %}
+          <h2 class="greycard"> Travel Directions: {{itinerary.location}}</h2>
+
+          {% endif %}
+
+          {% if itinerary.type == 'tips' %}
+        <h2 class="greycard"> Travel Tips </h2>
+
+        <!-- <p> <span>Tips:</span> {{itinerary.tips}} </p> -->
+        {% endif %}
+
+        {% if itinerary.type == 'Intro' %}
+      <h2 class="greycard"> Introduction to: {{itinerary.activity}}</h2>
+
+      {% endif %}
+
+        </a>
+      </dt>
+      <dd>
+
+
+{% if itinerary.type == 'activity' %}
+ {% if itinerary.img %}
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="{{itinerary.img}}" title="{{itinerary.img_alt}}">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3> {{itinerary.img_alt}} </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="{{itinerary.img}}" alt="{{itinerary.img_alt}}">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY {{ day_count }}  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  {{itinerary.text}}
+
+   </p>
+      </div>
+  </section>
+{% else %}
+<section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+<div class="col-3-middle_sm-12 vertical-line padded">
+  <div class="">
+
+
+<h2>  </h2>
+
+<p> <span> Location: </span>{{itinerary.location}} </p>
+<p> <span>Activity:</span> {{itinerary.activity}} </p>
+</div>
+</div>
+
+<div class="col-9-middle_sm-12 padded">
+
+
+<p>  {{itinerary.text}}
+
+</p>
+  </div>
+
+  </section>
+
+  {% endif %}
+  {% endif %}
+
+
+
+
+  <!-- travel directions  -->
+  {% if itinerary.type == 'direction' %}
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+    <div class="col-3-middle_sm-12 vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div>
+
+    <div class="col-9-middle_sm-12 padded">
+
+
+    <p>  {{itinerary.text}}
+
+   </p>
+      </div>
+  </section>
+<!-- end of directions -->
+  {% endif %}
+
+
+  <!-- Tips <section> -->
+  {% if itinerary.type == 'tips' %}
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+<!--
+    <div class="col-3-middle vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div> -->
+
+    <div class="col-12-middle padded">
+
+
+    <p>  {{itinerary.text}}
+      <!-- <a href="/thing.pdf" download>download</a> -->
+   </p>
+      </div>
+  </section>
+<!-- end of tips -->
+  {% endif %}
+
+  <!-- Intro <section> -->
+  {% if itinerary.type == 'Intro' %}
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+    <!-- <div class="col-3-middle vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>{{itinerary.location}} </p>
+    <p> <span>Activity:</span> {{itinerary.activity}} </p>
+    </div>
+    </div> -->
+
+    <div class="col-12-middle padded">
+
+
+    <p>  {{itinerary.text}}
+      <!-- <a href="/thing.pdf" download>download</a> -->
+   </p>
+      </div>
+  </section>
+<!-- end of Intro -->
+  {% endif %}
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  {% endif %}
+</dd>
+<!-- end itinerary blocks  -->
+  {% endfor %}
+<!-- end arrays -->
+  {% endfor %}
+</div>
+</section>

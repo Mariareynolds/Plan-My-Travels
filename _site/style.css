@@ -47,6 +47,10 @@ html {
   padding: 3%;
 }
 
+.paddedexample{
+  padding: 5%;
+}
+
 .padded1.5{
   padding: 1.5%;
 }
@@ -112,6 +116,10 @@ padding: 0;
   text-shadow:0px 0px 20px #C8F5F5;
 
 } */
+
+.blueborder{
+    border: 4px solid #D8DDDD;
+}
 
 .white{
   color: White;
@@ -227,6 +235,10 @@ padding: 0;
 
 .titles span{
   font-weight: bold;
+}
+
+.textalign .titles {
+  text-align: left;
 }
 .margin-bottom-7{
   margin-bottom: -7rem;
@@ -1385,6 +1397,34 @@ button, .submitreview, .button {
   color:#fff;
 }
 
+.subscribe{
+  color: white;
+  background-color: #ff9999;
+  border:1px solid #ff9999;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 1rem;
+  transition: all .2s;
+  font-weight:400;
+  max-width:250px;
+  display:block;
+  text-align:center;
+  margin:10px auto;
+  position:relative;
+  border-radius:25px;
+}
+
+.subscribe:hover {
+  -webkit-box-shadow:inset 0 0 10px 25px #C8F5F5;
+  box-shadow:inset 0 0 10px 25px #C8F5F5;
+  border-color:#C8F5F5;
+  color:#fff;
+}
+
+
 
 
 .buttons {
@@ -1795,6 +1835,13 @@ button, .submitreview, .button {
 .open::after {
   transform: rotateZ(45deg);
 }
+
+.min-height{
+  min-height: 10rem;
+
+}
+
+
 
 /* 48em = 768px */
 @media (max-width: 65em){
