@@ -27,6 +27,7 @@
 
 (function ($) {
     if (typeof $.cookieguard === 'undefined') {
+      // alert('dave');
         $.cookieguard = function (options) {
 
 			// Defaults
@@ -684,4 +685,4 @@
     }
 })(jQuery);
 
-alert('bob');
+// alert('bob');
