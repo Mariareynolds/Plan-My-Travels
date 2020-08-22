@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://planmytravels.co.uk/</title>
+  <link>http://planmytravels.co.uk/</link>
+
+<item>
+     <link>https://planmytravels.co.uk/</link>
+     <title> Plan My Travels </title>
+     <description>Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/PrivacyPolicy</link>
+     <title>  </title>
+     <description>  </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/CookiePolicy</link>
+     <title> Plan My Travels Cookie Policy </title>
+     <description> Plan My Travels Cookie Policy </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/TermsofService</link>
+     <title>  </title>
+     <description>  </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/index</link>
+     <title> Plan My Travels </title>
+     <description>Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/ItineraryPlanner</link>
+     <title> Australia Itinerary Planner </title>
+     <description>Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/FAQs</link>
+     <title> FAQ's </title>
+     <description>Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://planmytravels.co.uk/ItineraryPlanner.html</link>
+     <title> Australia Itinerary Planner </title>
+     <description>Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

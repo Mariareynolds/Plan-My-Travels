@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script type="text/javascript">
-  var _iub = _iub || [];
-  _iub.csConfiguration = {"tcfPurposes":{"2":"consent_only","3":"consent_only","4":"consent_only","5":"consent_only","6":"consent_only","7":"consent_only","8":"consent_only","9":"consent_only","10":"consent_only"},"isTCFConsentGlobal":false,"consentOnContinuedBrowsing":false,"enableCMP":true,"lang":"en","siteId":1979187,"preferenceCookie":{"expireAfter":365},"askConsentAtCookiePolicyUpdate":true,"priorConsent":false,"newConsentAtVendorListUpdate":0,"rebuildIframe":false,"logLevel":"debug","cookiePolicyId":91719999,"cookiePolicyUrl":"https://planmytravels.co.uk/CookiePolicy", "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#B8DDDD","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","rejectButtonDisplay":true,"rejectButtonColor":"#B8DDDD","rejectButtonCaptionColor":"white","position":"float-bottom-right","textColor":"black","backgroundColor":"white" }};
+    <!-- jQuery -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='/javascript/cookieguard.js'></script>
+  <script >
+    $(document).ready(function(){
+      $.cookieguard();
+      $.cookieguard.cookies.add('Google Analytics', '__utma,__utmb,__utmc,__utmz,__utmv', 'These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited.', false);
+      $.cookieguard.cookies.add('Cloudflare', '__cfduid', 'The cookie is set by CloudFare. The cookie is used to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It does not correspond to any user ID in the web application and does not store any personally identifiable information.', true);
+      $.cookieguard.cookies.add('browser session cookie', 'connect.sid', 'null', false);
+      $.cookieguard.run();
+    });
   </script>
-  <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
-  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -160,8 +166,7 @@
 
 
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
-    <!-- jQuery -->
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"  defer></script>
+
     <!-- jQuery easing plugin -->
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"  defer></script>
 
@@ -220,8 +225,8 @@
 <!-- Google analytics -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script  class="_iub_cs_activate-inline" type="text/plain" async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
-<script class="_iub_cs_activate-inline" type="text/plain">>
+<script   async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

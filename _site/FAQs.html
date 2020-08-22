@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- jQuery -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='/javascript/cookieguard.js'></script>
+  <script >
+    $(document).ready(function(){
+      $.cookieguard();
+      $.cookieguard.cookies.add('Google Analytics', '__utma,__utmb,__utmc,__utmz,__utmv', 'These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited.', false);
+      $.cookieguard.cookies.add('Cloudflare', '__cfduid', 'The cookie is set by CloudFare. The cookie is used to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It does not correspond to any user ID in the web application and does not store any personally identifiable information.', true);
+      $.cookieguard.cookies.add('browser session cookie', 'connect.sid', 'null', false);
+      $.cookieguard.run();
+    });
+  </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="og:description" content="Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!">
+    <title> FAQ's </title>
+    <meta property="og:title" content="Plan My Travels">
+  <!-- <meta property="og:description" content="Planning itineraries across Australia. Plan My Travels offers bespoke itineraries tailored to each customer."> -->
+  <meta property="og:image" content="/images/ADVENTURER.PNG">
+  <meta property="og:url" content="planmytravels.co.uk">
+
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css"
+    />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+
+    <style>
+      #map{ height: 100% }
+    </style>
+    <!-- Cookies policy -->
+    <!-- <link rel="stylesheet" href="/cookie-consent-bar-grt/grt-cookies-consent.css" /> -->
+
+
+
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="/javascript/info-window.js"></script>
+    <script src="/javascript/map.js"></script>
+    <script id="marker-content-template" type="text/x-handlebars-template">
+    <div class="custom-img" style="background-image: url()"></div>
+    <section class="custom-content">
+    <h1 class="custom-header">
+     my header
+    <small>my subtitle</small>
+    </h1>
+    <div class="custom-body">my description</div>
+    </section>
+  </script> -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script:400,500,600,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <body>
+
+    <!-- cookies policy -->
+    <!-- <div class="grt-cookie">
+      <div class="grt-cookies-msg">
+        <p>
+          We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you accept and understand our <a href="/PrivacyPolicy">Privacy Policy</a>, <a href="/CookiePolicy">Cookie Policy</a> and our <a href="/TermsofService">Terms of Service</a>.</p>
+        </p>
+
+      </div>
+      <span class="grt-cookie-button">Accept</span>
+    </div> -->
+
+  <!-- --------------------- THIS IS THE HEADER --------------- -->
+
+
+    <header class="fixed  header">
+      <div id="header_bar">&nbsp;</div>
+  <h1 class="logo"> Plan My Travels </h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/ItineraryPlanner">Plan My Travels </a></li>
+    <li><a href="/FAQs">FAQ's </a></li>
+
+  </ul>
+    <hr>
+
+
+</header>
+
+
+
+
+
+    <!-- <h2> Fixed Banner</h2>
+
+    <section class="banner grid-center fixed">
+      <div class="col-6_sm-12-middle centered">
+        <h2 class="big-bold"> This this a heading </h2>
+        <h3 class="not-bold"> This is a sub-heading </h3>
+      </div>
+    </section>
+  </header>-->
+
+  <section class="banner grid-center fixed" style="background-image:url('/images/rottnest.JPG'); background-position: center;">
+  <div class="col-6_sm-12-middle centered">
+    <h2 class="big-bold font-color"> </h2>
+    <h3 class="not-bold font-color">  </h3>
+  </div>
+</section>
+
+
+
+
+<section class="grid hidden">
+  <div class="col-6-middle">
+    <div class="image1"> <img class="padding-bottom "src="/images/meitinerary.JPG" alt="Founder of Plan My Travels - Australia itinerary creators">
+    </div>
+  </div>
+  <div class="col-6_md-12 mobile-init padded card bg-colorblue bump-left center ">
+
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> Who is behind the scenes </h2>
+  <p class="center "> Hi I'm Maria, a travel enthusiast from the UK. I travelled to Australia 3 times before eventually moving to Sydney. I have now lived in Australia for nearly 2 years and I have travelled up and down the East Coast, Melbourne, Adealide and WA.</p>
+
+  <p>When first travelling to Australia I had been working long hours, giving me little time to plan and I had just 3 weeks to squeeze in everything I wanted to do on the East Coast. No matter how much research you do it’s so hard to work out what parts you should prioritise, as Australia is such a huge country, so my aim was to create something that would help travellers in a similar situation. </p>
+  <p>When I travel I like to see and do everything possible, I like my days to be full and I hate missing out on a 'Must Do' activity. There is nothing worse than leaving a location and then hearing about a great spot that you'd missed. Plan My Travels is designed to cover all bases, so you have all the information in your itinerary and you can pick and choose the best bits for you. Don't worry I have included the odd chilled beach day too.</p>
+  <p class="center">Plan My Travels has been designed to select a route and itinerary that will be perfect for each customer, based on locations I have visited and can personally recommend. I identify a customers preferences and make sure they are seeing as much as possible and not missing out on any little gems I have discovered on my travels.</p>
+  <!-- <p class="center padding-bottom">I have a good understanding of travelling on a budget so these itineraries are aimed to be affordable to purchase but they also offer activities that are affordable and well researched to ensure customers are getting the best deals. </p> -->
+
+  </div>
+</section>
+
+<section class="grid mobilevisible">
+  <div class="col-12">
+    <div class="image1"> <img class="padding-bottom "src="/images/meitinerary.JPG" alt="Founder of Plan My Travels - Australia itinerary creators">
+    </div>
+  </div>
+  <div class="col-12 mobile-init padded card bg-colorblue  center ">
+
+    <h2 class="padding-bottom center" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+  "> Who is behind the scenes </h2>
+    <p class="center "> Hi I'm Maria, a travel enthusiast from the UK. I travelled to Australia 3 times before eventually moving to Sydney. </p>
+    <p>I have now lived in Australia for nearly 2 years and I have travelled up and down the East Coast, Melbourne, Adealide and WA. </p>
+    <p>When first travelling to Australia I had been working long hours, giving me little time to plan and I had just 3 weeks to squeeze in everything I wanted to do on the East Coast. No matter how much research you do it’s so hard to work out what parts you should prioritise, as Australia is such a huge country, so my aim was to create something that would help travellers in a similar situation. </p>
+    <p>When I travel I like to see and do everything possible, I like my days to be full and I hate missing out on a 'Must Do' activity. There is nothing worse than leaving a location and then hearing about a great spot that you'd missed. Plan My Travels is designed to cover all bases, so you have all the information in your itinerary and you can pick and choose the best bits for you. Don't worry I have included the odd chilled beach day too.</p>
+    <p class="center">Plan My Travels has been designed to select a route and itinerary that will be perfect for each customer, based on locations I have visited and can personally recommend. I identify a customers preferences and make sure they are seeing as much as possible and not missing out on any little gems I have discovered on my travels.</p>
+    <!-- <p class="center padding-bottom">I have a good understanding of travelling on a budget so these itineraries are aimed to be affordable to purchase but they also offer activities that are affordable and well researched to ensure customers are getting the best deals. </p> -->
+
+  </div>
+</section>
+
+<section class=" margin-bottom7">
+  <div>
+  <dl class="accordion light-bg padded-1">
+
+    <h2 class=" center margin-bottom" style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      position:relative;
+      ">
+      FAQ's
+      <hr class="blueline ">
+    </h2>
+
+    <dt><a href=""><h2 class="bluecard"> What does Plan My Travels do?</h2></a></dt>
+    <dd><p class="padded">Plan My Travels explores destinations all over Australia (and more countries in the pipeline) showing off the best of each location. Once you have selected which locations appeal to you, you will submit your preferences and will then be sent a full itinerary for your own trip. Plan My Travels bespoke itineraries are designed around the locations you’d like to visit, how long you’re traveling for and your personal interests.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">Why would I use Plan My Travels?</h2></a></dt>
+    <dd><p class="padded">Are you looking to travel a country you know nothing about? Planning a trip with no ideal start or finishing point? Or are you simply working long hours and don’t have the time to do your research but you also don’t want to miss out on anything. Plan my travels was born to fill that void. Pick out all the places you want to visit and the activities you enjoy and we will build your itinerary to make sure you aren't missing anything. We all hate FOMO!</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">What's included in my itinerary?</h2></a></dt>
+    <!-- <div class="padded"> -->
+
+    <dd><p class="">The itinerary will give you a plan for each day of your trip. We like to cover all the must see landmarks as well as hidden gems you wouldn't have otherwise come across. The itinerary will detail how to get to each location depending on the modes of transport you select and will also give you tips on the area such as popular restaurants and links to nearby attractions.</p>
+    <p >Each location you select you will be given hotel recommendations, tips on the area, best transport options and restaurants will be recommeneded for each day. </p>
+    <p > To cater to all taste we recommend a range of different accommodations and restaurants </p></dd>
+    <!-- </div> -->
+    <dt><a href=""><h2 class="bluecard">How to plan my trip</h2></a></dt>
+    <dd><p class="padded">Complete a quick questionnaire about your desired trip and you will recieve an email in 48 hours with a quote. If you are happy to go ahead you will receive a link to your own personalised login page detailing your trip day by day. It’s as simple as that.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard"> How much can I expect to pay for an itinerary?</h2></a></dt>
+    <dd><p class="padded"> Itinerary's start from just $30/ £15 per week. As each itinerary is bespoke you will be sent a quote once you've completed your preferences and if you are happy to go ahead you will be sent a payment request and login details for your own personal login page with your itinerary. </p></dd>
+
+    <dt><a href=""><h2 class="bluecard">Can I give more information to tailor my trip?</h2></a></dt>
+    <dd><p class="padded">If you have more questions you are welcome to use the additional comments box when submitting your travel preferences for a quote and we will come back to you to help your with your plans as best as we can.</p></dd>
+
+    <dt><a href=""><h2 class="bluecard">Can you provide an itinerary for locations that aren't on the site?</h2></a></dt>
+    <dd><p class="padded"> Yes we can! If you have a location within Australia that you would like to visit but it isn't one of the selections then feel free to pop us a message in the additional comments box before you submit your request and we will come back to you with the quote. </p></dd>
+
+    <dt><a href=""><h2 class="bluecard">How long does it take to get an itinerary?</h2></a></dt>
+    <dd><p class="padded"> You will be sent a quote within 48hours after submiting your preferences. You will also recieve a link to payment, once you have made payment you will be sent the link to your personal login page which contains your itinerary  </p></dd>
+    <!-- <dt><a href=""><h2 class="bluecard">Can I contact you to find out more?</h2></a></dt>
+    <dd><p class="padded">If you have more questions you are welcome to email us at XXXXXXX  and we will come back to you within 48hours.</p></dd> -->
+
+  </dl>
+  </div>
+</section>
+
+
+<section class="center bg-image-pinkbeachbottom padded bg-color nopaddingbottom comment-box-fix">
+<div class="centered padded">
+  <h3> Subscribe Now </h3>
+  <p> Subscribe for a FREE 5 day example itinerary from Sydney to Byron. </p>
+
+  <form class="email-signup" action="/exampleitinerary.html" method="post">
+
+    <!-- <label for="name"> Your Name *</label> -->
+    <input class="padded" required type="text" name="name" id="name" placeholder="Name" />
+
+    <!-- <label for="email"> Your Email * </label> -->
+    <input type="email" name="_replyto" required id="email" placeholder="Email" />
+    <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
+    <input type="text" name="_gotcha" style="display: none;">
+    <button class="subscribe button" type="submit" value="Subscribe">Subscribe </button>
+  </form>
+
+
+</div>
+</section>
+<section class="margin-bottom7">
+
+</section>
+
+
+
+
+
+<!-- --------------------- THIS IS THE FOOTER --------------- -->
+
+
+    <footer class="grid footer">
+      <!-- column -->
+      <div class="col-4_sm-12 padding-top padding-left">
+        <h2 class="logo"> Plan My Travels </h2>
+        <p class="nopaddingtop smalltext"> Website designed and created by Maria Francesca Reynolds.</p>
+        <p class="smalltext">Copyright © Maria Reynolds</p>
+        <p class="smalltext"><a class="smalltext" href="/PrivacyPolicy">Privacy Policy</a></p>
+        <p class="smalltext"><a class="smalltext" href="/TermsofService">Terms of Service</a></p>
+        <p class="smalltext"><a class="smalltext" href="/CookiePolicy"> Cookie Policy</a></p>
+      </div>
+      <!-- <div class="col-1 sm-hidden"></div> -->
+      <!-- column -->
+
+      <div class="col-3_sm-12-middle">
+        <nav class="inline socials">
+          <a href="https://www.facebook.com/Planmytravels">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/plan_my_travels/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="#">
+            <i class="fab fa-pinterest"></i>
+          </a> -->
+        </nav>
+
+      </div>
+
+      <div class="col-2 sm-hidden"></div>
+
+      <div class="col-3_sm-12-middle  mobile-init  right">
+        <nav class="inline padded">
+          <a class="padded decoration" href="/index"> Home </a>
+          <a class="padded decoration" href="/ItineraryPlanner"> Plan My Travels </a>
+          <a class="padded decoration" href="/FAQs"> FAQ's </a>
+        </nav>
+      </div>
+
+      </div>
+
+
+
+  </footer>
+
+<!-- scripts -->
+
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+
+    <!-- jQuery easing plugin -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"  defer></script>
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" defer></script>
+    <script type="text/javascript" src="/javascript/typing.js" defer></script>
+    <script src="/javascript/header_bar.js" defer> </script>
+    <script src="/javascript/expire-date.js" defer> </script>
+    <script src="/javascript/planner-if-statements.js" defer> </script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer> </script>
+    <script src="/javascript/lightbox.js" defer></script>
+    <script src="/javascript/read-more-button.js" defer></script>
+    <script src="/javascript/review.js" defer></script>
+
+    <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/grt-cookie-consent.js" defer></script>
+
+    <script src="/javascript/accordian.js" defer></script>
+
+
+    <script  src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+
+  // initialize the map
+  var map = L.map('map', {
+    scrollWheelZoom: false
+}).setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  // load GeoJSON from an external file
+  $.getJSON("/javascript/map.geojson",function(data){
+    var mapIcon = L.icon({
+      iconUrl: 'https://andywoodruff.com/maptime-leaflet/rat.png',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: mapIcon});
+        marker.bindPopup('<div class="popup-content"><img src="'+ feature.properties.image +'"><h3>' + feature.properties.city + '<h3/><div class="popup-description">' + feature.properties.description + '</div></div>');
+        return marker;
+      }
+    }).addTo(map);
+  });
+
+  </script>
+
+
+<!-- Google analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script   async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171580968-1');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- jQuery -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='/javascript/cookieguard.js'></script>
+  <script >
+    $(document).ready(function(){
+      $.cookieguard();
+      $.cookieguard.cookies.add('Google Analytics', '__utma,__utmb,__utmc,__utmz,__utmv', 'These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited.', false);
+      $.cookieguard.cookies.add('Cloudflare', '__cfduid', 'The cookie is set by CloudFare. The cookie is used to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It does not correspond to any user ID in the web application and does not store any personally identifiable information.', true);
+      $.cookieguard.cookies.add('browser session cookie', 'connect.sid', 'null', false);
+      $.cookieguard.run();
+    });
+  </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="og:description" content="Itineraries for your trip around Australia. Plan My Travels creates a bespoke itinerary for travellers exploring the East Coast and more!">
+    <title> Australia Itinerary Planner </title>
+    <meta property="og:title" content="Plan My Travels">
+  <!-- <meta property="og:description" content="Planning itineraries across Australia. Plan My Travels offers bespoke itineraries tailored to each customer."> -->
+  <meta property="og:image" content="/images/ADVENTURER.PNG">
+  <meta property="og:url" content="planmytravels.co.uk">
+
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css"
+    />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+
+    <style>
+      #map{ height: 100% }
+    </style>
+    <!-- Cookies policy -->
+    <!-- <link rel="stylesheet" href="/cookie-consent-bar-grt/grt-cookies-consent.css" /> -->
+
+
+
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="/javascript/info-window.js"></script>
+    <script src="/javascript/map.js"></script>
+    <script id="marker-content-template" type="text/x-handlebars-template">
+    <div class="custom-img" style="background-image: url()"></div>
+    <section class="custom-content">
+    <h1 class="custom-header">
+     my header
+    <small>my subtitle</small>
+    </h1>
+    <div class="custom-body">my description</div>
+    </section>
+  </script> -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script:400,500,600,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <body>
+
+    <!-- cookies policy -->
+    <!-- <div class="grt-cookie">
+      <div class="grt-cookies-msg">
+        <p>
+          We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you accept and understand our <a href="/PrivacyPolicy">Privacy Policy</a>, <a href="/CookiePolicy">Cookie Policy</a> and our <a href="/TermsofService">Terms of Service</a>.</p>
+        </p>
+
+      </div>
+      <span class="grt-cookie-button">Accept</span>
+    </div> -->
+
+  <!-- --------------------- THIS IS THE HEADER --------------- -->
+
+
+    <header class="fixed  header">
+      <div id="header_bar">&nbsp;</div>
+  <h1 class="logo"> Plan My Travels </h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/ItineraryPlanner">Plan My Travels </a></li>
+    <li><a href="/FAQs">FAQ's </a></li>
+
+  </ul>
+    <hr>
+
+
+</header>
+
+
+
+
+
+    <!-- <h2> Fixed Banner</h2>
+
+    <section class="banner grid-center fixed">
+      <div class="col-6_sm-12-middle centered">
+        <h2 class="big-bold"> This this a heading </h2>
+        <h3 class="not-bold"> This is a sub-heading </h3>
+      </div>
+    </section>
+  </header>-->
+
+  <!-- --------This is my map with popouts---------- -->
+
+
+<section class="banner grid-center fixed" style="background-image:url('/images/operahouse.jpg'); background-position: center;">
+  <div class="col-6_sm-12-middle centered">
+    <h2 class="big-bold font-color"> </h2>
+    <h3 class="not-bold font-color">  </h3>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="center hidden">
+    <h2 style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;"> Start planning your trip
+
+
+  </h2>
+
+    <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at the destinations on the map to get a feel for what there is to do in each location so you can pick what you'll enjoy most. </p>
+    <p>(Use the +/- buttons on the lower right hand corner of the map to help you zoom in and out to get a closer look at each of the locations)</p>
+  </div>
+  <div class="center mobilevisible">
+    <h3 style="
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;"> Let's start planning your trip </h3>
+    <p> Complete the steps below to help us plan an itinerary that is perfect for you! If you're not too sure which locations you want to visit have a look at this website on a desktop where you will be able to see a map with all of the pins explaining a little bit about each location </p>
+    <p>Unfortunatley the map of Australia is just too big to be viewed on a mobile!</p>
+  </div>
+
+</section>
+
+
+<section class="map comment box-fix">
+  <!-- <div  class="comment-box margin-bottom-7">
+
+  <a href="#" class="comment-box-text">
+     Double click the map to zoom in and select the drop pins for more information for each location </a>
+
+   </div> -->
+   <!-- <div  class="comment-box margin-bottom-7">
+
+   <a href="#" class="comment-box-text">
+      Double click the map to zoom in and select the drop pins for more information for each location </a>
+
+    </div> -->
+  <iframe class="mediamap" src="https://snazzymaps.com/embed/219502" width="100%" height="600px" style="border:none;"></iframe>
+
+</section>
+
+<!-- <script type="text/javascript">
+  console.log("START");
+
+  $(document).ready(function() {
+    console.log("READY");
+
+    $('.map iframe').on('load', function(){
+        console.log("MAP LOADED");
+
+        var iframe = $('.map iframe').children();
+        console.log(iframe.size());
+
+        iframe.on('DOMNodeInserted', function(){
+          console.log("INSERTED");
+          window.setTimeout(addImage, 1000);
+        });
+    });
+  });
+
+  function addImage() {
+    console.log('Popup text: ' + $('.si-wrapper-top').html());
+  }
+</script> -->
+
+<!-- -------- This is my form page ---------------- -->
+
+<form action="/success.html" method="POST" target="hidden_iframe">
+
+<section class="">
+<div class="">
+
+
+  <div id="step1"  class="col-5_sm-12-middle-spaceAround  padded bg-image-apostlessoft padded center hiddenform form  relative">
+    <div class="formcover  paddingtop50 bg-image-apostlessoft">
+      <h3> Step One </h3>
+    </div>
+    <div class="bg-transparent">
+
+
+    <h3 class="boldheading" for="level"> Pick a country *</h3>
+    <select name="Country placeholder="select one of the below">
+      <option value="Please select" selected disabled>Please select</option>
+      
+      <option required value="Australia"> Australia </option>
+
+      
+
+    </select>
+      <a href="#step2" class=" action-button hiddenButton"> Next </a>
+    </div>
+</div>
+
+  </div>
+
+  <div id="step2" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround card slideinright padded bg-image-beachcanoe form padded center relative">
+    <div class="formcover flexcenter paddingtop50 bg-image-beachcanoe">
+      <h3 class="padded-left padding-right"> Step Two </h3>
+    </div>
+    <div class="bg-transparent">
+    <h3 class="boldheading" for="level"> How long are you planning to travel for? * </h3>
+    <select name="travellength">
+    <option value="Please select" selected disabled>Please select</option>
+    
+      <option required value="1 week"> 1 week </option>
+    
+      <option required value="2 weeks"> 2 weeks </option>
+    
+      <option required value="3 weeks"> 3 weeks </option>
+    
+      <option required value="4 weeks"> 4 weeks </option>
+    
+      <option required value="5 weeks"> 5 weeks </option>
+    
+      <option required value="6 weeks"> 6 weeks </option>
+    
+      <option required value="7 weeks"> 7 weeks </option>
+    
+      <option required value="8 weeks"> 8 weeks </option>
+    
+      <option required value="9 weeks"> 9 weeks </option>
+    
+      <option required value="10 weeks"> 10 weeks </option>
+    
+      <option required value="11 weeks"> 11 weeks </option>
+    
+      <option required value="12 weeks"> 12 weeks </option>
+    
+    </select>
+    <a href="#step1" class=" action-button"> Previous</a>
+    <a href="#step3"  class=" action-button hiddenButton"> Next</a>
+    </div>
+  </div>
+
+  <div id="step3" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround bg-image-bluemountains slideinleft form padded center relative">
+    <div class="formcover paddingtop50 bg-image-bluemountains">
+      <h3> Step Three </h3>
+    </div>
+    <div class="bg-transparent" id="step3" >
+    <h3 class="boldheading">  Do you have a starting location? * </h3>
+    <div class="radio checkboxes">
+      <label for="starting-yes">YES
+        <input class="start-location" type="radio"  id=starting-yes name="start" value="YES" />
+      </label>
+      <label for="starting-no">NO
+        <input type="radio" id=starting-no name="start" value="NO" />
+      </label>
+      <div class="start-question" id="step3_5">
+      <h3 class="boldheading" for="level"> Select your starting location *</h3>
+      <select name="start-loc">
+        <option value="" selected disabled>Please select</option>
+       
+         <option  value="Adelaide"> Adelaide </option>
+       
+         <option  value="Great Ocean Road"> Great Ocean Road </option>
+       
+         <option  value="Melbourne"> Melbourne </option>
+       
+         <option  value="Canberra"> Canberra </option>
+       
+         <option  value="Jervis Bay"> Jervis Bay </option>
+       
+         <option  value="Sydney"> Sydney </option>
+       
+         <option  value="Central Coast"> Central Coast </option>
+       
+         <option  value="Newcastle"> Newcastle </option>
+       
+         <option  value="Byron Bay"> Byron Bay </option>
+       
+         <option  value="Gold Coast"> Gold Coast </option>
+       
+         <option  value="Brisbane"> Brisbane </option>
+       
+         <option  value="Sunshine Coast"> Sunshine Coast </option>
+       
+         <option  value="Noosa"> Noosa </option>
+       
+         <option  value="Fraser Island"> Fraser Island </option>
+       
+         <option  value="Whitsundays"> Whitsundays </option>
+       
+         <option  value="Airlie Beach"> Airlie Beach </option>
+       
+         <option  value="Cairns"> Cairns </option>
+       
+         <option  value="Perth"> Perth </option>
+       
+         <option  value="Exmouth"> Exmouth </option>
+       
+       </select>
+       </div>
+       </div>
+       <a href="#step2" class=" action-button"> Previous</a>
+       <a href="#step4"  class=" action-button hiddenButton"> Next</a>
+    </div>
+  </div>
+
+  <div id="step4" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround slideinright bg-image-lakemackenzie form padded center relative">
+<div class="formcover paddingtop50 bg-image-lakemackenzie">
+<h3> Step Four </h3>
+</div>
+<div class="bg-transparent">
+ <h3 class="boldheading">  Do you have a finishing location? * </h3>
+<div  class="radio">
+  <label for="finishing-yes">YES
+  <input class="finish-location" type="radio" id=finishing-yes name="finish" value="YES" /> </label>
+
+
+  <label for="finishing-no">NO
+  <input type="radio" id=finishing-no name="finish" value="NO" /> <label>
+
+    <div class="finish-question" id="step4_5">
+      <h3 class="boldheading" for="level"> Select your finishing location *</h3>
+    <select  name="finish-loc">
+      <option value="" selected disabled>Please select</option>
+     
+       <option  value="Adelaide"> Adelaide </option>
+     
+       <option  value="Great Ocean Road"> Great Ocean Road </option>
+     
+       <option  value="Melbourne"> Melbourne </option>
+     
+       <option  value="Canberra"> Canberra </option>
+     
+       <option  value="Jervis Bay"> Jervis Bay </option>
+     
+       <option  value="Sydney"> Sydney </option>
+     
+       <option  value="Central Coast"> Central Coast </option>
+     
+       <option  value="Newcastle"> Newcastle </option>
+     
+       <option  value="Byron Bay"> Byron Bay </option>
+     
+       <option  value="Gold Coast"> Gold Coast </option>
+     
+       <option  value="Brisbane"> Brisbane </option>
+     
+       <option  value="Sunshine Coast"> Sunshine Coast </option>
+     
+       <option  value="Noosa"> Noosa </option>
+     
+       <option  value="Fraser Island"> Fraser Island </option>
+     
+       <option  value="Whitsundays"> Whitsundays </option>
+     
+       <option  value="Airlie Beach"> Airlie Beach </option>
+     
+       <option  value="Cairns"> Cairns </option>
+     
+       <option  value="Perth"> Perth </option>
+     
+       <option  value="Exmouth"> Exmouth </option>
+     
+     </select>
+     </div>
+</div>
+<a href="#step3" class=" action-button"> Previous</a>
+<a href="#step5"  class=" action-button hiddenButton"> Next</a>
+</div>
+  </div>
+
+  <div id="step5" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-pinkbeach form slideinleft center relative">
+    <div class="formcover  paddingtop50 bg-image-pinkbeach bg-image-paper">
+<h3> Step Five </h3>
+ </div>
+<div class="bg-transparent">
+  <h3 class="boldheading"> Where would you like to stop? *</h3>
+<div class="checkboxes center">
+
+
+
+ <label class="label-container" for="Adelaide"> <input class="buttons buttonsselected "  id="Adelaide" role="button" type="checkbox" style="left" name="Stops" value="Adelaide"/>
+<span class="checkmark toggleselect">Adelaide</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Melbourne"> <input class="buttons buttonsselected "  id="Melbourne" role="button" type="checkbox" style="left" name="Stops" value="Melbourne"/>
+<span class="checkmark toggleselect">Melbourne</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Canberra"> <input class="buttons buttonsselected "  id="Canberra" role="button" type="checkbox" style="left" name="Stops" value="Canberra"/>
+<span class="checkmark toggleselect">Canberra</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Jervis Bay"> <input class="buttons buttonsselected "  id="Jervis Bay" role="button" type="checkbox" style="left" name="Stops" value="Jervis Bay"/>
+<span class="checkmark toggleselect">Jervis Bay</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="The Cove"> <input class="buttons buttonsselected "  id="The Cove" role="button" type="checkbox" style="left" name="Stops" value="The Cove"/>
+<span class="checkmark toggleselect">The Cove</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Blue Mountains"> <input class="buttons buttonsselected "  id="Blue Mountains" role="button" type="checkbox" style="left" name="Stops" value="Blue Mountains"/>
+<span class="checkmark toggleselect">Blue Mountains</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Sydney"> <input class="buttons buttonsselected "  id="Sydney" role="button" type="checkbox" style="left" name="Stops" value="Sydney"/>
+<span class="checkmark toggleselect">Sydney</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Central Coast"> <input class="buttons buttonsselected "  id="Central Coast" role="button" type="checkbox" style="left" name="Stops" value="Central Coast"/>
+<span class="checkmark toggleselect">Central Coast</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="North Coast"> <input class="buttons buttonsselected "  id="North Coast" role="button" type="checkbox" style="left" name="Stops" value="North Coast"/>
+<span class="checkmark toggleselect">North Coast</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Byron Bay"> <input class="buttons buttonsselected "  id="Byron Bay" role="button" type="checkbox" style="left" name="Stops" value="Byron Bay"/>
+<span class="checkmark toggleselect">Byron Bay</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Gold Coast"> <input class="buttons buttonsselected "  id="Gold Coast" role="button" type="checkbox" style="left" name="Stops" value="Gold Coast"/>
+<span class="checkmark toggleselect">Gold Coast</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Brisbane"> <input class="buttons buttonsselected "  id="Brisbane" role="button" type="checkbox" style="left" name="Stops" value="Brisbane"/>
+<span class="checkmark toggleselect">Brisbane</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Sunshine Coast"> <input class="buttons buttonsselected "  id="Sunshine Coast" role="button" type="checkbox" style="left" name="Stops" value="Sunshine Coast"/>
+<span class="checkmark toggleselect">Sunshine Coast</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Noosa"> <input class="buttons buttonsselected "  id="Noosa" role="button" type="checkbox" style="left" name="Stops" value="Noosa"/>
+<span class="checkmark toggleselect">Noosa</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Fraser Island"> <input class="buttons buttonsselected "  id="Fraser Island" role="button" type="checkbox" style="left" name="Stops" value="Fraser Island"/>
+<span class="checkmark toggleselect">Fraser Island</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Whitsundays"> <input class="buttons buttonsselected "  id="Whitsundays" role="button" type="checkbox" style="left" name="Stops" value="Whitsundays"/>
+<span class="checkmark toggleselect">Whitsundays</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Airlie Beach"> <input class="buttons buttonsselected "  id="Airlie Beach" role="button" type="checkbox" style="left" name="Stops" value="Airlie Beach"/>
+<span class="checkmark toggleselect">Airlie Beach</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Cairns"> <input class="buttons buttonsselected "  id="Cairns" role="button" type="checkbox" style="left" name="Stops" value="Cairns"/>
+<span class="checkmark toggleselect">Cairns</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Magnetic Island"> <input class="buttons buttonsselected "  id="Magnetic Island" role="button" type="checkbox" style="left" name="Stops" value="Magnetic Island"/>
+<span class="checkmark toggleselect">Magnetic Island</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Kangaroo Island"> <input class="buttons buttonsselected "  id="Kangaroo Island" role="button" type="checkbox" style="left" name="Stops" value="Kangaroo Island"/>
+<span class="checkmark toggleselect">Kangaroo Island</span>
+ </label>
+
+
+   
+
+
+ <label class="label-container" for="Great Ocean Road"> <input class="buttons buttonsselected "  id="Great Ocean Road" role="button" type="checkbox" style="left" name="Stops" value="Great Ocean Road"/>
+<span class="checkmark toggleselect">Great Ocean Road</span>
+ </label>
+
+
+   
+   <div class="toggleboxes bordertop">
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Adelaide'>
+       <p class="white larger">Adelaide is South Australia's Coastal Capital. Adelaide offers the Barossa Valley wine region, one of the most famous in Australia, Kangaroo Island and some of the biggest festivals in Australia.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Melbourne'>
+       <p class="white larger">Melbourne is a vibrant City in the South of Australia. It is known for being an artistic city with lots of beautiful graffiti laneways and quirky cafe's and rooftop bars. Melbourne is surrounded by some great locations that are ideal for day trips. A few examples are Philip Islands to see the Penguins or maybe a trip to the Yarra Valley wine region.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Canberra'>
+       <p class="white larger">Canberra is Australia's largest inland city and the eighth-largest city overall. Located between Australia's 2 largest cities, Melbourne and Sydney. Canberra is the capital city of Australia and is home to the nations Parliament house.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Jervis-Bay'>
+       <p class="white larger">Jervis Bay is a coastal town around 3 hours South of Sydney. The best place to stay is Huskissons Bay as it offers the most shops and restaurants. The majority of the surrounding is either a National park or secluded beach. The best part about Jervis Bay is the fact its so private, the beaches offer lots of space and are rarely busy, even on public holidays.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout The-Cove'>
+       <p class="white larger">The Cove is a resort on the Jervis Bay Peninsula that offers Glamping or luxury beach hut accommodation set inside a National Park. Accommodation starts at $230per night. You will need to have a 4WD car to access this experience so bear this in mind if you wish to select this option.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Blue-Mountains'>
+       <p class="white larger">The Blue Mountains are roughly an hour and a half outside of Sydney and they are are great place to escape the City. The Blue Mountains offer lots of walking tracks and viewpoints over the valleys as well as small towns and a boutique eateries.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Sydney'>
+       <p class="white larger">Sydney is one of the largest Cities in Australia and it is known for its iconic landmarks, such as the Sydney Harbour Bridge and the Sydney Opera House. Sydney offers the perfect balance of beach life and city life, with some of Australia's most famous beaches being just a 15minute drive from the City. Aside from the tourist hotspots Sydney also offers lots of other activities such as bottomless brunches or hikes in the National park. If you're looking for a relaxing day and a vibrant nightlife Sydney should definitely be on your list.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Central-Coast'>
+       <p class="white larger">The Central Coast is around an hour and a half North of Sydney and is home to some very underrated beaches. The resort towns such as Terrigal and Avoca Beach and popular amongst the locals and those looking to get out of the City for a long weekend. Central Coast is a great stop to break up the journey along the Coast.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout North-Coast'>
+       <p class="white larger">The North Coast stretches from just outside of Sydney up to Tweeds Head, which borders Queensland.  The North Coast has lots of underrated coastal towns that are great road trip stops on your way up and down the East Coast. Some you may have heard of are Newcastle, Port Stephens and Coffs Harbour. The journey from Byron to Sydney takes around 8 hours so you may want to break up the journey with a night or 2 on the North Coast.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Byron-Bay'>
+       <p class="white larger">Byron Bay is the hippie hotspot of the East Coast of Australia and it has loads to offer including, surfing, beaches, boutique shops with beautiful clothes and a care free vibe. One of my personal favourite spots.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Gold-Coast'>
+       <p class="white larger">The Gold Coast is known for its long stretches of beaches and it's high profile suburbs including Burleigh Heads. The Gold Coast has a wildlife centre that allows you to get up close with the Australian animals as well as Internationally known theme parks.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Brisbane'>
+       <p class="white larger">Brisbane is best known for being that Capital of Queensland. Brisbane has Museums, Science centres and  Art Galleries, as well as Botanical Gardens and a man-made beach on the South Bank. Brisbane offers something for everyone, it's great to have a little bit of City between the coastal towns along the East Coast.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Sunshine-Coast'>
+       <p class="white larger">Australia's Sunshine Coast has loads of great places to visit including Costal beach towns, the famous Australia Zoo and the Glass House Mountains. The Sunshine Coast is easily accessible from both Brisbane and Noosa via public transport.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Noosa'>
+       <p class="white larger">Noosa is a boutique beach town, North of the Sunshine Coast Airport, that is full of coffee shops and luxury clothing stores, set amongst sprawling million dollar homes. Hastings street is the main shopping street, set metres back from the beach making it the ideal place to visit if you’re looking to treat yourself a little and relax at the beach once you’ve done so. Noosa has a large National Park a hidden beaches and is a very popular coastal stop.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Fraser-Island'>
+       <p class="white larger">Fraser Island is the world's largest sand island, stretching over 120km and is one of only 20 in the world. Fraser Island is an adventure playground with it's impressive natural beauty. It's a camping and ecotourism destination, with beaches and swimming sites at Lake McKenzie, Lake Wabby and other freshwater pools.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Whitsundays'>
+       <p class="white larger">The Whitsundays are a collection of 74 Islands off the coast of Queensland. The Islands mark the gateway to the Great Barrier Reef making the area a beautiful snorkelling and diving destination. Whilst most of the Islands are uninhabited, some of the islands have luxury, honeymoon style resorts and incredible views.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Airlie-Beach'>
+       <p class="white larger">Airlie Beach is the vibrant hub of the Whitsundays and the ideal mainland base for fun and adventure in the Whitsundays. Located on the Great Barrier Reef and known for it's young and adventurous atmosphere it is the perfect launching pad for activities on the water and in the lush, green rainforest of the Whitsunday Coast. If you're looking to explore the Whitsunday Islands without the expense of staying on the Islands then this is definitely the place for you.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Cairns'>
+       <p class="white larger">Cairns is located in far North Queensland and is right at the heart of the Great Barrier Reef. Cairns is known for activities such as diving, white water rafting and bungy jumping, along with a great nightlife. Cape Tribulation is a short day trip from Cairns and it is the only place in the world where the Reef meets the Rainforest.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Magnetic-Island'>
+       <p class="white larger">Magnetic Island is located a short ferry ride off the mainland from Townsville. The Island is famous for it's topless Barbie cars that you can hire to drive around the Island. You can hike, hire bikes or beach hop for a few days and enjoy the nightlife of an evening.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Kangaroo-Island'>
+       <p class="white larger">Kangaroo Island is just off the peninsula from Cape Jervis which is roughly an hour and 40 minutes from Adelaide CBD. It's full of nature and wildlife and you'll have plenty of opportunities to meet some Aussie animals such as Kangaroo's, koala's, penguins and seals.</p>
+     </div>
+
+     
+
+
+     <div class='toggledbox paddingnone toggledout Great-Ocean-Road'>
+       <p class="white larger">The Great Ocean Road is a iconic route through Victoria stretching 243km along the south-eastern coast of Australia. The Great Ocean Road is a popular road trip with view points the whole way along it, the most famous of which is the 12 Apostles. The Great Ocean Road can be a slow and steady road trip over a few days or you can book a day trip from Melbourne to see the highlights.</p>
+     </div>
+
+     
+   </div>
+</div>
+<a  href="#step4" class=" action-button"> Previous</a>
+<a href="#step6"  class="action-button  hiddenButton"> Next</a>
+</div>
+
+  </div>
+
+
+  <div id="step6" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-koala1 form slideinright center relative">
+    <div class="formcover  paddingtop50 bg-image-koala1 bg-image-paper">
+    <h3> Step Six </h3>
+  </div>
+  <div class="bg-transparent ">
+    <h3 class="boldheading">  What modes of transport do you want to use during your trip? * </h3>
+    <div class="checkboxes  center">
+    
+
+
+   <label class="label-container" for="Car Hire">
+     <input class="buttons buttonsselected " id="Car Hire"  role="button" type="checkbox" style="center" name="transport" value="Car Hire"/>
+     <span class="checkmark toggleselect">Car Hire</span>
+     </label>
+     
+
+
+   <label class="label-container" for="Train">
+     <input class="buttons buttonsselected " id="Train"  role="button" type="checkbox" style="center" name="transport" value="Train"/>
+     <span class="checkmark toggleselect">Train</span>
+     </label>
+     
+
+
+   <label class="label-container" for="Greyhound Bus">
+     <input class="buttons buttonsselected " id="Greyhound Bus"  role="button" type="checkbox" style="center" name="transport" value="Greyhound Bus"/>
+     <span class="checkmark toggleselect">Greyhound Bus</span>
+     </label>
+     
+
+
+   <label class="label-container" for="Plane">
+     <input class="buttons buttonsselected " id="Plane"  role="button" type="checkbox" style="center" name="transport" value="Plane"/>
+     <span class="checkmark toggleselect">Plane</span>
+     </label>
+     
+
+
+   <label class="label-container" for="Bus">
+     <input class="buttons buttonsselected " id="Bus"  role="button" type="checkbox" style="center" name="transport" value="Bus"/>
+     <span class="checkmark toggleselect">Bus</span>
+     </label>
+     
+     <div class="toggleboxes bordertop">
+
+       
+
+
+       <div class='toggledbox  paddingnone toggledout Car-Hire'>
+         <p class="white larger">If you plan on hiring a car or van to travel Australia you're likely to have that little extra freedom to be able to explore some hidden spots off the beaten path. We can provide recommendations for can and van hire across Australia so you have several options and you can pick whats most suitable for you.</p>
+       </div>
+
+       
+
+
+       <div class='toggledbox  paddingnone toggledout Train'>
+         <p class="white larger">The East Coast of Australia is well connected by train routes and It's definitely possible to cover the majority of locations. However if you're looking to travel across country you will need to be open to using other means of transport.</p>
+       </div>
+
+       
+
+
+       <div class='toggledbox  paddingnone toggledout Greyhound-Bus'>
+         <p class="white larger">Greyhound buses cover all tourist hotspot along the East Coast of Australia. Some journeys can be up to 12 hours so if you're looking to save time on the roads you select other modes of transport as well.</p>
+       </div>
+
+       
+
+
+       <div class='toggledbox  paddingnone toggledout Plane'>
+         <p class="white larger">Flying is definitely the best mode of transport if the locations you wish to visit are farely spreadout, for example Adelaide, Melbourne, Sydney, Brisbane and Cairns. These locations are often favourites but involve long travel days inbetween if you don't plan to stop at other locations to break up the journey, which makes flying the best option. (Flights across Australia can be really cheap if booked in advance)</p>
+       </div>
+
+       
+
+
+       <div class='toggledbox  paddingnone toggledout Bus'>
+         <p class="white larger">The East Coast of Australia is well connected by bus routes and It's definitely possible to cover the majority of locations however we suggest you will need to be open to using other means of transport in order to reduce travel time. If you're looking to travel across country you we need to fly or use the train services.</p>
+       </div>
+
+       
+     </div>
+     </div>
+     <a href="#step5" class=" action-button"> Previous</a>
+     <a href="#step7"  class=" action-button hiddenButton"> Next</a>
+  </div>
+  </div>
+
+  <div id="step7" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround bg-image-wategos  slideinleft form  center relative">
+    <div class="formcover  bg-image-wategos  paddingtop50 bg-image-paper">
+    <h3> Step Seven </h3>
+  </div>
+  <div class="bg-transparent">
+    <h3 class="boldheading">  What activities do you enjoy? * </h3>
+      <div  class="checkboxes">
+    
+
+
+
+    <label class="label-container" for="Beach Days">
+      <input class="buttons center buttonsselected " id="Beach Days" role="button" type="checkbox" style="center" name="activities" value="Beach Days"/>
+      <span class="checkmark toggleselect">Beach Days</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Hiking">
+      <input class="buttons center buttonsselected " id="Hiking" role="button" type="checkbox" style="center" name="activities" value="Hiking"/>
+      <span class="checkmark toggleselect">Hiking</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Watersports">
+      <input class="buttons center buttonsselected " id="Watersports" role="button" type="checkbox" style="center" name="activities" value="Watersports"/>
+      <span class="checkmark toggleselect">Watersports</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Museums">
+      <input class="buttons center buttonsselected " id="Museums" role="button" type="checkbox" style="center" name="activities" value="Museums"/>
+      <span class="checkmark toggleselect">Museums</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Galleries">
+      <input class="buttons center buttonsselected " id="Galleries" role="button" type="checkbox" style="center" name="activities" value="Galleries"/>
+      <span class="checkmark toggleselect">Galleries</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Animal Encounters">
+      <input class="buttons center buttonsselected " id="Animal Encounters" role="button" type="checkbox" style="center" name="activities" value="Animal Encounters"/>
+      <span class="checkmark toggleselect">Animal Encounters</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Landmarks">
+      <input class="buttons center buttonsselected " id="Landmarks" role="button" type="checkbox" style="center" name="activities" value="Landmarks"/>
+      <span class="checkmark toggleselect">Landmarks</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Photography">
+      <input class="buttons center buttonsselected " id="Photography" role="button" type="checkbox" style="center" name="activities" value="Photography"/>
+      <span class="checkmark toggleselect">Photography</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Sailing">
+      <input class="buttons center buttonsselected " id="Sailing" role="button" type="checkbox" style="center" name="activities" value="Sailing"/>
+      <span class="checkmark toggleselect">Sailing</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Theme Parks">
+      <input class="buttons center buttonsselected " id="Theme Parks" role="button" type="checkbox" style="center" name="activities" value="Theme Parks"/>
+      <span class="checkmark toggleselect">Theme Parks</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Nightlife">
+      <input class="buttons center buttonsselected " id="Nightlife" role="button" type="checkbox" style="center" name="activities" value="Nightlife"/>
+      <span class="checkmark toggleselect">Nightlife</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Wineries">
+      <input class="buttons center buttonsselected " id="Wineries" role="button" type="checkbox" style="center" name="activities" value="Wineries"/>
+      <span class="checkmark toggleselect">Wineries</span>
+    </label>
+  
+
+
+
+    <label class="label-container" for="Glamping">
+      <input class="buttons center buttonsselected " id="Glamping" role="button" type="checkbox" style="center" name="activities" value="Glamping"/>
+      <span class="checkmark toggleselect">Glamping</span>
+    </label>
+  
+  <div class="toggleboxes bordertop">
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Beach-Days'>
+      <p class="white larger">Ones of Australia's best features are the famous white sand beaches. Beach days will be slower paced with recommendations for both hidden gems and hot spots and include recommended food spots nearby.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Hiking'>
+      <p class="white larger">Hikes will start from 1 hour and could be anywhere upto to 10 hour hikes. They could be coastal walks or Mountain trails. If you are interested in only shorter hikes and walks please let us know in your comments before you submit your request.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Watersports'>
+      <p class="white larger">Examples of watersports include white water rafting, Surfing, Kayaking, Stand Up Paddle Boarding and Diving.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Museums'>
+      <p class="white larger">Discover the local culture at Museums in most major cities within Australia. You can expect specialist Museums for each location. The musuems are often History based however you will be given other options also.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Galleries'>
+      <p class="white larger">Most Galleries are located in the larger cities such as Melbourne, Sydney and Brisbane so make sure you are travelling to these locations if you wish to visit Australia's best known art galleries.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Animal-Encounters'>
+      <p class="white larger">Visit famous Zoo's or small wildlife sanctuary's. Australia loves to share it's unique animals and many locations offer up close encounters such as feeding Kangaroos and cuddling Koala's. Itineraries may also include Aquariums or Whale watching experiences as other examples.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Landmarks'>
+      <p class="white larger">Landmarks cover all the tourist hotspots and often involve a busy day of exploring and navigating a new destination. Sightseeing days can be quite busy!</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Photography'>
+      <p class="white larger">Photography hotspots can be found all over Australia however these itineraries will be designed specifically to make sure you get the best shots. For example sunrise walks to Lighthouses and the best walking tours of the city. Other activities will be recommended whilst at each location to ensure you make the most of each stop.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Sailing'>
+      <p class="white larger">Sailing experiences range from Harbour Cruises with high tea to lunch to yacht socials or even Overnight sailing tours in the Whitsundays.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Theme-Parks'>
+      <p class="white larger">The Gold Coast is known for it's Theme Parks and this a popular attraction on the East Coast. Theme parks also include Luna Parks and Circus's in Sydney and Melbourne.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Nightlife'>
+      <p class="white larger">Certain City's are known in particular for their nightlife. Nightlife itineraries are usually slower paced days with recommendations for the best bars and clubs in the evenings.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Wineries'>
+      <p class="white larger">Wineries describe the best way to discover the local wine region, that could be a 'DIY' Winery hopping day or a group tour depending on the location.</p>
+    </div>
+
+    
+
+
+
+    <div class='toggledbox  paddingnone toggledout Glamping'>
+      <p class="white larger">Glamping or luxury beach hut accommodation set inside a National Parks around Australia. Accommodation starts from $180per night. You will need to have a 4WD car to access most experiences so bear this in mind if you wish to select this option.</p>
+    </div>
+
+    
+  </div>
+    </div>
+    <a href="#step6" class=" action-button"> Previous</a>
+    <a href="#step8"  class="action-button hiddenButton"> Next</a>
+  </div>
+  </div>
+
+
+
+  <div id="step8" style="margin-left: 0px;" class="col-5_sm-12-spaceAround bg-image-noosasurf form slideinright padded center relative">
+    <div class="formcover paddingtop50 bg-image-noosasurf bg-image-paper">
+    <h3> Step Eight </h3>
+  </div>
+  <div class="bg-transparent">
+    <h3 class="boldheading" for="message"> Any additional comments that would help us plan your trip... </h3>
+    <textarea type="text" name="message" id="message" placeholder="Tell me more!"></textarea>
+    <a href="#step7" class=" action-button"> Previous</a>
+    <a href="#step9"  class=" action-button"> Next</a>
+    </div>
+
+    </div>
+
+  <div id="step9" style="margin-left: 0px;" class="col-5_sm-12-middle-spaceAround bg-image-byronshops slideinleft form padded center relative">
+    <div class="formcover paddingtop50 bg-image-byronshops bg-image-paper">
+    <h3> Step Nine </h3>
+  </div>
+    <div class="bg-transparent">
+
+      <label for="name"> Your Name *</label>
+      <input required type="text" name="name" id="name" placeholder="Name" />
+
+      <label for="email"> Your Email * </label>
+      <input type="email" name="_replyto" required id="email" placeholder="Email" />
+
+      <label for="name"> Discount Code</label>
+      <input  type="text" name="discount" id="discount" placeholder="Discount code" />
+
+      <input type="text" name="_gotcha" style="display: none;">
+      <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
+       <!-- <input type="hidden" name="_cc" value="aussieme@gmail.com"> -->
+<p> <input type="submit" value="Submit for a quote"> </p>
+
+
+
+
+<a href="#step8" class=" action-button"> Previous</a>
+  </div>
+
+  </div>
+<!-- <div id="step10" style="margin-left: 0px;" class="form padded center relative">
+  <h2 class="fs-title">Thank you for your Enquiry!!</h2>
+    <p>We will be in touch with a quote in the next 48hours. </p>
+    <p> If you are happy with the quote you will be sent a link to your own personal login where you will find a bespoke itineray tailored to your preferences selected.  </p>
+
+</div> -->
+
+</section>
+</form>
+
+<div class="padded">
+
+</div>
+
+
+<section class="center bg-image-pinkbeachbottom padded bg-color nopaddingbottom comment-box-fix">
+<div class="centered padded">
+  <h3> Subscribe Now </h3>
+  <p> Subscribe for a FREE 5 day example itinerary from Sydney to Byron. </p>
+
+  <form class="email-signup" action="/exampleitinerary.html" method="post">
+
+    <!-- <label for="name"> Your Name *</label> -->
+    <input class="padded" required type="text" name="name" id="name" placeholder="Name" />
+
+    <!-- <label for="email"> Your Email * </label> -->
+    <input type="email" name="_replyto" required id="email" placeholder="Email" />
+    <input type="hidden" name="_to" value="mariafrancesca@postcardsfrommaria.com">
+    <input type="text" name="_gotcha" style="display: none;">
+    <button class="subscribe button" type="submit" value="Subscribe">Subscribe </button>
+  </form>
+
+
+</div>
+</section>
+<section class="margin-bottom7">
+
+</section>
+
+
+
+
+
+<!-- --------------------- THIS IS THE FOOTER --------------- -->
+
+
+    <footer class="grid footer">
+      <!-- column -->
+      <div class="col-4_sm-12 padding-top padding-left">
+        <h2 class="logo"> Plan My Travels </h2>
+        <p class="nopaddingtop smalltext"> Website designed and created by Maria Francesca Reynolds.</p>
+        <p class="smalltext">Copyright © Maria Reynolds</p>
+        <p class="smalltext"><a class="smalltext" href="/PrivacyPolicy">Privacy Policy</a></p>
+        <p class="smalltext"><a class="smalltext" href="/TermsofService">Terms of Service</a></p>
+        <p class="smalltext"><a class="smalltext" href="/CookiePolicy"> Cookie Policy</a></p>
+      </div>
+      <!-- <div class="col-1 sm-hidden"></div> -->
+      <!-- column -->
+
+      <div class="col-3_sm-12-middle">
+        <nav class="inline socials">
+          <a href="https://www.facebook.com/Planmytravels">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/plan_my_travels/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="#">
+            <i class="fab fa-pinterest"></i>
+          </a> -->
+        </nav>
+
+      </div>
+
+      <div class="col-2 sm-hidden"></div>
+
+      <div class="col-3_sm-12-middle  mobile-init  right">
+        <nav class="inline padded">
+          <a class="padded decoration" href="/index"> Home </a>
+          <a class="padded decoration" href="/ItineraryPlanner"> Plan My Travels </a>
+          <a class="padded decoration" href="/FAQs"> FAQ's </a>
+        </nav>
+      </div>
+
+      </div>
+
+
+
+  </footer>
+
+<!-- scripts -->
+
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+
+    <!-- jQuery easing plugin -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"  defer></script>
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" defer></script>
+    <script type="text/javascript" src="/javascript/typing.js" defer></script>
+    <script src="/javascript/header_bar.js" defer> </script>
+    <script src="/javascript/expire-date.js" defer> </script>
+    <script src="/javascript/planner-if-statements.js" defer> </script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer> </script>
+    <script src="/javascript/lightbox.js" defer></script>
+    <script src="/javascript/read-more-button.js" defer></script>
+    <script src="/javascript/review.js" defer></script>
+
+    <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/grt-cookie-consent.js" defer></script>
+
+    <script src="/javascript/accordian.js" defer></script>
+
+
+    <script  src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+
+  // initialize the map
+  var map = L.map('map', {
+    scrollWheelZoom: false
+}).setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  // load GeoJSON from an external file
+  $.getJSON("/javascript/map.geojson",function(data){
+    var mapIcon = L.icon({
+      iconUrl: 'https://andywoodruff.com/maptime-leaflet/rat.png',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: mapIcon});
+        marker.bindPopup('<div class="popup-content"><img src="'+ feature.properties.image +'"><h3>' + feature.properties.city + '<h3/><div class="popup-description">' + feature.properties.description + '</div></div>');
+        return marker;
+      }
+    }).addTo(map);
+  });
+
+  </script>
+
+
+<!-- Google analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script   async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171580968-1');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- jQuery -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='/javascript/cookieguard.js'></script>
+  <script >
+    $(document).ready(function(){
+      $.cookieguard();
+      $.cookieguard.cookies.add('Google Analytics', '__utma,__utmb,__utmc,__utmz,__utmv', 'These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited.', false);
+      $.cookieguard.cookies.add('Cloudflare', '__cfduid', 'The cookie is set by CloudFare. The cookie is used to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It does not correspond to any user ID in the web application and does not store any personally identifiable information.', true);
+      $.cookieguard.cookies.add('browser session cookie', 'connect.sid', 'null', false);
+      $.cookieguard.run();
+    });
+  </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="og:description" content="">
+    <title>  </title>
+    <meta property="og:title" content="Plan My Travels">
+  <!-- <meta property="og:description" content="Planning itineraries across Australia. Plan My Travels offers bespoke itineraries tailored to each customer."> -->
+  <meta property="og:image" content="/images/ADVENTURER.PNG">
+  <meta property="og:url" content="planmytravels.co.uk">
+
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css"
+    />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+
+    <style>
+      #map{ height: 100% }
+    </style>
+    <!-- Cookies policy -->
+    <!-- <link rel="stylesheet" href="/cookie-consent-bar-grt/grt-cookies-consent.css" /> -->
+
+
+
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="/javascript/info-window.js"></script>
+    <script src="/javascript/map.js"></script>
+    <script id="marker-content-template" type="text/x-handlebars-template">
+    <div class="custom-img" style="background-image: url()"></div>
+    <section class="custom-content">
+    <h1 class="custom-header">
+     my header
+    <small>my subtitle</small>
+    </h1>
+    <div class="custom-body">my description</div>
+    </section>
+  </script> -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script:400,500,600,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <body>
+
+    <!-- cookies policy -->
+    <!-- <div class="grt-cookie">
+      <div class="grt-cookies-msg">
+        <p>
+          We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you accept and understand our <a href="/PrivacyPolicy">Privacy Policy</a>, <a href="/CookiePolicy">Cookie Policy</a> and our <a href="/TermsofService">Terms of Service</a>.</p>
+        </p>
+
+      </div>
+      <span class="grt-cookie-button">Accept</span>
+    </div> -->
+
+  <!-- --------------------- THIS IS THE HEADER --------------- -->
+
+
+    <header class="fixed  header">
+      <div id="header_bar">&nbsp;</div>
+  <h1 class="logo"> Plan My Travels </h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/ItineraryPlanner">Plan My Travels </a></li>
+    <li><a href="/FAQs">FAQ's </a></li>
+
+  </ul>
+    <hr>
+
+
+</header>
+
+
+
+
+
+    <!-- <h2> Fixed Banner</h2>
+
+    <section class="banner grid-center fixed">
+      <div class="col-6_sm-12-middle centered">
+        <h2 class="big-bold"> This this a heading </h2>
+        <h3 class="not-bold"> This is a sub-heading </h3>
+      </div>
+    </section>
+  </header>-->
+
+  <section class="bg-image-wategos margin padded grid">
+  <div class="col-2">
+
+  </div>
+  <div class="col-8 card padded ">
+    <h2>Plan My Travels Terms of Service</h2>
+<h3>1. Terms</h3>
+<p>By accessing the website at <a href="http://planmytravels.co.uk">http://planmytravels.co.uk</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
+<h3>2. Use Licence</h3>
+<ol class="padded li" type="a">
+   <li class="padded">Permission is granted to temporarily download one copy of the materials (information or software) on Plan My Travels' website for personal, non-commercial transitory viewing only. This is the grant of a licence, not a transfer of title, and under this licence you may not:
+   <ol class="padded li" type="i">
+       <li>modify or copy the materials;</li>
+       <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+       <li>attempt to decompile or reverse engineer any software contained on Plan My Travels' website;</li>
+       <li>remove any copyright or other proprietary notations from the materials; or</li>
+       <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+   </ol>
+    </li>
+   <li class="li padded">This licence shall automatically terminate if you violate any of these restrictions and may be terminated by Plan My Travels at any time. Upon terminating your viewing of these materials or upon the termination of this licence, you must destroy any downloaded materials in your possession whether in electronic or printed format.</li>
+</ol>
+<h3>3. Disclaimer</h3>
+<ol class="li padded" type="a">
+   <li class="padded">The materials on Plan My Travels' website are provided on an 'as is' basis. Plan My Travels makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</li>
+   <li class="padded">Further, Plan My Travels does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</li>
+</ol>
+<h3>4. Limitations</h3>
+<p>In no event shall Plan My Travels or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Plan My Travels' website, even if Plan My Travels or a Plan My Travels authorised representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
+<h3>5. Accuracy of materials</h3>
+<p>The materials appearing on Plan My Travels' website could include technical, typographical, or photographic errors. Plan My Travels does not warrant that any of the materials on its website are accurate, complete or current. Plan My Travels may make changes to the materials contained on its website at any time without notice. However Plan My Travels does not make any commitment to update the materials.</p>
+<h3>6. Links</h3>
+<p>Plan My Travels has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Plan My Travels of the site. Use of any such linked website is at the user's own risk.</p>
+<h3>7. Modifications</h3>
+<p>Plan My Travels may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
+<h3>8. Governing Law</h3>
+<p>These terms and conditions are governed by and construed in accordance with the laws of Australia and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+<p><a href="https://getterms.io" title="Generate a free terms of use document">Terms of Use created with GetTerms.</a></p>
+
+<a href="/index"> <span class="grt-cookie-button">Accept</span> </a>
+
+
+  </div>
+  <div class="col-2">
+
+  </div>
+</section>
+
+
+
+
+<!-- --------------------- THIS IS THE FOOTER --------------- -->
+
+
+    <footer class="grid footer">
+      <!-- column -->
+      <div class="col-4_sm-12 padding-top padding-left">
+        <h2 class="logo"> Plan My Travels </h2>
+        <p class="nopaddingtop smalltext"> Website designed and created by Maria Francesca Reynolds.</p>
+        <p class="smalltext">Copyright © Maria Reynolds</p>
+        <p class="smalltext"><a class="smalltext" href="/PrivacyPolicy">Privacy Policy</a></p>
+        <p class="smalltext"><a class="smalltext" href="/TermsofService">Terms of Service</a></p>
+        <p class="smalltext"><a class="smalltext" href="/CookiePolicy"> Cookie Policy</a></p>
+      </div>
+      <!-- <div class="col-1 sm-hidden"></div> -->
+      <!-- column -->
+
+      <div class="col-3_sm-12-middle">
+        <nav class="inline socials">
+          <a href="https://www.facebook.com/Planmytravels">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/plan_my_travels/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="#">
+            <i class="fab fa-pinterest"></i>
+          </a> -->
+        </nav>
+
+      </div>
+
+      <div class="col-2 sm-hidden"></div>
+
+      <div class="col-3_sm-12-middle  mobile-init  right">
+        <nav class="inline padded">
+          <a class="padded decoration" href="/index"> Home </a>
+          <a class="padded decoration" href="/ItineraryPlanner"> Plan My Travels </a>
+          <a class="padded decoration" href="/FAQs"> FAQ's </a>
+        </nav>
+      </div>
+
+      </div>
+
+
+
+  </footer>
+
+<!-- scripts -->
+
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+
+    <!-- jQuery easing plugin -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"  defer></script>
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" defer></script>
+    <script type="text/javascript" src="/javascript/typing.js" defer></script>
+    <script src="/javascript/header_bar.js" defer> </script>
+    <script src="/javascript/expire-date.js" defer> </script>
+    <script src="/javascript/planner-if-statements.js" defer> </script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer> </script>
+    <script src="/javascript/lightbox.js" defer></script>
+    <script src="/javascript/read-more-button.js" defer></script>
+    <script src="/javascript/review.js" defer></script>
+
+    <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/grt-cookie-consent.js" defer></script>
+
+    <script src="/javascript/accordian.js" defer></script>
+
+
+    <script  src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+
+  // initialize the map
+  var map = L.map('map', {
+    scrollWheelZoom: false
+}).setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  // load GeoJSON from an external file
+  $.getJSON("/javascript/map.geojson",function(data){
+    var mapIcon = L.icon({
+      iconUrl: 'https://andywoodruff.com/maptime-leaflet/rat.png',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: mapIcon});
+        marker.bindPopup('<div class="popup-content"><img src="'+ feature.properties.image +'"><h3>' + feature.properties.city + '<h3/><div class="popup-description">' + feature.properties.description + '</div></div>');
+        return marker;
+      }
+    }).addTo(map);
+  });
+
+  </script>
+
+
+<!-- Google analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script   async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171580968-1');
+</script>
+
+  </body>
+</html>

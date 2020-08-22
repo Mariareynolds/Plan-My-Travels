@@ -1,0 +1,8247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- jQuery -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='/javascript/cookieguard.js'></script>
+  <script >
+    $(document).ready(function(){
+      $.cookieguard();
+      $.cookieguard.cookies.add('Google Analytics', '__utma,__utmb,__utmc,__utmz,__utmv', 'These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited.', false);
+      $.cookieguard.cookies.add('Cloudflare', '__cfduid', 'The cookie is set by CloudFare. The cookie is used to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It does not correspond to any user ID in the web application and does not store any personally identifiable information.', true);
+      $.cookieguard.cookies.add('browser session cookie', 'connect.sid', 'null', false);
+      $.cookieguard.run();
+    });
+  </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" property="og:description" content="">
+    <title> Nicole And Luke </title>
+    <meta property="og:title" content="Plan My Travels">
+  <!-- <meta property="og:description" content="Planning itineraries across Australia. Plan My Travels offers bespoke itineraries tailored to each customer."> -->
+  <meta property="og:image" content="/images/ADVENTURER.PNG">
+  <meta property="og:url" content="planmytravels.co.uk">
+
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css"
+    />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+
+    <style>
+      #map{ height: 100% }
+    </style>
+    <!-- Cookies policy -->
+    <!-- <link rel="stylesheet" href="/cookie-consent-bar-grt/grt-cookies-consent.css" /> -->
+
+
+
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="/javascript/info-window.js"></script>
+    <script src="/javascript/map.js"></script>
+    <script id="marker-content-template" type="text/x-handlebars-template">
+    <div class="custom-img" style="background-image: url()"></div>
+    <section class="custom-content">
+    <h1 class="custom-header">
+     my header
+    <small>my subtitle</small>
+    </h1>
+    <div class="custom-body">my description</div>
+    </section>
+  </script> -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script:400,500,600,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <body>
+
+    <!-- cookies policy -->
+    <!-- <div class="grt-cookie">
+      <div class="grt-cookies-msg">
+        <p>
+          We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you accept and understand our <a href="/PrivacyPolicy">Privacy Policy</a>, <a href="/CookiePolicy">Cookie Policy</a> and our <a href="/TermsofService">Terms of Service</a>.</p>
+        </p>
+
+      </div>
+      <span class="grt-cookie-button">Accept</span>
+    </div> -->
+
+  <!-- --------------------- THIS IS THE HEADER --------------- -->
+
+
+    <header class="fixed  header">
+      <div id="header_bar">&nbsp;</div>
+  <h1 class="logo"> Plan My Travels </h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/index">Home</a></li>
+    <li><a href="/ItineraryPlanner">Plan My Travels </a></li>
+    <li><a href="/FAQs">FAQ's </a></li>
+
+  </ul>
+    <hr>
+
+
+</header>
+
+
+
+
+
+    <!-- <h2> Fixed Banner</h2>
+
+    <section class="banner grid-center fixed">
+      <div class="col-6_sm-12-middle centered">
+        <h2 class="big-bold"> This this a heading </h2>
+        <h3 class="not-bold"> This is a sub-heading </h3>
+      </div>
+    </section>
+  </header>-->
+
+  <!-- itinerary days -->
+
+<section class="banner grid-center fixed" style="background-image:url('/images/whitsundays-view-cropped.jpg'); background-position: center;">
+  <div class="col-6_sm-12-middle centered">
+    <h2 class="big-bold font-color"> </h2>
+    <h3 class="not-bold font-color">  </h3>
+  </div>
+</section>
+
+
+<div class="padding-bottom">
+
+  <h3 class=" padded-1 bluetext">Hi Nicole and Luke are you ready for...
+  </h3>
+  <h3 class="padded-1 min-height bluetext"><span class="center" id="typed"></span></h3>
+  <div  id="typed-strings">
+
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+    
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 1  - Cairns Diving Great Barrier Reef</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 2  - Cairns Lagoon and Bar Crawl</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 3  - Cairns White water rafting</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 4  - Cairns Bungy Jumping</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 5  - Cairns Kuranda Scenic Railway</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 6  - Port Douglas Explore</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 7  - Port Douglas Diving Trip</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+            
+            
+    <h3> <span>DAY 8  - Port Douglas Additional Tours</span></h3>
+
+    
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  </div>
+
+</div>
+
+
+
+<div class="hidecontent" id="expire-date">
+  27/12/2020
+</div>
+
+<dl class="accordion  light-bg padded-1">
+
+
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+
+            
+
+          
+        <h2 class="greycard"> Travel Tips </h2>
+
+        <!-- <p> <span>Tips:</span>  </p> -->
+        
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+<!--
+    <div class="col-3-middle vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>Top-Apps </p>
+    <p> <span>Activity:</span> Top-Apps </p>
+    </div>
+    </div> -->
+
+    <div class="col-12-middle padded">
+
+
+    <p>  <h2>Top Apps to download to make your travels stress free. </h2>
+
+<h2>You can navigate Australia using these apps:</h2>
+
+<p>TripGo- Great for displaying the train platforms etc when changing trains and up to date bus routes you can track the current location of the next bus. </p>
+
+<p>Waze- Useful if you are driving as it highlights Toll routes and also speed cameras and up to date traffic alerts. </p>
+
+<p>Uber- Cheap rides around the City.</p>
+
+<h2>Download the below apps for great deals for food and drinks:</h2>
+
+<p>Eat Club- regularly updated discounts, you can use the map to find up to 50% discounts near you. You just need to book a table using the app and show the code on arrival. (You can book last minute) </p>
+
+<p>The Happiest Hour- Shows nearby happy hour deals as well as food discounts. </p>
+
+<h2>For accommodation options download the below apps: </h2>
+
+<p>Booking.com- All types of hotels can be found on booking.com, they often offer free cancellation so this will help you plan ahead but still gives you flexibility.</p>
+
+<p>HostelWorld- Great for booking last minute hostels and they are rated based on a young audiences experience. </p>
+
+<p>WikiCamps- Shows all the available camp grounds in Australia, it is also available offline which means its accessible when exploring a little further off the grid. </p>
+
+<h2>Additional Apps that we recommend:</h2>
+
+<p>Beach safe- An app that tells you if the beach is safe to swim and where to find the flags that are safe to swim between. This is very important in Australia as the tide can be extremely strong and there are also potentially dangerous saline in unsupervised waters. </p>
+
+<p>XE Currency Converter- The most up to date way to check the conversion rate which will help you manage your spending.</p>
+
+<p>Nature Near Me- Great for finding local hikes and seeing what amenities that are available at each spot as well as total distance and pictures on the route. </p>
+
+<p>WikiCamps- Shows all the available camp grounds in Australia, it is also available offline which means its accessible when exploring a little further off the grid. </p>
+
+      <!-- <a href="/thing.pdf" download>download</a> -->
+   </p>
+      </div>
+  </section>
+<!-- end of tips -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+
+            
+
+          
+
+        
+      <h2 class="greycard"> Introduction to: Cairns</h2>
+
+      
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+  <section class="bg-image-paper-login grid-spaceAround flip-flex">
+
+
+    <!-- <div class="col-3-middle vertical-line padded">
+      <div class="">
+
+
+    <h2>  </h2>
+
+    <p> <span> Location: </span>Cairns </p>
+    <p> <span>Activity:</span> Cairns </p>
+    </div>
+    </div> -->
+
+    <div class="col-12-middle padded">
+
+
+    <p>  <h2> Intro to Cairns</h2>
+  <p>Cairns is located in far North Queensland and is right at the heart of the Great Barrier Reef. Cairns is known for activities such as diving, white water rafting and bungy jumping, along with a great nightlife. </p>
+    <p>Cape Tribulation is a short day trip from Cairns and it is the only place in the world where the Reef meets the Rainforest. </p>
+
+
+  <h2>Getting Around</h2>
+  <p>Cairns has very limited transport options so you will need to book a taxi or an Uber from the airport. </p>
+  <p>Most tourist locations are within walking distance or may require using taxi services. </p>
+
+      <!-- <a href="/thing.pdf" download>download</a> -->
+   </p>
+      </div>
+  </section>
+<!-- end of Intro -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 1 : Diving Great Barrier Reef </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/nemo.jpg" title="Nemo- Clown fish on the Great Barrier Reef">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3> Nemo- Clown fish on the Great Barrier Reef </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/nemo.jpg" alt="Nemo- Clown fish on the Great Barrier Reef">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 1  </h2>
+
+    <p> <span> Location: </span>Cairns </p>
+    <p> <span>Activity:</span> Diving Great Barrier Reef </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p>Whether you have dived before or not, you’re on the Great Barrier Reef and you should definitely give it a go. You can book guided dives if your PADI certified or discovery dives if you have never dived before. A discovery dive will cost around $240 for a full day on the reef and you will be able to dive to 6metres and get a feel for life on the reef. Look out for turtles, stingers and possible even some reef sharks.</p>
+<p> For those who are experienced divers you can also book full day tours on the reef for all different levels also at <a target="_blank" href="www.divingcairns.com.au/daytrips-cairns"> Cairns Diving </a> .</p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 2 : Explore the markets and Bar Crawl </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/cairnslagoon.jpg" title="Cairns Esplanade- Man made lagoon pool in Cairns">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3> Cairns Esplanade- Man made lagoon pool in Cairns </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/cairnslagoon.jpg" alt="Cairns Esplanade- Man made lagoon pool in Cairns">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 2  </h2>
+
+    <p> <span> Location: </span>Cairns </p>
+    <p> <span>Activity:</span> Explore the markets and Bar Crawl </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p>Spend the day at the Cairns Lagoon. Much like Airlie Beach and Brisbane, Cairns has a man-made Lagoon right by the ocean where you can relax all day before heading out on one of Cairn’s famous bar crawls.</p>
+<p> Start the evening by heading to check out the Cairns night markets, they have some crazy bargains here as well as pamper sessions and massages.</p>
+<p>After some browsing at the markets go to the Woolshed for dinner and some table dancing before slowly making your way through all the bars in town and finishing the night at Gilligans, Cairns best Hostel for nightlife.</p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 3 : White water rafting </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/.JPG" title="">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3>  </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/.JPG" alt="">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 3  </h2>
+
+    <p> <span> Location: </span>Cairns </p>
+    <p> <span>Activity:</span> White water rafting </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p>One of the most popular activities in Cairns is White Water Rafting. Book a half day tour with <a href=" https://www.foamingfury.com.au/barron-river-half-day/">Foaming Fury</a> and spend 2 full hours rafting along Barron river. You will be picked up from Cairns and driven 20 minutes to the Barron River where you will be given your equipment and taught some of the things you’ll need to know on the river. The Barron River has grade 3 rapids which is suitable for beginners. Prices start from $145.</p>
+
+<p>If you like the sound of White water rafting but you’re on a tighter budget you could book a river tubing trip on the Mulgrave river for $90. Again you will be picked up from Cairns and dropped back again. This experience will be roughly 4 and a half hours.</p>
+
+<p>You will need to take a towel, a change of clothes, suncream and some water.</p>
+
+<p>You’ve worked up an appetite so treat yourself to a nice dinner at the Salt House which offers one of the best seats in town. Right on the marina, they serve lunch and dinner and you can choose from the Bar, restaurant or pizzeria. This is the go-to for locals as it’s such a great location.</p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 4 : Bungy Jump and Jungle Swing </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/.JPG" title="">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3>  </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/.JPG" alt="">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 4  </h2>
+
+    <p> <span> Location: </span>Cairns </p>
+    <p> <span>Activity:</span> Bungy Jump and Jungle Swing </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p>Cairns is a bit of an adventure hot spot and is home to an <a href="https://www.ajhackett.com/cairns/">AJ Hackett</a> skypark. You can choose from Bungy jumping or the giant jungle swing, or of course do both!
+The bungy jump is 50m high and it’s the only place you can bungy in Australia. Choose form 16 different ways to jump from Cairns only viewing platform with a view of the Northern Beaches. Bungy jump prices start from $179.</p>
+
+<p>If you’ve bungy jumped before and you’re looking to do something different you can instead test out the Giant Jungle swing that drops from 45m with a self release pully to set you flying at speeds reaching 120km and hour. Prices for the swing start from $129 and include free transport from your accommodation.</p>
+
+<p>If you’re really feeling adventurous you can do both for a bundle price of $269.</p>
+
+<p>Once you’ve finished being a daredevil you’re going to need something to celebrate so head to <a href="https://www.flamingostikibar.com.au/">Flamingo’s Tiki Bar</a> for some cocktails and a great atmosphere to keep your buzz going.</p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 5 : Kuranda Scenic Railway </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/.JPG" title="">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3>  </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/.JPG" alt="">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 5  </h2>
+
+    <p> <span> Location: </span>Cairns </p>
+    <p> <span>Activity:</span> Kuranda Scenic Railway </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p><a href="https://www.skyrail.com.au/" target="_blank">Kuranda Scenic Railway</a>  is a popular day trip in to the Rainforest. You can book a round trip on the Kuranda Railway or alternatively you can opt for the Skyrail gondola one way so you get to experience both.  Once you arrive in Kuranda you can visit the brightly coloured village markets, Rainforest Nature Park or the Kuranda Koala Gardens. It’s recommended that you allow 2-3hours in Kuranda  before taking the scenic journey back to Cairns.</p>
+
+<p>The railway and the skyrail each take an hour and a half, you can choose which route you take there and back and you can also book pick up and return transfers from your Cairns accommodation from a total of $130.</p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 6 : Port Douglas </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/hyamsbeach.JPG" title="Four Mile Beach view from lookout point">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3> Four Mile Beach view from lookout point </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/hyamsbeach.JPG" alt="Four Mile Beach view from lookout point">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 6  </h2>
+
+    <p> <span> Location: </span>Port Douglas </p>
+    <p> <span>Activity:</span> Port Douglas </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p>Grab a coffee from the Lighthouse Cafe, a favourite amongst the locals and spend the day exploring the small town of Port Douglas, the most impressive spot being Four Mile Beach. You can probably image where it got it’s name so take along Four Mile Beach before you pick you spot to take a dip in the sea. </p>
+
+<p>Plan ahead and take a picnic with you so you don’t need to leave the beach food food or water anytime soon.  </p>
+
+<p>If you’ve had enough of the heat, head in to town for lunch at the Hi Tide Cafe, they have a great all day menu including, milkshakes, smoothies or cocktails depending on what you fancy.  </p>
+
+<p>As the afternoon starts to get a little cooler head up to either 4 Mile beach lookout or the Trinity Bay lookout at the North end of the beach. You’ll get a view across the whole coast and it’s a perfect photo spot to show off where you’re staying.  </p>
+
+<p>Finish up the day at The Court House Hotel for a few drinks and a lively atmosphere. It's a popular watering hole for the locals. </p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 7 : Port Douglas - On the Reef </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/turtle.JPG" title="Turtle eating coral on the Great Barrier Reef">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3> Turtle eating coral on the Great Barrier Reef </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/turtle.JPG" alt="Turtle eating coral on the Great Barrier Reef">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 7  </h2>
+
+    <p> <span> Location: </span>Port Douglas </p>
+    <p> <span>Activity:</span> Port Douglas - On the Reef </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p>Book a full day diving trip with Dive the Reef <a href=" http://www.divethereef.com/DiveResults.asp?LastSearch=Yes&Currency=AUD&B1=Submit">Dive The Reef</a> They have a range of different tours from snorkelling and glass bottom boat cruises to 4 day diving courses so they offer something for all skill levels. </p>
+
+<p>Choose between a full day or half day reef tours, which will include morning or afternoon tea and transfers back to your accommodation. Prices start from $283 for snorkel and cruise. </p>
+
+<p>Another great company for a 1 day dive or snorkel is  <a href=" https://www.silverseries.com.au/sonic_price.html.">Silver Sonic</a> They offer snorkel and cruise options with additional dives meaning you can choose between 1-3 dives during your tour. Snorkel and cruise prices start from $255pp. These guys cover upto 3 dive spots in 1 day so you’ll definitely	be getting your moneys worth! </p>
+
+<p>They also offer introductory dives for people who aren’t certified, these dives will go to a maximum of 12 metres and you can do a maximum of 2 dives. Intro dives start from $74pp </p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+
+
+      <dt>
+        <a href="">
+
+            
+            
+            <h2 class="bluecard"> DAY 8 : Port Douglas - Additional Day Trips </h2>
+          
+
+            
+
+          
+
+        
+
+        </a>
+      </dt>
+      <dd>
+
+
+
+ 
+
+  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+
+  <div class="col-4-middle center padded1.5 mobileorder2">
+
+    <div class="lightboxcontainer center">
+      <a class="" href="/images/turtle.JPG" title="">
+      <p class="mobilevisible  action-button">  View Image</p>
+      <!-- <div class="lightboxhover">
+        <h3>  </h3>
+      </div> -->
+
+        <img class="bg-image hidden" src="/images/turtle.JPG" alt="">
+    </a>
+    </div>
+  </div>
+
+    <div class="col-2-middle_md-12 mobileorder1 vertical-line padded1.5">
+      <div class="">
+
+
+    <h2> DAY 8  </h2>
+
+    <p> <span> Location: </span>Port Douglas </p>
+    <p> <span>Activity:</span> Port Douglas - Additional Day Trips </p>
+    </div>
+    </div>
+
+    <div class="col-6-middle_sm-12 mobileorder3 padded">
+
+
+    <p>  <p> Additional Day trip recommendations and activities you might enjoy: </p>
+<p> (Click the links for more info)</p>
+
+<p> <a href="https://www.visitportdouglasdaintree.com/daintree-rainforest/daintree-wonder-tours "> Daintree Wonder Tours</a></p>
+
+<p> <a href="https://www.visitportdouglasdaintree.com/daintree-rainforest/tonys-tropical-tours ">Tony's Tropical Tours</a></p>
+
+<p> <a href="https://www.visitportdouglasdaintree.com/port-douglas/windswell-kite-surfing-stand-up-paddleboarding "> Windsell Kite surfing and SUP</a></p>
+
+<p> <a href="https://www.visitportdouglasdaintree.com/cape-tribulation/daintree-great-barrier-reef-tours "> Daintree & Great Barrier Reef Tours</a></p>
+
+<p> <a href="https://www.tropicaltours.com.au/port-douglas-day-tours/daintree-rainforest-cape-tribulation-tour/ "> Daintree and Cape Tribulation Tours</a></p>
+
+
+   </p>
+      </div>
+  </section>
+
+  
+
+
+
+
+  <!-- travel directions  -->
+  
+
+
+  <!-- Tips <section> -->
+  
+
+  <!-- Intro <section> -->
+  
+
+
+
+
+
+
+<!-- end checking of IF and ARRAYS being the same  -->
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+  
+</dd>
+<!-- end itinerary blocks  -->
+  
+<!-- end arrays -->
+  
+
+
+
+
+<!-- --------------------- THIS IS THE FOOTER --------------- -->
+
+
+    <footer class="grid footer">
+      <!-- column -->
+      <div class="col-4_sm-12 padding-top padding-left">
+        <h2 class="logo"> Plan My Travels </h2>
+        <p class="nopaddingtop smalltext"> Website designed and created by Maria Francesca Reynolds.</p>
+        <p class="smalltext">Copyright © Maria Reynolds</p>
+        <p class="smalltext"><a class="smalltext" href="/PrivacyPolicy">Privacy Policy</a></p>
+        <p class="smalltext"><a class="smalltext" href="/TermsofService">Terms of Service</a></p>
+        <p class="smalltext"><a class="smalltext" href="/CookiePolicy"> Cookie Policy</a></p>
+      </div>
+      <!-- <div class="col-1 sm-hidden"></div> -->
+      <!-- column -->
+
+      <div class="col-3_sm-12-middle">
+        <nav class="inline socials">
+          <a href="https://www.facebook.com/Planmytravels">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/plan_my_travels/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="#">
+            <i class="fab fa-pinterest"></i>
+          </a> -->
+        </nav>
+
+      </div>
+
+      <div class="col-2 sm-hidden"></div>
+
+      <div class="col-3_sm-12-middle  mobile-init  right">
+        <nav class="inline padded">
+          <a class="padded decoration" href="/index"> Home </a>
+          <a class="padded decoration" href="/ItineraryPlanner"> Plan My Travels </a>
+          <a class="padded decoration" href="/FAQs"> FAQ's </a>
+        </nav>
+      </div>
+
+      </div>
+
+
+
+  </footer>
+
+<!-- scripts -->
+
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+
+    <!-- jQuery easing plugin -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"  defer></script>
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" defer></script>
+    <script type="text/javascript" src="/javascript/typing.js" defer></script>
+    <script src="/javascript/header_bar.js" defer> </script>
+    <script src="/javascript/expire-date.js" defer> </script>
+    <script src="/javascript/planner-if-statements.js" defer> </script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer> </script>
+    <script src="/javascript/lightbox.js" defer></script>
+    <script src="/javascript/read-more-button.js" defer></script>
+    <script src="/javascript/review.js" defer></script>
+
+    <script src="/cookie-consent-bar-grt/grt-cookie-consent.js" defer></script>
+    <script src="/javascript/grt-cookie-consent.js" defer></script>
+
+    <script src="/javascript/accordian.js" defer></script>
+
+
+    <script  src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+
+  // initialize the map
+  var map = L.map('map', {
+    scrollWheelZoom: false
+}).setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  // load GeoJSON from an external file
+  $.getJSON("/javascript/map.geojson",function(data){
+    var mapIcon = L.icon({
+      iconUrl: 'https://andywoodruff.com/maptime-leaflet/rat.png',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: mapIcon});
+        marker.bindPopup('<div class="popup-content"><img src="'+ feature.properties.image +'"><h3>' + feature.properties.city + '<h3/><div class="popup-description">' + feature.properties.description + '</div></div>');
+        return marker;
+      }
+    }).addTo(map);
+  });
+
+  </script>
+
+
+<!-- Google analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script   async src="https://www.googletagmanager.com/gtag/js?id=UA-171580968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171580968-1');
+</script>
+
+  </body>
+</html>
