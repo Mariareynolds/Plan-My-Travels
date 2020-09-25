@@ -417,7 +417,9 @@ padding: 0;
   background-color: red;
 } */
 
-
+.lb-outerContainer,.lb-container{
+  padding: 0;
+}
 
 .bg-transparent{
   border: 7px solid white;

@@ -75,16 +75,15 @@ description:
       </dt>
       <dd>
 
-
 {% if itinerary.type == 'activity' %}
  {% if itinerary.img %}
 
-  <section class="bg-image-paper-login popup-gallery grid flip-flex">
+  <section class="bg-image-paper-login  grid flip-flex">
 
   <div class="col-4-middle center padded1.5 mobileorder2">
 
-    <div class="lightboxcontainer center">
-      <a class="" href="{{itinerary.img}}" title="{{itinerary.img_alt}}">
+    <div class="lightboxcontainer  center">
+      <a class="" href="{{itinerary.img}}" data-lightbox="{{ forloop.index}}" data-title="{{itinerary.img_alt}}" title="{{itinerary.img_alt}}">
       <p class="mobilevisible  action-button">  View Image</p>
       <!-- <div class="lightboxhover">
         <h3> {{itinerary.img_alt}} </h3>
